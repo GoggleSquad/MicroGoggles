@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/pprat/Senior_Design/OLED_display/main
+# Install script for directory: C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

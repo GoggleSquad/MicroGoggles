@@ -17,4 +17,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/Users/pprat/Senior_Design/OLED_display/build/bootloader/bootloader.elf
+file C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader/bootloader.elf

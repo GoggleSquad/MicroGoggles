@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/pprat/Senior_Design/OLED_display/managed_components/espressif__esp_lcd_sh1107
+# Install script for directory: C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/managed_components/espressif__esp_lcd_sh1107
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

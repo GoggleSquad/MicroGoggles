@@ -184,6 +184,9 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_lcd_panel_init(panel_handle));
     ESP_ERROR_CHECK(esp_lcd_panel_disp_on_off(panel_handle, true));
 
+//new addition 
+    ESP_ERROR_CHECK(esp_lcd_panel_mirror(panel_handle, true, false));  // mirror horizontally (for mirror-view text)
+
 #if CONFIG_EXAMPLE_LCD_CONTROLLER_SH1107
     ESP_ERROR_CHECK(esp_lcd_panel_invert_color(panel_handle, true));
 #endif
@@ -192,6 +195,11 @@ void app_main(void)
     lv_init();
     // create a lvgl display
     lv_display_t *display = lv_display_create(EXAMPLE_LCD_H_RES, EXAMPLE_LCD_V_RES);
+    
+    //removed- flip display horizontally
+    //lv_disp_set_rotation(display, LV_DISP_ROTATION_180);
+
+    
     // associate the i2c panel handle to the display
     lv_display_set_user_data(display, panel_handle);
     // create draw buffer

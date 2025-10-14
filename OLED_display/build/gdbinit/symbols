@@ -13,8 +13,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/Users/pprat/Senior_Design/OLED_display/build/bootloader/bootloader.elf
+    add-symbol-file C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/Users/pprat/Senior_Design/OLED_display/build/OLED_display.elf
+file C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/OLED_display.elf

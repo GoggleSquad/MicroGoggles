@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/pprat/esp/v5.5.1/esp-idf/components/bootloader/subprojec
   file(MAKE_DIRECTORY "C:/Users/pprat/esp/v5.5.1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader"
-  "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix"
-  "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix/tmp"
-  "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix/src"
-  "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader"
+  "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix"
+  "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix/tmp"
+  "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix/src"
+  "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/pprat/Senior_Design/OLED_display/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/pprat/Senior_Design/MicroGoggles/OLED_display/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
