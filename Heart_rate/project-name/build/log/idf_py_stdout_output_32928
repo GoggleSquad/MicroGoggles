@@ -1,0 +1,583 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\project-name.elf C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct  9 2025 12:03:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b9b0h ( 47536) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001b9d8 vaddr=3fc92b00 size=02ae8h ( 10984) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e4c8 vaddr=40374000 size=01b50h (  6992) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b594h (112020) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=0003b5bc vaddr=40375b50 size=0cf20h ( 53024) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=000484e4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (146) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (146) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     project-name[0m
+[0;32mI (172) app_init: App version:      1[0m
+[0;32mI (175) app_init: Compile time:     Oct  9 2025 12:03:15[0m
+[0;32mI (180) app_init: ELF file SHA256:  1315a8433...[0m
+[0;32mI (185) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC966B8 len 00053058 (332 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (253) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+[0;32mI (279) maxrefdes117: I2C initialized successfully[0m
+[0;32mI (279) maxrefdes117: MAX30102 Part ID: 0x15[0m
+[0;32mI (379) maxrefdes117: MAX30102 configured for SpO2 mode[0m
+[0;32mI (869) maxrefdes117: Sample 50: IR: 3384[0m
+[0;32mI (1369) maxrefdes117: Sample 100: IR: 3376[0m
+[0;32mI (1869) maxrefdes117: Sample 150: IR: 3378[0m
+[0;32mI (2369) maxrefdes117: Sample 200: IR: 3373[0m
+[0;32mI (2869) maxrefdes117: Sample 250: IR: 3379[0m
+[0;32mI (3369) maxrefdes117: Sample 300: IR: 3371[0m
+[0;32mI (3869) maxrefdes117: Sample 350: IR: 3408[0m
+[0;32mI (4369) maxrefdes117: Sample 400: IR: 3384[0m
+[0;32mI (4869) maxrefdes117: Sample 450: IR: 3380[0m
+[0;32mI (5369) PEAK_DETECT: Min: 3347, Max: 3454, Mean: 3381, Amplitude: 107[0m
+[0;32mI (5369) PEAK_DETECT: Peak 1 at sample 44, value: 3418[0m
+[0;32mI (5369) PEAK_DETECT: Peak 2 at sample 220, value: 3416[0m
+[0;32mI (5369) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (5369) maxrefdes117: Sample 0: IR: 3389[0m
+[0;32mI (5379) maxrefdes117: *** Heart Rate: 24 BPM ***[0m
+[0;32mI (5879) maxrefdes117: Sample 50: IR: 3401[0m
+[0;32mI (6379) maxrefdes117: Sample 100: IR: 3387[0m
+[0;32mI (6879) maxrefdes117: Sample 150: IR: 3527[0m
+[0;32mI (7379) maxrefdes117: Sample 200: IR: 3337[0m
+[0;32mI (7879) maxrefdes117: Sample 250: IR: 3314[0m
+[0;32mI (8379) maxrefdes117: Sample 300: IR: 3407[0m
+[0;32mI (8879) maxrefdes117: Sample 350: IR: 3408[0m
+[0;32mI (9379) maxrefdes117: Sample 400: IR: 3419[0m
+[0;32mI (9879) maxrefdes117: Sample 450: IR: 3413[0m
+[0;32mI (10379) PEAK_DETECT: Min: 3254, Max: 145849, Mean: 11472, Amplitude: 142595[0m
+[0;32mI (10379) PEAK_DETECT: Peak 1 at sample 362, value: 57398[0m
+[0;32mI (10379) PEAK_DETECT: Peak 2 at sample 406, value: 64635[0m
+[0;32mI (10379) PEAK_DETECT: Peak 3 at sample 446, value: 145849[0m
+[0;32mI (10389) PEAK_DETECT: Total peaks found: 3[0m
+[0;32mI (10389) maxrefdes117: Sample 0: IR: 30962[0m
+[0;32mI (10399) maxrefdes117: *** Heart Rate: 36 BPM ***[0m
+[0;32mI (10899) maxrefdes117: Sample 50: IR: 136821[0m
+[0;32mI (11399) maxrefdes117: Sample 100: IR: 141093[0m
+[0;32mI (11899) maxrefdes117: Sample 150: IR: 143581[0m
+[0;32mI (12399) maxrefdes117: Sample 200: IR: 145525[0m
+[0;32mI (12899) maxrefdes117: Sample 250: IR: 145290[0m
+[0;32mI (13399) maxrefdes117: Sample 300: IR: 145077[0m
+[0;32mI (13899) maxrefdes117: Sample 350: IR: 145032[0m
+[0;32mI (14399) maxrefdes117: Sample 400: IR: 144621[0m
+[0;32mI (14899) maxrefdes117: Sample 450: IR: 145222[0m
+[0;32mI (15399) PEAK_DETECT: Min: 27166, Max: 146074, Mean: 138998, Amplitude: 118908[0m
+[0;32mI (15399) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (15399) maxrefdes117: Sample 0: IR: 145761[0m
+[0;32mI (15399) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (15899) maxrefdes117: Sample 50: IR: 146052[0m
+[0;32mI (16399) maxrefdes117: Sample 100: IR: 145202[0m
+[0;32mI (16899) maxrefdes117: Sample 150: IR: 143678[0m
+[0;32mI (17399) maxrefdes117: Sample 200: IR: 143732[0m
+[0;32mI (17899) maxrefdes117: Sample 250: IR: 143419[0m
+[0;32mI (18399) maxrefdes117: Sample 300: IR: 143640[0m
+[0;32mI (18899) maxrefdes117: Sample 350: IR: 143438[0m
+[0;32mI (19399) maxrefdes117: Sample 400: IR: 152727[0m
+[0;32mI (19899) maxrefdes117: Sample 450: IR: 153235[0m
+[0;32mI (20399) PEAK_DETECT: Min: 83794, Max: 153741, Mean: 145896, Amplitude: 69947[0m
+[0;32mI (20399) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (20399) maxrefdes117: Sample 0: IR: 153544[0m
+[0;32mI (20899) maxrefdes117: Sample 50: IR: 153135[0m
+[0;32mI (21399) maxrefdes117: Sample 100: IR: 152416[0m
+[0;32mI (21899) maxrefdes117: Sample 150: IR: 153140[0m
+[0;32mI (22399) maxrefdes117: Sample 200: IR: 148348[0m
+[0;32mI (22899) maxrefdes117: Sample 250: IR: 152362[0m
+[0;32mI (23399) maxrefdes117: Sample 300: IR: 148411[0m
+[0;32mI (23899) maxrefdes117: Sample 350: IR: 149865[0m
+[0;32mI (24399) maxrefdes117: Sample 400: IR: 147898[0m
+[0;32mI (24899) maxrefdes117: Sample 450: IR: 148811[0m
+[0;32mI (25399) PEAK_DETECT: Min: 146038, Max: 153741, Mean: 150385, Amplitude: 7703[0m
+[0;32mI (25399) PEAK_DETECT: Peak 1 at sample 40, value: 153284[0m
+[0;32mI (25399) PEAK_DETECT: Total peaks found: 1[0m
+[0;32mI (25399) maxrefdes117: Sample 0: IR: 146775[0m
+[0;32mI (25399) maxrefdes117: *** Heart Rate: 12 BPM ***[0m
+[0;32mI (25909) maxrefdes117: Sample 50: IR: 147575[0m
+[0;32mI (26409) maxrefdes117: Sample 100: IR: 143425[0m
+[0;32mI (26909) maxrefdes117: Sample 150: IR: 146676[0m
+[0;32mI (27409) maxrefdes117: Sample 200: IR: 133971[0m
+[0;32mI (27909) maxrefdes117: Sample 250: IR: 141159[0m
+[0;32mI (28409) maxrefdes117: Sample 300: IR: 131440[0m
+[0;32mI (28909) maxrefdes117: Sample 350: IR: 134000[0m
+[0;32mI (29409) maxrefdes117: Sample 400: IR: 131627[0m
+[0;32mI (29909) maxrefdes117: Sample 450: IR: 132027[0m
+[0;32mI (30409) PEAK_DETECT: Min: 130548, Max: 148379, Mean: 139009, Amplitude: 17831[0m
+[0;32mI (30409) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (30409) maxrefdes117: Sample 0: IR: 131381[0m
+[0;32mI (30409) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (30909) maxrefdes117: Sample 50: IR: 132109[0m
+[0;32mI (31409) maxrefdes117: Sample 100: IR: 130716[0m
+[0;32mI (31909) maxrefdes117: Sample 150: IR: 131635[0m
+[0;32mI (32409) maxrefdes117: Sample 200: IR: 130743[0m
+[0;32mI (32909) maxrefdes117: Sample 250: IR: 131948[0m
+[0;32mI (33409) maxrefdes117: Sample 300: IR: 131483[0m
+[0;32mI (33909) maxrefdes117: Sample 350: IR: 132485[0m
+[0;32mI (34409) maxrefdes117: Sample 400: IR: 131401[0m
+[0;32mI (34909) maxrefdes117: Sample 450: IR: 131716[0m
+[0;32mI (35409) PEAK_DETECT: Min: 425, Max: 134004, Mean: 129149, Amplitude: 133579[0m
+[0;32mI (35409) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (35409) maxrefdes117: Sample 0: IR: 130319[0m
+[0;32mI (35909) maxrefdes117: Sample 50: IR: 128896[0m
+[0;32mI (36409) maxrefdes117: Sample 100: IR: 1879[0m
+[0;32mI (36909) maxrefdes117: Sample 150: IR: 434[0m
+[0;32mI (37409) maxrefdes117: Sample 200: IR: 428[0m
+[0;32mI (37909) maxrefdes117: Sample 250: IR: 437[0m
+[0;32mI (38409) maxrefdes117: Sample 300: IR: 456[0m
+[0;32mI (38909) maxrefdes117: Sample 350: IR: 443[0m
+[0;32mI (39409) maxrefdes117: Sample 400: IR: 1582[0m
+[0;32mI (39909) maxrefdes117: Sample 450: IR: 535[0m
+[0;32mI (40409) PEAK_DETECT: Min: 371, Max: 134004, Mean: 28985, Amplitude: 133633[0m
+[0;32mI (40409) PEAK_DETECT: Peak 1 at sample 362, value: 71852[0m
+[0;32mI (40409) PEAK_DETECT: Peak 2 at sample 402, value: 109551[0m
+[0;32mI (40409) PEAK_DETECT: Peak 3 at sample 442, value: 129258[0m
+[0;32mI (40419) PEAK_DETECT: Total peaks found: 3[0m
+[0;32mI (40419) maxrefdes117: Sample 0: IR: 85284[0m
+[0;32mI (40429) maxrefdes117: *** Heart Rate: 36 BPM ***[0m
+[0;32mI (40929) maxrefdes117: Sample 50: IR: 114290[0m
+[0;32mI (41429) maxrefdes117: Sample 100: IR: 132943[0m
+[0;32mI (41929) maxrefdes117: Sample 150: IR: 130433[0m
+[0;32mI (42429) maxrefdes117: Sample 200: IR: 133251[0m
+[0;32mI (42929) maxrefdes117: Sample 250: IR: 133056[0m
+[0;32mI (43429) maxrefdes117: Sample 300: IR: 134496[0m
+[0;32mI (43929) maxrefdes117: Sample 350: IR: 133336[0m
+[0;32mI (44429) maxrefdes117: Sample 400: IR: 135017[0m
+[0;32mI (44929) maxrefdes117: Sample 450: IR: 132762[0m
+[0;32mI (45429) PEAK_DETECT: Min: 60692, Max: 135263, Mean: 130276, Amplitude: 74571[0m
+[0;32mI (45429) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (45429) maxrefdes117: Sample 0: IR: 134538[0m
+[0;32mI (45429) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (45929) maxrefdes117: Sample 50: IR: 133311[0m
+[0;32mI (46429) maxrefdes117: Sample 100: IR: 134071[0m
+[0;32mI (46929) maxrefdes117: Sample 150: IR: 134119[0m
+[0;32mI (47429) maxrefdes117: Sample 200: IR: 134130[0m
+[0;32mI (47929) maxrefdes117: Sample 250: IR: 134902[0m
+[0;32mI (48429) maxrefdes117: Sample 300: IR: 133485[0m
+[0;32mI (48929) maxrefdes117: Sample 350: IR: 135318[0m
+[0;32mI (49429) maxrefdes117: Sample 400: IR: 134237[0m
+[0;32mI (49929) maxrefdes117: Sample 450: IR: 135124[0m
+[0;32mI (50429) PEAK_DETECT: Min: 133066, Max: 136965, Mean: 134429, Amplitude: 3899[0m
+[0;32mI (50429) PEAK_DETECT: Peak 1 at sample 308, value: 135670[0m
+[0;32mI (50429) PEAK_DETECT: Peak 2 at sample 384, value: 135693[0m
+[0;32mI (50429) PEAK_DETECT: Peak 3 at sample 448, value: 135622[0m
+[0;32mI (50439) PEAK_DETECT: Total peaks found: 3[0m
+[0;32mI (50439) maxrefdes117: Sample 0: IR: 135243[0m
+[0;32mI (50449) maxrefdes117: *** Heart Rate: 36 BPM ***[0m
+[0;32mI (50949) maxrefdes117: Sample 50: IR: 134991[0m
+[0;32mI (51449) maxrefdes117: Sample 100: IR: 136824[0m
+[0;32mI (51949) maxrefdes117: Sample 150: IR: 134888[0m
+[0;32mI (52449) maxrefdes117: Sample 200: IR: 135977[0m
+[0;32mI (52949) maxrefdes117: Sample 250: IR: 134647[0m
+[0;32mI (53449) maxrefdes117: Sample 300: IR: 134175[0m
+[0;32mI (53949) maxrefdes117: Sample 350: IR: 134854[0m
+[0;32mI (54449) maxrefdes117: Sample 400: IR: 134162[0m
+[0;32mI (54949) maxrefdes117: Sample 450: IR: 136412[0m
+[0;32mI (55449) PEAK_DETECT: Min: 133691, Max: 136965, Mean: 135074, Amplitude: 3274[0m
+[0;32mI (55449) PEAK_DETECT: Peak 1 at sample 58, value: 136088[0m
+[0;32mI (55449) PEAK_DETECT: Peak 2 at sample 154, value: 136111[0m
+[0;32mI (55449) PEAK_DETECT: Peak 3 at sample 318, value: 136128[0m
+[0;32mI (55459) PEAK_DETECT: Total peaks found: 3[0m
+[0;32mI (55459) maxrefdes117: Sample 0: IR: 134473[0m
+[0;32mI (55969) maxrefdes117: Sample 50: IR: 133768[0m
+[0;32mI (56469) maxrefdes117: Sample 100: IR: 134588[0m
+[0;32mI (56969) maxrefdes117: Sample 150: IR: 133530[0m
+[0;32mI (57469) maxrefdes117: Sample 200: IR: 133421[0m
+[0;32mI (57969) maxrefdes117: Sample 250: IR: 133930[0m
+[0;32mI (58469) maxrefdes117: Sample 300: IR: 133679[0m
+[0;32mI (58969) maxrefdes117: Sample 350: IR: 134252[0m
+[0;32mI (59469) maxrefdes117: Sample 400: IR: 133350[0m
+[0;32mI (59969) maxrefdes117: Sample 450: IR: 134329[0m
+[0;32mI (60469) PEAK_DETECT: Min: 131797, Max: 135732, Mean: 133678, Amplitude: 3935[0m
+[0;32mI (60469) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (60469) maxrefdes117: Sample 0: IR: 133685[0m
+[0;32mI (60469) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (60969) maxrefdes117: Sample 50: IR: 131805[0m
+[0;32mI (61469) maxrefdes117: Sample 100: IR: 131790[0m
+[0;32mI (61969) maxrefdes117: Sample 150: IR: 132413[0m
+[0;32mI (62469) maxrefdes117: Sample 200: IR: 131872[0m
+[0;32mI (62969) maxrefdes117: Sample 250: IR: 132281[0m
+[0;32mI (63469) maxrefdes117: Sample 300: IR: 454[0m
+[0;32mI (63969) maxrefdes117: Sample 350: IR: 132252[0m
+[0;32mI (64469) maxrefdes117: Sample 400: IR: 397[0m
+[0;32mI (64969) maxrefdes117: Sample 450: IR: 418[0m
+[0;32mI (65469) PEAK_DETECT: Min: 361, Max: 134292, Mean: 93953, Amplitude: 133931[0m
+[0;32mI (65469) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (65469) maxrefdes117: Sample 0: IR: 396[0m
+[0;32mI (65969) maxrefdes117: Sample 50: IR: 404[0m
+[0;32mI (66469) maxrefdes117: Sample 100: IR: 405[0m
+[0;32mI (66969) maxrefdes117: Sample 150: IR: 405[0m
+[0;32mI (67469) maxrefdes117: Sample 200: IR: 408[0m
+[0;32mI (67969) maxrefdes117: Sample 250: IR: 401[0m
+[0;32mI (68469) maxrefdes117: Sample 300: IR: 416[0m
+[0;32mI (68969) maxrefdes117: Sample 350: IR: 403[0m
+[0;32mI (69469) maxrefdes117: Sample 400: IR: 413[0m
+[0;32mI (69969) maxrefdes117: Sample 450: IR: 411[0m
+[0;32mI (70469) PEAK_DETECT: Min: 388, Max: 426, Mean: 404, Amplitude: 38[0m
+[1;31mE (70469) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (70469) maxrefdes117: Sample 0: IR: 426[0m
+[0;32mI (70969) maxrefdes117: Sample 50: IR: 418[0m
+[0;32mI (71469) maxrefdes117: Sample 100: IR: 426[0m
+[0;32mI (71969) maxrefdes117: Sample 150: IR: 431[0m
+[0;32mI (72469) maxrefdes117: Sample 200: IR: 441[0m
+[0;32mI (72969) maxrefdes117: Sample 250: IR: 426[0m
+[0;32mI (73469) maxrefdes117: Sample 300: IR: 445[0m
+[0;32mI (73969) maxrefdes117: Sample 350: IR: 431[0m
+[0;32mI (74469) maxrefdes117: Sample 400: IR: 441[0m
+[0;32mI (74969) maxrefdes117: Sample 450: IR: 441[0m
+[0;32mI (75469) PEAK_DETECT: Min: 394, Max: 474, Mean: 433, Amplitude: 80[0m
+[1;31mE (75469) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (75469) maxrefdes117: Sample 0: IR: 460[0m
+[0;32mI (75969) maxrefdes117: Sample 50: IR: 470[0m
+[0;32mI (76469) maxrefdes117: Sample 100: IR: 470[0m
+[0;32mI (76969) maxrefdes117: Sample 150: IR: 460[0m
+[0;32mI (77469) maxrefdes117: Sample 200: IR: 492[0m
+[0;32mI (77969) maxrefdes117: Sample 250: IR: 470[0m
+[0;32mI (78469) maxrefdes117: Sample 300: IR: 492[0m
+[0;32mI (78969) maxrefdes117: Sample 350: IR: 477[0m
+[0;32mI (79469) maxrefdes117: Sample 400: IR: 501[0m
+[0;32mI (79969) maxrefdes117: Sample 450: IR: 499[0m
+[0;32mI (80469) PEAK_DETECT: Min: 433, Max: 521, Mean: 476, Amplitude: 88[0m
+[1;31mE (80469) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (80469) maxrefdes117: Sample 0: IR: 511[0m
+[0;32mI (80969) maxrefdes117: Sample 50: IR: 501[0m
+[0;32mI (81469) maxrefdes117: Sample 100: IR: 506[0m
+[0;32mI (81969) maxrefdes117: Sample 150: IR: 507[0m
+[0;32mI (82469) maxrefdes117: Sample 200: IR: 656[0m
+[0;32mI (82969) maxrefdes117: Sample 250: IR: 524[0m
+[0;32mI (83469) maxrefdes117: Sample 300: IR: 655[0m
+[0;32mI (83969) maxrefdes117: Sample 350: IR: 601[0m
+[0;32mI (84469) maxrefdes117: Sample 400: IR: 430[0m
+[0;32mI (84969) maxrefdes117: Sample 450: IR: 452[0m
+[0;32mI (85469) PEAK_DETECT: Min: 382, Max: 661, Mean: 520, Amplitude: 279[0m
+[0;32mI (85469) PEAK_DETECT: Peak 1 at sample 159, value: 616[0m
+[0;32mI (85469) PEAK_DETECT: Peak 2 at sample 199, value: 656[0m
+[0;32mI (85469) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (85469) maxrefdes117: Sample 0: IR: 523[0m
+[0;32mI (85479) maxrefdes117: *** Heart Rate: 24 BPM ***[0m
+[0;32mI (85979) maxrefdes117: Sample 50: IR: 532[0m
+[0;32mI (86479) maxrefdes117: Sample 100: IR: 534[0m
+[0;32mI (86979) maxrefdes117: Sample 150: IR: 551[0m
+[0;32mI (87479) maxrefdes117: Sample 200: IR: 562[0m
+[0;32mI (87979) maxrefdes117: Sample 250: IR: 576[0m
+[0;32mI (88479) maxrefdes117: Sample 300: IR: 567[0m
+[0;32mI (88979) maxrefdes117: Sample 350: IR: 588[0m
+[0;32mI (89479) maxrefdes117: Sample 400: IR: 574[0m
+[0;32mI (89979) maxrefdes117: Sample 450: IR: 585[0m
+[0;32mI (90479) PEAK_DETECT: Min: 523, Max: 591, Mean: 557, Amplitude: 68[0m
+[1;31mE (90479) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (90479) maxrefdes117: Sample 0: IR: 586[0m
+[0;32mI (90479) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (90979) maxrefdes117: Sample 50: IR: 588[0m
+[0;32mI (91479) maxrefdes117: Sample 100: IR: 584[0m
+[0;32mI (91979) maxrefdes117: Sample 150: IR: 603[0m
+[0;32mI (92479) maxrefdes117: Sample 200: IR: 594[0m
+[0;32mI (92979) maxrefdes117: Sample 250: IR: 603[0m
+[0;32mI (93479) maxrefdes117: Sample 300: IR: 613[0m
+[0;32mI (93979) maxrefdes117: Sample 350: IR: 613[0m
+[0;32mI (94479) maxrefdes117: Sample 400: IR: 613[0m
+[0;32mI (94979) maxrefdes117: Sample 450: IR: 610[0m
+[0;32mI (95479) PEAK_DETECT: Min: 566, Max: 659, Mean: 599, Amplitude: 93[0m
+[1;31mE (95479) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (95479) maxrefdes117: Sample 0: IR: 625[0m
+[0;32mI (95979) maxrefdes117: Sample 50: IR: 647[0m
+[0;32mI (96479) maxrefdes117: Sample 100: IR: 629[0m
+[0;32mI (96979) maxrefdes117: Sample 150: IR: 634[0m
+[0;32mI (97479) maxrefdes117: Sample 200: IR: 647[0m
+[0;32mI (97979) maxrefdes117: Sample 250: IR: 636[0m
+[0;32mI (98479) maxrefdes117: Sample 300: IR: 628[0m
+[0;32mI (98979) maxrefdes117: Sample 350: IR: 677[0m
+[0;32mI (99479) maxrefdes117: Sample 400: IR: 647[0m
+[0;32mI (99979) maxrefdes117: Sample 450: IR: 670[0m
+[0;32mI (100479) PEAK_DETECT: Min: 602, Max: 705, Mean: 642, Amplitude: 103[0m
+[0;32mI (100479) PEAK_DETECT: Peak 1 at sample 157, value: 705[0m
+[0;32mI (100479) PEAK_DETECT: Peak 2 at sample 337, value: 673[0m
+[0;32mI (100479) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (100489) maxrefdes117: Sample 0: IR: 666[0m
+[0;32mI (100489) maxrefdes117: *** Heart Rate: 24 BPM ***[0m
+[0;32mI (100989) maxrefdes117: Sample 50: IR: 659[0m
+[0;32mI (101489) maxrefdes117: Sample 100: IR: 669[0m
+[0;32mI (101989) maxrefdes117: Sample 150: IR: 671[0m
+[0;32mI (102489) maxrefdes117: Sample 200: IR: 668[0m
+[0;32mI (102989) maxrefdes117: Sample 250: IR: 660[0m
+[0;32mI (103489) maxrefdes117: Sample 300: IR: 698[0m
+[0;32mI (103989) maxrefdes117: Sample 350: IR: 690[0m
+[0;32mI (104489) maxrefdes117: Sample 400: IR: 788[0m
+[0;32mI (104989) maxrefdes117: Sample 450: IR: 796[0m
+[0;32mI (105489) PEAK_DETECT: Min: 566, Max: 823, Mean: 701, Amplitude: 257[0m
+[0;32mI (105489) PEAK_DETECT: Peak 1 at sample 272, value: 788[0m
+[0;32mI (105489) PEAK_DETECT: Peak 2 at sample 312, value: 809[0m
+[0;32mI (105489) PEAK_DETECT: Peak 3 at sample 352, value: 779[0m
+[0;32mI (105499) PEAK_DETECT: Total peaks found: 3[0m
+[0;32mI (105499) maxrefdes117: Sample 0: IR: 684[0m
+[0;32mI (105499) maxrefdes117: *** Heart Rate: 36 BPM ***[0m
+[0;32mI (106009) maxrefdes117: Sample 50: IR: 693[0m
+[0;32mI (106509) maxrefdes117: Sample 100: IR: 610[0m
+[0;32mI (107009) maxrefdes117: Sample 150: IR: 716[0m
+[0;32mI (107509) maxrefdes117: Sample 200: IR: 693[0m
+[0;32mI (108009) maxrefdes117: Sample 250: IR: 718[0m
+[0;32mI (108509) maxrefdes117: Sample 300: IR: 710[0m
+[0;32mI (109009) maxrefdes117: Sample 350: IR: 760[0m
+[0;32mI (109509) maxrefdes117: Sample 400: IR: 706[0m
+[0;32mI (110009) maxrefdes117: Sample 450: IR: 729[0m
+[0;32mI (110509) PEAK_DETECT: Min: 544, Max: 760, Mean: 693, Amplitude: 216[0m
+[0;32mI (110509) PEAK_DETECT: Peak 1 at sample 349, value: 760[0m
+[0;32mI (110509) PEAK_DETECT: Total peaks found: 1[0m
+[0;32mI (110509) maxrefdes117: Sample 0: IR: 745[0m
+[0;32mI (110509) maxrefdes117: *** Heart Rate: 12 BPM ***[0m
+[0;32mI (111019) maxrefdes117: Sample 50: IR: 742[0m
+[0;32mI (111519) maxrefdes117: Sample 100: IR: 732[0m
+[0;32mI (112019) maxrefdes117: Sample 150: IR: 786[0m
+[0;32mI (112519) maxrefdes117: Sample 200: IR: 744[0m
+[0;32mI (113019) maxrefdes117: Sample 250: IR: 725[0m
+[0;32mI (113519) maxrefdes117: Sample 300: IR: 749[0m
+[0;32mI (114019) maxrefdes117: Sample 350: IR: 748[0m
+[0;32mI (114519) maxrefdes117: Sample 400: IR: 762[0m
+[0;32mI (115019) maxrefdes117: Sample 450: IR: 750[0m
+[0;32mI (115519) PEAK_DETECT: Min: 705, Max: 786, Mean: 743, Amplitude: 81[0m
+[1;31mE (115519) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (115519) maxrefdes117: Sample 0: IR: 756[0m
+[0;32mI (115519) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (116029) maxrefdes117: Sample 50: IR: 760[0m
+[0;32mI (116529) maxrefdes117: Sample 100: IR: 758[0m
+[0;32mI (117029) maxrefdes117: Sample 150: IR: 774[0m
+[0;32mI (117529) maxrefdes117: Sample 200: IR: 775[0m
+[0;32mI (118029) maxrefdes117: Sample 250: IR: 770[0m
+[0;32mI (118529) maxrefdes117: Sample 300: IR: 750[0m
+[0;32mI (119029) maxrefdes117: Sample 350: IR: 786[0m
+[0;32mI (119529) maxrefdes117: Sample 400: IR: 775[0m
+[0;32mI (120029) maxrefdes117: Sample 450: IR: 763[0m
+[0;32mI (120529) PEAK_DETECT: Min: 705, Max: 809, Mean: 768, Amplitude: 104[0m
+[0;32mI (120529) PEAK_DETECT: Peak 1 at sample 315, value: 804[0m
+[0;32mI (120529) PEAK_DETECT: Peak 2 at sample 355, value: 801[0m
+[0;32mI (120529) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (120539) maxrefdes117: Sample 0: IR: 786[0m
+[0;32mI (120539) maxrefdes117: *** Heart Rate: 24 BPM ***[0m
+[0;32mI (121039) maxrefdes117: Sample 50: IR: 779[0m
+[0;32mI (121539) maxrefdes117: Sample 100: IR: 781[0m
+[0;32mI (122039) maxrefdes117: Sample 150: IR: 791[0m
+[0;32mI (122539) maxrefdes117: Sample 200: IR: 789[0m
+[0;32mI (123039) maxrefdes117: Sample 250: IR: 783[0m
+[0;32mI (123539) maxrefdes117: Sample 300: IR: 837[0m
+[0;32mI (124039) maxrefdes117: Sample 350: IR: 797[0m
+[0;32mI (124539) maxrefdes117: Sample 400: IR: 816[0m
+[0;32mI (125039) maxrefdes117: Sample 450: IR: 935[0m
+[0;32mI (125539) PEAK_DETECT: Min: 678, Max: 948, Mean: 819, Amplitude: 270[0m
+[0;32mI (125539) PEAK_DETECT: Peak 1 at sample 314, value: 905[0m
+[0;32mI (125539) PEAK_DETECT: Peak 2 at sample 354, value: 938[0m
+[0;32mI (125539) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (125549) maxrefdes117: Sample 0: IR: 916[0m
+[0;32mI (126049) maxrefdes117: Sample 50: IR: 721[0m
+[0;32mI (126549) maxrefdes117: Sample 100: IR: 684[0m
+[0;32mI (127049) maxrefdes117: Sample 150: IR: 797[0m
+[0;32mI (127549) maxrefdes117: Sample 200: IR: 816[0m
+[0;32mI (128049) maxrefdes117: Sample 250: IR: 817[0m
+[0;32mI (128549) maxrefdes117: Sample 300: IR: 829[0m
+[0;32mI (129049) maxrefdes117: Sample 350: IR: 823[0m
+[0;32mI (129549) maxrefdes117: Sample 400: IR: 825[0m
+[0;32mI (130049) maxrefdes117: Sample 450: IR: 838[0m
+[0;32mI (130549) PEAK_DETECT: Min: 648, Max: 904, Mean: 806, Amplitude: 256[0m
+[0;32mI (130549) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (130549) maxrefdes117: Sample 0: IR: 852[0m
+[0;32mI (130549) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (131049) maxrefdes117: Sample 50: IR: 839[0m
+[0;32mI (131549) maxrefdes117: Sample 100: IR: 843[0m
+[0;32mI (132049) maxrefdes117: Sample 150: IR: 841[0m
+[0;32mI (132549) maxrefdes117: Sample 200: IR: 853[0m
+[0;32mI (133049) maxrefdes117: Sample 250: IR: 849[0m
+[0;32mI (133549) maxrefdes117: Sample 300: IR: 856[0m
+[0;32mI (134049) maxrefdes117: Sample 350: IR: 845[0m
+[0;32mI (134549) maxrefdes117: Sample 400: IR: 831[0m
+[0;32mI (135049) maxrefdes117: Sample 450: IR: 877[0m
+[0;32mI (135549) PEAK_DETECT: Min: 818, Max: 951, Mean: 853, Amplitude: 133[0m
+[0;32mI (135549) PEAK_DETECT: Peak 1 at sample 336, value: 951[0m
+[0;32mI (135549) PEAK_DETECT: Total peaks found: 1[0m
+[0;32mI (135549) maxrefdes117: Sample 0: IR: 878[0m
+[0;32mI (135549) maxrefdes117: *** Heart Rate: 12 BPM ***[0m
+[0;32mI (136059) maxrefdes117: Sample 50: IR: 880[0m
+[0;32mI (136559) maxrefdes117: Sample 100: IR: 871[0m
+[0;32mI (137059) maxrefdes117: Sample 150: IR: 864[0m
+[0;32mI (137559) maxrefdes117: Sample 200: IR: 874[0m
+[0;32mI (138059) maxrefdes117: Sample 250: IR: 875[0m
+[0;32mI (138559) maxrefdes117: Sample 300: IR: 903[0m
+[0;32mI (139059) maxrefdes117: Sample 350: IR: 860[0m
+[0;32mI (139559) maxrefdes117: Sample 400: IR: 902[0m
+[0;32mI (140059) maxrefdes117: Sample 450: IR: 892[0m
+[0;32mI (140559) PEAK_DETECT: Min: 856, Max: 904, Mean: 876, Amplitude: 48[0m
+[1;31mE (140559) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (140559) maxrefdes117: Sample 0: IR: 896[0m
+[0;32mI (140559) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (141069) maxrefdes117: Sample 50: IR: 882[0m
+[0;32mI (141569) maxrefdes117: Sample 100: IR: 894[0m
+[0;32mI (142069) maxrefdes117: Sample 150: IR: 890[0m
+[0;32mI (142569) maxrefdes117: Sample 200: IR: 892[0m
+[0;32mI (143069) maxrefdes117: Sample 250: IR: 875[0m
+[0;32mI (143569) maxrefdes117: Sample 300: IR: 967[0m
+[0;32mI (144069) maxrefdes117: Sample 350: IR: 1023[0m
+[0;32mI (144569) maxrefdes117: Sample 400: IR: 885[0m
+[0;32mI (145069) maxrefdes117: Sample 450: IR: 910[0m
+[0;32mI (145569) PEAK_DETECT: Min: 768, Max: 1049, Mean: 907, Amplitude: 281[0m
+[0;32mI (145569) PEAK_DETECT: Peak 1 at sample 202, value: 1007[0m
+[0;32mI (145569) PEAK_DETECT: Peak 2 at sample 242, value: 1020[0m
+[0;32mI (145569) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (145579) maxrefdes117: Sample 0: IR: 883[0m
+[0;32mI (145579) maxrefdes117: *** Heart Rate: 24 BPM ***[0m
+[0;32mI (146079) maxrefdes117: Sample 50: IR: 854[0m
+[0;32mI (146579) maxrefdes117: Sample 100: IR: 907[0m
+[0;32mI (147079) maxrefdes117: Sample 150: IR: 902[0m
+[0;32mI (147579) maxrefdes117: Sample 200: IR: 929[0m
+[0;32mI (148079) maxrefdes117: Sample 250: IR: 912[0m
+[0;32mI (148579) maxrefdes117: Sample 300: IR: 917[0m
+[0;32mI (149079) maxrefdes117: Sample 350: IR: 925[0m
+[0;32mI (149579) maxrefdes117: Sample 400: IR: 936[0m
+[0;32mI (150079) maxrefdes117: Sample 450: IR: 933[0m
+[0;32mI (150579) PEAK_DETECT: Min: 854, Max: 962, Mean: 920, Amplitude: 108[0m
+[0;32mI (150579) PEAK_DETECT: Peak 1 at sample 440, value: 960[0m
+[0;32mI (150579) PEAK_DETECT: Total peaks found: 1[0m
+[0;32mI (150579) maxrefdes117: Sample 0: IR: 927[0m
+[0;32mI (150579) maxrefdes117: *** Heart Rate: 12 BPM ***[0m
+[0;32mI (151089) maxrefdes117: Sample 50: IR: 943[0m
+[0;32mI (151589) maxrefdes117: Sample 100: IR: 946[0m
+[0;32mI (152089) maxrefdes117: Sample 150: IR: 949[0m
+[0;32mI (152589) maxrefdes117: Sample 200: IR: 959[0m
+[0;32mI (153089) maxrefdes117: Sample 250: IR: 946[0m
+[0;32mI (153589) maxrefdes117: Sample 300: IR: 940[0m
+[0;32mI (154089) maxrefdes117: Sample 350: IR: 959[0m
+[0;32mI (154589) maxrefdes117: Sample 400: IR: 961[0m
+[0;32mI (155089) maxrefdes117: Sample 450: IR: 944[0m
+[0;32mI (155589) PEAK_DETECT: Min: 912, Max: 979, Mean: 950, Amplitude: 67[0m
+[1;31mE (155589) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (155589) maxrefdes117: Sample 0: IR: 959[0m
+[0;32mI (155589) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (156099) maxrefdes117: Sample 50: IR: 947[0m
+[0;32mI (156599) maxrefdes117: Sample 100: IR: 961[0m
+[0;32mI (157099) maxrefdes117: Sample 150: IR: 966[0m
+[0;32mI (157599) maxrefdes117: Sample 200: IR: 964[0m
+[0;32mI (158099) maxrefdes117: Sample 250: IR: 986[0m
+[0;32mI (158599) maxrefdes117: Sample 300: IR: 981[0m
+[0;32mI (159099) maxrefdes117: Sample 350: IR: 974[0m
+[0;32mI (159599) maxrefdes117: Sample 400: IR: 956[0m
+[0;32mI (160099) maxrefdes117: Sample 450: IR: 980[0m
+[0;32mI (160599) PEAK_DETECT: Min: 947, Max: 1120, Mean: 973, Amplitude: 173[0m
+[0;32mI (160599) PEAK_DETECT: Peak 1 at sample 458, value: 1030[0m
+[0;32mI (160599) PEAK_DETECT: Total peaks found: 1[0m
+[0;32mI (160599) maxrefdes117: Sample 0: IR: 974[0m
+[0;32mI (160599) maxrefdes117: *** Heart Rate: 12 BPM ***[0m
+[0;32mI (161109) maxrefdes117: Sample 50: IR: 1003[0m
+[0;32mI (161609) maxrefdes117: Sample 100: IR: 1074[0m
+[0;32mI (162109) maxrefdes117: Sample 150: IR: 1100[0m
+[0;32mI (162609) maxrefdes117: Sample 200: IR: 936[0m
+[0;32mI (163109) maxrefdes117: Sample 250: IR: 878[0m
+[0;32mI (163609) maxrefdes117: Sample 300: IR: 984[0m
+[0;32mI (164109) maxrefdes117: Sample 350: IR: 1015[0m
+[0;32mI (164609) maxrefdes117: Sample 400: IR: 1002[0m
+[0;32mI (165109) maxrefdes117: Sample 450: IR: 1004[0m
+[0;32mI (165609) PEAK_DETECT: Min: 855, Max: 1131, Mean: 998, Amplitude: 276[0m
+[0;32mI (165609) PEAK_DETECT: Total peaks found: 0[0m
+[0;32mI (165609) maxrefdes117: Sample 0: IR: 993[0m
+[0;32mI (165609) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (166109) maxrefdes117: Sample 50: IR: 1010[0m
+[0;32mI (166609) maxrefdes117: Sample 100: IR: 996[0m
+[0;32mI (167109) maxrefdes117: Sample 150: IR: 1007[0m
+[0;32mI (167609) maxrefdes117: Sample 200: IR: 1008[0m
+[0;32mI (168109) maxrefdes117: Sample 250: IR: 1030[0m
+[0;32mI (168609) maxrefdes117: Sample 300: IR: 1018[0m
+[0;32mI (169109) maxrefdes117: Sample 350: IR: 1035[0m
+[0;32mI (169609) maxrefdes117: Sample 400: IR: 1029[0m
+[0;32mI (170109) maxrefdes117: Sample 450: IR: 1020[0m
+[0;32mI (170609) PEAK_DETECT: Min: 985, Max: 1052, Mean: 1019, Amplitude: 67[0m
+[1;31mE (170609) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (170609) maxrefdes117: Sample 0: IR: 1025[0m
+[0;32mI (171109) maxrefdes117: Sample 50: IR: 1042[0m
+[0;32mI (171609) maxrefdes117: Sample 100: IR: 1036[0m
+[0;32mI (172109) maxrefdes117: Sample 150: IR: 1029[0m
+[0;32mI (172609) maxrefdes117: Sample 200: IR: 1021[0m
+[0;32mI (173109) maxrefdes117: Sample 250: IR: 1029[0m
+[0;32mI (173609) maxrefdes117: Sample 300: IR: 1036[0m
+[0;32mI (174109) maxrefdes117: Sample 350: IR: 1041[0m
+[0;32mI (174609) maxrefdes117: Sample 400: IR: 1035[0m
+[0;32mI (175109) maxrefdes117: Sample 450: IR: 1048[0m
+[0;32mI (175609) PEAK_DETECT: Min: 1010, Max: 1061, Mean: 1034, Amplitude: 51[0m
+[1;31mE (175609) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (175609) maxrefdes117: Sample 0: IR: 1038[0m
+[0;32mI (176109) maxrefdes117: Sample 50: IR: 1051[0m
+[0;32mI (176609) maxrefdes117: Sample 100: IR: 1052[0m
+[0;32mI (177109) maxrefdes117: Sample 150: IR: 1053[0m
+[0;32mI (177609) maxrefdes117: Sample 200: IR: 1035[0m
+[0;32mI (178109) maxrefdes117: Sample 250: IR: 1074[0m
+[0;32mI (178609) maxrefdes117: Sample 300: IR: 1063[0m
+[0;32mI (179109) maxrefdes117: Sample 350: IR: 1182[0m
+[0;32mI (179609) maxrefdes117: Sample 400: IR: 1029[0m
+[0;32mI (180109) maxrefdes117: Sample 450: IR: 958[0m
+[0;32mI (180609) PEAK_DETECT: Min: 899, Max: 1195, Mean: 1058, Amplitude: 296[0m
+[0;32mI (180609) PEAK_DETECT: Peak 1 at sample 216, value: 1155[0m
+[0;32mI (180609) PEAK_DETECT: Peak 2 at sample 256, value: 1169[0m
+[0;32mI (180609) PEAK_DETECT: Total peaks found: 2[0m
+[0;32mI (180619) maxrefdes117: Sample 0: IR: 1050[0m
+[0;32mI (180619) maxrefdes117: *** Heart Rate: 24 BPM ***[0m
+[0;32mI (181119) maxrefdes117: Sample 50: IR: 1055[0m
+[0;32mI (181619) maxrefdes117: Sample 100: IR: 1051[0m
+[0;32mI (182119) maxrefdes117: Sample 150: IR: 1062[0m
+[0;32mI (182619) maxrefdes117: Sample 200: IR: 1049[0m
+[0;32mI (183119) maxrefdes117: Sample 250: IR: 1076[0m
+[0;32mI (183619) maxrefdes117: Sample 300: IR: 1047[0m
+[0;32mI (184119) maxrefdes117: Sample 350: IR: 1080[0m
+[0;32mI (184619) maxrefdes117: Sample 400: IR: 1069[0m
+[0;32mI (185119) maxrefdes117: Sample 450: IR: 1068[0m
+[0;32mI (185619) PEAK_DETECT: Min: 973, Max: 1100, Mean: 1061, Amplitude: 127[0m
+[0;32mI (185619) PEAK_DETECT: Peak 1 at sample 210, value: 1100[0m
+[0;32mI (185619) PEAK_DETECT: Total peaks found: 1[0m
+[0;32mI (185619) maxrefdes117: Sample 0: IR: 1056[0m
+[0;32mI (185619) maxrefdes117: *** Heart Rate: 12 BPM ***[0m
+[0;32mI (186129) maxrefdes117: Sample 50: IR: 1088[0m
+[0;32mI (186629) maxrefdes117: Sample 100: IR: 1072[0m
+[0;32mI (187129) maxrefdes117: Sample 150: IR: 1079[0m
+[0;32mI (187629) maxrefdes117: Sample 200: IR: 1081[0m
+[0;32mI (188129) maxrefdes117: Sample 250: IR: 1080[0m
+[0;32mI (188629) maxrefdes117: Sample 300: IR: 1089[0m
+[0;32mI (189129) maxrefdes117: Sample 350: IR: 1104[0m
+[0;32mI (189629) maxrefdes117: Sample 400: IR: 1073[0m
+[0;32mI (190129) maxrefdes117: Sample 450: IR: 1093[0m
+[0;32mI (190629) PEAK_DETECT: Min: 1056, Max: 1108, Mean: 1082, Amplitude: 52[0m
+[1;31mE (190629) PEAK_DETECT: Amplitude too low - bad sensor contact?[0m
+[0;32mI (190629) maxrefdes117: Sample 0: IR: 1106[0m
+[0;32mI (190629) maxrefdes117: *** Heart Rate: 0 BPM ***[0m
+[0;32mI (191139) maxrefdes117: Sample 50: IR: 1090[0m
+[0;32mI (191639) maxrefdes117: Sample 100: IR: 1086[0m
+[0;32mI (192139) maxrefdes117: Sample 150: IR: 1082[0m
+[0;32mI (192639) maxrefdes117: Sample 200: IR: 1082[0m
+[0;32mI (193139) maxrefdes117: Sample 250: IR: 1099[0m

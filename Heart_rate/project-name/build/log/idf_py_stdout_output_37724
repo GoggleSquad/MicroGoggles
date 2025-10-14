@@ -1,0 +1,168 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\project-name.elf C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct  9 2025 12:03:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b8f0h ( 47344) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001b918 vaddr=3fc92b00 size=02ae8h ( 10984) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e408 vaddr=40374000 size=01c10h (  7184) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b520h (111904) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=0003b548 vaddr=40375c10 size=0ce60h ( 52832) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=000483b0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (146) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (146) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     project-name[0m
+[0;32mI (172) app_init: App version:      1[0m
+[0;32mI (175) app_init: Compile time:     Oct  9 2025 12:03:15[0m
+[0;32mI (180) app_init: ELF file SHA256:  9cbcc5bec...[0m
+[0;32mI (185) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC96080 len 00053690 (333 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+[0;32mI (279) maxrefdes117: I2C initialized successfully[0m
+[0;32mI (279) maxrefdes117: MAX30102 Part ID: 0x15[0m
+[0;32mI (579) maxrefdes117: MAX30102 configured for SpO2 mode[0m
+[0;32mI (819) maxrefdes117: IR: 1084, AC: 17874[0m
+[0;32mI (1069) maxrefdes117: IR: 1078, AC: -13484[0m
+[0;32mI (1319) maxrefdes117: IR: 1126, AC: -22498[0m
+[0;32mI (1569) maxrefdes117: IR_raw: 1056, DC: 4136, AC: 7854, BPM: 1080[0m
+[0;32mI (1819) maxrefdes117: IR: 1077, AC: -18654[0m
+[0;32mI (2069) maxrefdes117: IR: 1087, AC: -19596[0m
+[0;32mI (2319) maxrefdes117: IR: 1045, AC: 19026[0m
+[0;32mI (2569) maxrefdes117: IR_raw: 1102, DC: 4293, AC: -8339, BPM: 1200[0m
+[0;32mI (2819) maxrefdes117: IR: 1064, AC: 21355[0m
+[0;32mI (3069) maxrefdes117: IR: 1086, AC: -11343[0m
+[0;32mI (3319) maxrefdes117: IR: 997, AC: -24524[0m
+[0;32mI (3569) maxrefdes117: IR_raw: 1109, DC: 4385, AC: 5061, BPM: 1200[0m
+[0;32mI (3819) maxrefdes117: IR: 1083, AC: 18797[0m
+[0;32mI (4069) maxrefdes117: IR: 1085, AC: -18999[0m
+[0;32mI (4319) maxrefdes117: IR: 994, AC: 16869[0m
+[0;32mI (4569) maxrefdes117: IR_raw: 1156, DC: 4544, AC: -6911, BPM: 1080[0m
+[0;32mI (4819) maxrefdes117: IR: 1085, AC: -16941[0m
+[0;32mI (5069) maxrefdes117: IR: 1075, AC: -27726[0m
+[0;32mI (5319) maxrefdes117: IR: 971, AC: 12812[0m
+[0;32mI (5569) maxrefdes117: IR_raw: 68122, DC: 227414, AC: -28508, BPM: 1290[0m
+[0;32mI (5819) maxrefdes117: IR: 114677, AC: -12196[0m
+[0;32mI (6069) maxrefdes117: IR: 115986, AC: 19938[0m
+[0;32mI (6319) maxrefdes117: IR: 118335, AC: 11183[0m
+[0;32mI (6569) maxrefdes117: IR_raw: 120541, DC: 465482, AC: 23553, BPM: 1230[0m
+[0;32mI (6819) maxrefdes117: IR: 118326, AC: 15107[0m
+[0;32mI (7069) maxrefdes117: IR: 442, AC: -24091[0m
+[0;32mI (7319) maxrefdes117: IR: 396, AC: -8305[0m
+[0;32mI (7569) maxrefdes117: IR_raw: 532, DC: 2008, AC: 22328, BPM: 1290[0m
+[0;32mI (7819) maxrefdes117: IR: 387, AC: -13337[0m
+[0;32mI (8069) maxrefdes117: IR: 433, AC: -13665[0m
+[0;32mI (8319) maxrefdes117: IR: 521, AC: 10745[0m
+[0;32mI (8569) maxrefdes117: IR_raw: 752, DC: 2808, AC: 13037, BPM: 1260[0m
+[0;32mI (8819) maxrefdes117: IR: 645, AC: 12991[0m
+[0;32mI (9069) maxrefdes117: IR: 650, AC: 8033[0m
+[0;32mI (9319) maxrefdes117: IR: 677, AC: 18223[0m
+[0;32mI (9569) maxrefdes117: IR_raw: 817, DC: 3129, AC: -14288, BPM: 1200[0m
+[0;32mI (9819) maxrefdes117: IR: 710, AC: -13194[0m
+[0;32mI (10069) maxrefdes117: IR: 727, AC: -12428[0m
+[0;32mI (10319) maxrefdes117: IR: 734, AC: -16595[0m
+[0;32mI (10569) maxrefdes117: IR_raw: 909, DC: 3386, AC: 18773, BPM: 1200[0m
+[0;32mI (10819) maxrefdes117: IR: 754, AC: -28304[0m
+[0;32mI (11069) maxrefdes117: IR: 760, AC: 14039[0m
+[0;32mI (11319) maxrefdes117: IR: 656, AC: 18508[0m
+[0;32mI (11569) maxrefdes117: IR_raw: 910, DC: 3525, AC: -18876, BPM: 1230[0m
+[0;32mI (11819) maxrefdes117: IR: 817, AC: -10551[0m
+[0;32mI (12069) maxrefdes117: IR: 809, AC: -28132[0m
+[0;32mI (12319) maxrefdes117: IR: 704, AC: 20506[0m
+[0;32mI (12569) maxrefdes117: IR_raw: 926, DC: 3619, AC: 8882, BPM: 1110[0m
+[0;32mI (12819) maxrefdes117: IR: 851, AC: 14501[0m
+[0;32mI (13069) maxrefdes117: IR: 830, AC: 21979[0m
+[0;32mI (13319) maxrefdes117: IR: 789, AC: 17724[0m
+[0;32mI (13569) maxrefdes117: IR_raw: 897, DC: 3590, AC: -27439, BPM: 840[0m
+[0;32mI (13819) maxrefdes117: IR: 870, AC: -18285[0m
+[0;32mI (14069) maxrefdes117: IR: 880, AC: -17592[0m
+[0;32mI (14319) maxrefdes117: IR: 843, AC: 17053[0m
+[0;32mI (14569) maxrefdes117: IR_raw: 953, DC: 3666, AC: -13893, BPM: 1020[0m
+[0;32mI (14819) maxrefdes117: IR: 885, AC: -7190[0m
+[0;32mI (15069) maxrefdes117: IR: 893, AC: 15033[0m
+[0;32mI (15319) maxrefdes117: IR: 880, AC: 19520[0m
+[0;32mI (15569) maxrefdes117: IR_raw: 902, DC: 3568, AC: 22024, BPM: 1320[0m
+[0;32mI (15819) maxrefdes117: IR: 921, AC: 20895[0m
+[0;32mI (16069) maxrefdes117: IR: 890, AC: -24096[0m
+[0;32mI (16319) maxrefdes117: IR: 1017, AC: -22726[0m
+[0;32mI (16569) maxrefdes117: IR_raw: 896, DC: 3533, AC: -28421, BPM: 1410[0m
+[0;32mI (16819) maxrefdes117: IR: 932, AC: -22926[0m
+[0;32mI (17069) maxrefdes117: IR: 936, AC: 10758[0m
+[0;32mI (17319) maxrefdes117: IR: 1047, AC: -21668[0m
+[0;32mI (17569) maxrefdes117: IR_raw: 937, DC: 3640, AC: -21047, BPM: 1320[0m
+[0;32mI (17819) maxrefdes117: IR: 933, AC: -25675[0m
+[0;32mI (18069) maxrefdes117: IR: 963, AC: 14947[0m
+[0;32mI (18319) maxrefdes117: IR: 1018, AC: -27541[0m
+[0;32mI (18569) maxrefdes117: IR_raw: 963, DC: 3706, AC: 11227, BPM: 990[0m
+[0;32mI (18819) maxrefdes117: IR: 965, AC: -23672[0m
+[0;32mI (19069) maxrefdes117: IR: 973, AC: 13452[0m
+[0;32mI (19319) maxrefdes117: IR: 1118, AC: -11980[0m
+[0;32mI (19569) maxrefdes117: IR_raw: 954, DC: 3686, AC: -18878, BPM: 1080[0m
+[0;32mI (19819) maxrefdes117: IR: 977, AC: -26163[0m
+[0;32mI (20069) maxrefdes117: IR: 880, AC: 19895[0m
+[0;32mI (20319) maxrefdes117: IR: 1040, AC: -16799[0m
+[0;32mI (20569) maxrefdes117: IR_raw: 976, DC: 3759, AC: -16534, BPM: 1020[0m
+[0;32mI (20819) maxrefdes117: IR: 996, AC: 6730[0m
+[0;32mI (21069) maxrefdes117: IR: 916, AC: -10773[0m
+[0;32mI (21319) maxrefdes117: IR: 1023, AC: 17156[0m
+[0;32mI (21569) maxrefdes117: IR_raw: 1013, DC: 3888, AC: -13351, BPM: 1140[0m
+[0;32mI (21819) maxrefdes117: IR: 1008, AC: 6012[0m
+[0;32mI (22069) maxrefdes117: IR: 953, AC: 6604[0m
+[0;32mI (22319) maxrefdes117: IR: 1028, AC: -22356[0m
+[0;32mI (22569) maxrefdes117: IR_raw: 1028, DC: 3928, AC: -16895, BPM: 1350[0m
+[0;32mI (22819) maxrefdes117: IR: 1022, AC: 7389[0m
+[0;32mI (23069) maxrefdes117: IR: 996, AC: -20162[0m
+[0;32mI (23319) maxrefdes117: IR: 997, AC: 5914[0m
+[0;32mI (23569) maxrefdes117: IR_raw: 1036, DC: 3973, AC: 16682, BPM: 1110[0m
+[0;32mI (23819) maxrefdes117: IR: 1016, AC: 19808[0m
+[0;32mI (24069) maxrefdes117: IR: 1114, AC: -28422[0m
+[0;32mI (24319) maxrefdes117: IR: 1046, AC: -9854[0m
+[0;32mI (24569) maxrefdes117: IR_raw: 1022, DC: 3933, AC: 8255, BPM: 1080[0m
+[0;32mI (24819) maxrefdes117: IR: 1048, AC: 22397[0m
+[0;32mI (25069) maxrefdes117: IR: 1164, AC: -9490[0m
+[0;32mI (25319) maxrefdes117: IR: 1062, AC: -18577[0m
+[0;32mI (25569) maxrefdes117: IR_raw: 1043, DC: 4023, AC: 11533, BPM: 990[0m
+[0;32mI (25819) maxrefdes117: IR: 1024, AC: 21856[0m
+[0;32mI (26069) maxrefdes117: IR: 1177, AC: 17899[0m
+[0;32mI (26319) maxrefdes117: IR: 1049, AC: 21177[0m
+[0;32mI (26569) maxrefdes117: IR_raw: 1055, DC: 3998, AC: -15117, BPM: 1140[0m
+[0;32mI (26819) maxrefdes117: IR: 1059, AC: -16232[0m
+[0;32mI (27069) maxrefdes117: IR: 1172, AC: -15852[0m
+[0;32mI (27319) maxrefdes117: IR: 1045, AC: 13042[0m
+[0;32mI (27569) maxrefdes117: IR_raw: 1072, DC: 4061, AC: -24266, BPM: 1110[0m

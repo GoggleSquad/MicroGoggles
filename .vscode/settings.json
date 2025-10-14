@@ -1,0 +1,13 @@
+{
+    "idf.portWin": "COM7",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.espIdfPathWin": "C:\\Users\\pprat\\esp\\v5.5.1\\esp-idf",
+    "idf.toolsPathWin": "C:\\Users\\pprat\\.espressif",
+    "idf.pythonInstallPath": "C:\\Users\\pprat\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
+    "files.associations": {
+        "max30102.h": "c",
+        "algorithm_by_rf.h": "c"
+    }
+}

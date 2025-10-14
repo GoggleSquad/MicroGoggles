@@ -1,0 +1,28 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\bootloader\esp-idf\esptool_py && C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/pprat/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/pprat/Senior_Design/Heart_rate/project-name/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/i2c_basic_example_main.c.obj
+C:/Users/pprat/Senior_Design/Heart_rate/project-name/main/i2c_basic_example_main.c: In function 'app_main':
+C:/Users/pprat/Senior_Design/Heart_rate/project-name/main/i2c_basic_example_main.c:178:13: warning: unused variable 'dc_estimate' [-Wunused-variable]
+  178 |     int32_t dc_estimate = 0;
+      |             ^~~~~~~~~~~
+C:/Users/pprat/Senior_Design/Heart_rate/project-name/main/i2c_basic_example_main.c:177:9: warning: unused variable 'samples_collected' [-Wunused-variable]
+  177 |     int samples_collected = 0;
+      |         ^~~~~~~~~~~~~~~~~
+C:/Users/pprat/Senior_Design/Heart_rate/project-name/main/i2c_basic_example_main.c: At top level:
+C:/Users/pprat/Senior_Design/Heart_rate/project-name/main/i2c_basic_example_main.c:138:23: warning: 'filter_state' defined but not used [-Wunused-variable]
+  138 | static filter_state_t filter_state = {0};
+      |                       ^~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable project-name.elf
+FAILED: project-name.elf 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Users\pprat\.espressif\tools\xtensa-esp-elf\esp-14.2.0_20241119\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32S3=0 -Wl,--Map=C:/Users/pprat/Senior_Design/Heart_rate/project-name/build/project-name.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32s3.peripherals.ld -T esp32s3.rom.ld -T esp32s3.rom.api.ld -T esp32s3.rom.bt_funcs.ld -T esp32s3.rom.libgcc.ld -T esp32s3.rom.wdt.ld -T esp32s3.rom.version.ld -T esp32s3.rom.ble_master.ld -T esp32s3.rom.ble_50.ld -T esp32s3.rom.ble_smp.ld -T esp32s3.rom.ble_dtm.ld -T esp32s3.rom.ble_test.ld -T esp32s3.rom.ble_scan.ld -T esp32s3.rom.libc.ld -T esp32s3.rom.newlib.ld -T memory.ld -T sections.ld @CMakeFiles\project-name.elf.rsp -o project-name.elf && cd ."
+C:/Users/pprat/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(i2c_basic_example_main.c.obj):(.literal.app_main+0x3c): undefined reference to `maxim_heart_rate_and_oxygen_saturation'
+C:/Users/pprat/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(i2c_basic_example_main.c.obj): in function `app_main':
+C:/Users/pprat/Senior_Design/Heart_rate/project-name/main/i2c_basic_example_main.c:199:(.text.app_main+0x10a): undefined reference to `maxim_heart_rate_and_oxygen_saturation'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,343 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\project-name.elf C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct  9 2025 12:03:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b848h ( 47176) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001b870 vaddr=3fc92b00 size=02ae8h ( 10984) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e360 vaddr=40374000 size=01cb8h (  7352) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b14ch (110924) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=0003b174 vaddr=40375cb8 size=0cdb8h ( 52664) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=00047f34 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (146) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (146) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (167) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     project-name[0m
+[0;32mI (172) app_init: App version:      1[0m
+[0;32mI (175) app_init: Compile time:     Oct  9 2025 12:03:15[0m
+[0;32mI (180) app_init: ELF file SHA256:  eeeeeba87...[0m
+[0;32mI (184) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC95EE0 len 00053830 (334 KiB): RAM[0m
+[0;32mI (211) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+[0;32mI (279) maxrefdes117: I2C initialized successfully[0m
+[0;32mI (279) maxrefdes117: MAX30102 Part ID: 0x15[0m
+[0;32mI (279) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (1289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (2289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (3289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (4289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (5289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (6289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (7289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (8289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (9289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (10289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (11289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (12289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (13289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (14289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (15289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (16289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (17289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (18289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (19289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (20289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (21289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (22289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (23289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (24289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (25289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (26289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (27289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (28289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (29289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (30289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (31289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (32289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (33289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (34289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (35289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (36289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (37289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (38289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (39289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (40289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (41289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (42289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (43289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (44289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (45289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (46289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (47289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (48289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (49289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (50289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (51289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (52289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (53289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (54289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (55289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (56289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (57289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (58289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (59289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (60289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (61289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (62289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (63289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (64289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (65289) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (66289) maxrefdes117: RED: 248779, IR: 248779[0m
+[1;31mE (67389) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (67389) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (67389) maxrefdes117: Failed to read FIFO: 259[0m
+[0;32mI (68389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (69389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (70389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (71389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (72389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (73389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (74389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (75389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (76389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (77389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (78389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (79389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (80389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (81389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (82389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (83389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (84389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (85389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (86389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (87389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (88389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (89389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (90389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (91389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (92389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (93389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (94389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (95389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (96389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (97389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (98389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (99389) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (100389) maxrefdes117: RED: 248779, IR: 248779[0m
+[1;31mE (101489) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (101489) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (101489) maxrefdes117: Failed to read FIFO: 259[0m
+[1;31mE (102589) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (102589) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (102589) maxrefdes117: Failed to read FIFO: 259[0m
+[0;32mI (103619) maxrefdes117: RED: 248779, IR: 248779[0m
+[1;31mE (104719) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (104719) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (104719) maxrefdes117: Failed to read FIFO: 259[0m
+[1;31mE (105819) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (105819) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (105819) maxrefdes117: Failed to read FIFO: 259[0m
+[1;31mE (106919) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (106919) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (106919) maxrefdes117: Failed to read FIFO: 259[0m
+[1;31mE (108019) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (108019) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (108019) maxrefdes117: Failed to read FIFO: 259[0m
+[1;31mE (109119) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (109119) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (109119) maxrefdes117: Failed to read FIFO: 259[0m
+[1;31mE (110219) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (110219) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (110219) maxrefdes117: Failed to read FIFO: 259[0m
+[0;32mI (111219) maxrefdes117: RED: 248779, IR: 248779[0m
+[1;31mE (112319) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (112319) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (112319) maxrefdes117: Failed to read FIFO: 259[0m
+[0;32mI (113319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (114319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (115319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (116319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (117319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (118319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (119319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (120319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (121319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (122319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (123319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (124319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (125319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (126319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (127319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (128319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (129319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (130319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (131319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (132319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (133319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (134319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (135319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (136319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (137319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (138319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (139319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (140319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (141319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (142319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (143319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (144319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (145319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (146319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (147319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (148319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (149319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (150319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (151319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (152319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (153319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (154319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (155319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (156319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (157319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (158319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (159319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (160319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (161319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (162319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (163319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (164319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (165319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (166319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (167319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (168319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (169319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (170319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (171319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (172319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (173319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (174319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (175319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (176319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (177319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (178319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (179319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (180319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (181319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (182319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (183319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (184319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (185319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (186319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (187319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (188319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (189319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (190319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (191319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (192319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (193319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (194319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (195319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (196319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (197319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (198319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (199319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (200319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (201319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (202319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (203319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (204319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (205319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (206319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (207319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (208319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (209319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (210319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (211319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (212319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (213319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (214319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (215319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (216319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (217319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (218319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (219319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (220319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (221319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (222319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (223319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (224319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (225319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (226319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (227319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (228319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (229319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (230319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (231319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (232319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (233319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (234319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (235319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (236319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (237319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (238319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (239319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (240319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (241319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (242319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (243319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (244319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (245319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (246319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (247319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (248319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (249319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (250319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (251319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (252319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (253319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (254319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (255319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (256319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (257319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (258319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (259319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (260319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (261319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (262319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (263319) maxrefdes117: RED: 248779, IR: 248779[0m
+[0;32mI (264319) maxrefdes117: RED: 248779, IR: 248779[0m

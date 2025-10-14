@@ -1,0 +1,744 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\project-name.elf C:\Users\pprat\Senior_Design\Heart_rate\project-name\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct  9 2025 12:03:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b8f0h ( 47344) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001b918 vaddr=3fc92b00 size=02ae8h ( 10984) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e408 vaddr=40374000 size=01c10h (  7184) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b520h (111904) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=0003b548 vaddr=40375c10 size=0ce60h ( 52832) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=000483b0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (146) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (146) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     project-name[0m
+[0;32mI (172) app_init: App version:      1[0m
+[0;32mI (175) app_init: Compile time:     Oct  9 2025 12:03:15[0m
+[0;32mI (180) app_init: ELF file SHA256:  adc113794...[0m
+[0;32mI (185) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC96080 len 00053690 (333 KiB): RAM[0m
+[0;32mI (211) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+[0;32mI (279) maxrefdes117: I2C initialized successfully[0m
+[0;32mI (279) maxrefdes117: MAX30102 Part ID: 0x15[0m
+[0;32mI (379) maxrefdes117: MAX30102 configured for SpO2 mode[0m
+[0;32mI (619) maxrefdes117: IR: 1649, AC: 13635[0m
+[0;32mI (869) maxrefdes117: IR: 1688, AC: 18810[0m
+[0;32mI (1119) maxrefdes117: IR: 1682, AC: -16940[0m
+[0;32mI (1369) maxrefdes117: IR_raw: 1674, DC: 6602, AC: -22660, BPM: 990[0m
+[0;32mI (1619) maxrefdes117: IR: 1649, AC: -13622[0m
+[0;32mI (1869) maxrefdes117: IR: 1670, AC: -21147[0m
+[0;32mI (2119) maxrefdes117: IR: 1618, AC: -13556[0m
+[0;32mI (2369) maxrefdes117: IR_raw: 1722, DC: 6792, AC: -18298, BPM: 1080[0m
+[0;32mI (2619) maxrefdes117: IR: 1675, AC: 8301[0m
+[0;32mI (2869) maxrefdes117: IR: 1667, AC: -22390[0m
+[0;32mI (3119) maxrefdes117: IR: 1591, AC: 9789[0m
+[0;32mI (3369) maxrefdes117: IR_raw: 1786, DC: 6884, AC: 14801, BPM: 1230[0m
+[0;32mI (3619) maxrefdes117: IR: 1669, AC: -11792[0m
+[0;32mI (3869) maxrefdes117: IR: 1673, AC: -19148[0m
+[0;32mI (4119) maxrefdes117: IR: 1675, AC: -14282[0m
+[0;32mI (4369) maxrefdes117: IR_raw: 1803, DC: 6896, AC: -8775, BPM: 1170[0m
+[0;32mI (4619) maxrefdes117: IR: 1689, AC: 3420[0m
+[0;32mI (4869) maxrefdes117: IR: 1668, AC: -9702[0m
+[0;32mI (5119) maxrefdes117: IR: 1680, AC: -23427[0m
+[0;32mI (5369) maxrefdes117: IR_raw: 1805, DC: 6721, AC: 4332, BPM: 1200[0m
+[0;32mI (5619) maxrefdes117: IR: 1685, AC: -30921[0m
+[0;32mI (5869) maxrefdes117: IR: 1671, AC: -17579[0m
+[0;32mI (6119) maxrefdes117: IR: 1675, AC: -20481[0m
+[0;32mI (6369) maxrefdes117: IR_raw: 1679, DC: 6306, AC: -19774, BPM: 1260[0m
+[0;32mI (6619) maxrefdes117: IR: 77176, AC: 7298[0m
+[0;32mI (6869) maxrefdes117: IR: 119541, AC: 11282[0m
+[0;32mI (7119) maxrefdes117: IR: 123080, AC: 25938[0m
+[0;32mI (7369) maxrefdes117: IR_raw: 123801, DC: 476194, AC: -9555, BPM: 1080[0m
+[0;32mI (7619) maxrefdes117: IR: 124014, AC: -18035[0m
+[0;32mI (7869) maxrefdes117: IR: 123889, AC: 28796[0m
+[0;32mI (8119) maxrefdes117: IR: 123788, AC: -31594[0m
+[0;32mI (8369) maxrefdes117: IR_raw: 123859, DC: 476635, AC: 947, BPM: 1290[0m
+[0;32mI (8619) maxrefdes117: IR: 123844, AC: -10543[0m
+[0;32mI (8869) maxrefdes117: IR: 123534, AC: -25430[0m
+[0;32mI (9119) maxrefdes117: IR: 123680, AC: -14977[0m
+[0;32mI (9369) maxrefdes117: IR_raw: 123404, DC: 475946, AC: -18698, BPM: 1410[0m
+[0;32mI (9619) maxrefdes117: IR: 123322, AC: -23773[0m
+[0;32mI (9869) maxrefdes117: IR: 122125, AC: 26394[0m
+[0;32mI (10119) maxrefdes117: IR: 120329, AC: 9012[0m
+[0;32mI (10369) maxrefdes117: IR_raw: 119135, DC: 459076, AC: -30539, BPM: 1320[0m
+[0;32mI (10619) maxrefdes117: IR: 118473, AC: -25105[0m
+[0;32mI (10869) maxrefdes117: IR: 117228, AC: 6191[0m
+[0;32mI (11119) maxrefdes117: IR: 116020, AC: 6777[0m
+[0;32mI (11369) maxrefdes117: IR_raw: 115819, DC: 445760, AC: -10553, BPM: 1020[0m
+[0;32mI (11619) maxrefdes117: IR: 115717, AC: 10923[0m
+[0;32mI (11869) maxrefdes117: IR: 114601, AC: -24256[0m
+[0;32mI (12119) maxrefdes117: IR: 114830, AC: -12950[0m
+[0;32mI (12369) maxrefdes117: IR_raw: 115239, DC: 443175, AC: 20909, BPM: 1140[0m
+[0;32mI (12619) maxrefdes117: IR: 114511, AC: 24429[0m
+[0;32mI (12869) maxrefdes117: IR: 115060, AC: 13281[0m
+[0;32mI (13119) maxrefdes117: IR: 115768, AC: -19678[0m
+[0;32mI (13369) maxrefdes117: IR_raw: 115308, DC: 443707, AC: -19470, BPM: 1050[0m
+[0;32mI (13619) maxrefdes117: IR: 115774, AC: -27637[0m
+[0;32mI (13869) maxrefdes117: IR: 116627, AC: 20484[0m
+[0;32mI (14119) maxrefdes117: IR: 116464, AC: 20461[0m
+[0;32mI (14369) maxrefdes117: IR_raw: 116751, DC: 449076, AC: 7431, BPM: 1050[0m
+[0;32mI (14619) maxrefdes117: IR: 117220, AC: -30206[0m
+[0;32mI (14869) maxrefdes117: IR: 117350, AC: -31874[0m
+[0;32mI (15119) maxrefdes117: IR: 116863, AC: 19712[0m
+[0;32mI (15369) maxrefdes117: IR_raw: 117217, DC: 450665, AC: 16332, BPM: 1170[0m
+[0;32mI (15619) maxrefdes117: IR: 117626, AC: -12685[0m
+[0;32mI (15869) maxrefdes117: IR: 116827, AC: -21407[0m
+[0;32mI (16119) maxrefdes117: IR: 116960, AC: -27654[0m
+[0;32mI (16369) maxrefdes117: IR_raw: 117537, DC: 452071, AC: 16569, BPM: 1140[0m
+[0;32mI (16619) maxrefdes117: IR: 116529, AC: 8075[0m
+[0;32mI (16869) maxrefdes117: IR: 116563, AC: -10489[0m
+[0;32mI (17119) maxrefdes117: IR: 117038, AC: -25406[0m
+[0;32mI (17369) maxrefdes117: IR_raw: 115990, DC: 446750, AC: 14066, BPM: 1260[0m
+[0;32mI (17619) maxrefdes117: IR: 115816, AC: -13295[0m
+[0;32mI (17869) maxrefdes117: IR: 116283, AC: -26251[0m
+[0;32mI (18119) maxrefdes117: IR: 115051, AC: 9705[0m
+[0;32mI (18369) maxrefdes117: IR_raw: 115148, DC: 443239, AC: 22720, BPM: 1260[0m
+[0;32mI (18619) maxrefdes117: IR: 114567, AC: 8037[0m
+[0;32mI (18869) maxrefdes117: IR: 111794, AC: -6165[0m
+[0;32mI (19119) maxrefdes117: IR: 104675, AC: 12882[0m
+[0;32mI (19369) maxrefdes117: IR_raw: 2603, DC: 38174, AC: 28646, BPM: 1320[0m
+[0;32mI (19619) maxrefdes117: IR: 762, AC: -17170[0m
+[0;32mI (19869) maxrefdes117: IR: 543, AC: 20622[0m
+[0;32mI (20119) maxrefdes117: IR: 690, AC: -27760[0m
+[0;32mI (20369) maxrefdes117: IR_raw: 1108, DC: 4067, AC: 12739, BPM: 1020[0m
+[0;32mI (20619) maxrefdes117: IR: 24375, AC: -16444[0m
+[0;32mI (20869) maxrefdes117: IR: 109737, AC: 11344[0m
+[0;32mI (21119) maxrefdes117: IR: 110389, AC: 26980[0m
+[0;32mI (21369) maxrefdes117: IR_raw: 35910, DC: 189673, AC: -32364, BPM: 1260[0m
+[0;32mI (21619) maxrefdes117: IR: 117464, AC: 13141[0m
+[0;32mI (21869) maxrefdes117: IR: 117941, AC: 16788[0m
+[0;32mI (22119) maxrefdes117: IR: 117496, AC: 358[0m
+[0;32mI (22369) maxrefdes117: IR_raw: 117639, DC: 452575, AC: -1412, BPM: 1200[0m
+[0;32mI (22619) maxrefdes117: IR: 117283, AC: -28969[0m
+[0;32mI (22869) maxrefdes117: IR: 117508, AC: -833[0m
+[0;32mI (23119) maxrefdes117: IR: 117270, AC: -22972[0m
+[0;32mI (23369) maxrefdes117: IR_raw: 117466, DC: 452145, AC: -12396, BPM: 1140[0m
+[0;32mI (23619) maxrefdes117: IR: 117452, AC: 10344[0m
+[0;32mI (23869) maxrefdes117: IR: 117429, AC: -31121[0m
+[0;32mI (24119) maxrefdes117: IR: 117369, AC: 9379[0m
+[0;32mI (24369) maxrefdes117: IR_raw: 117455, DC: 452101, AC: -28837, BPM: 1230[0m
+[0;32mI (24619) maxrefdes117: IR: 117321, AC: 10388[0m
+[0;32mI (24869) maxrefdes117: IR: 117228, AC: 15890[0m
+[0;32mI (25119) maxrefdes117: IR: 117103, AC: -19699[0m
+[0;32mI (25369) maxrefdes117: IR_raw: 117155, DC: 450944, AC: -27133, BPM: 1320[0m
+[0;32mI (25619) maxrefdes117: IR: 117095, AC: 8622[0m
+[0;32mI (25869) maxrefdes117: IR: 117057, AC: -20929[0m
+[0;32mI (26119) maxrefdes117: IR: 117053, AC: -7036[0m
+[0;32mI (26369) maxrefdes117: IR_raw: 116986, DC: 450243, AC: 5896, BPM: 1470[0m
+[0;32mI (26619) maxrefdes117: IR: 116955, AC: 14779[0m
+[0;32mI (26869) maxrefdes117: IR: 116923, AC: -18834[0m
+[0;32mI (27119) maxrefdes117: IR: 117496, AC: 8274[0m
+[0;32mI (27369) maxrefdes117: IR_raw: 117624, DC: 452716, AC: -13793, BPM: 1020[0m
+[0;32mI (27619) maxrefdes117: IR: 117555, AC: 6171[0m
+[0;32mI (27869) maxrefdes117: IR: 116938, AC: 17064[0m
+[0;32mI (28119) maxrefdes117: IR: 117176, AC: -17593[0m
+[0;32mI (28369) maxrefdes117: IR_raw: 117229, DC: 451133, AC: 6280, BPM: 1140[0m
+[0;32mI (28619) maxrefdes117: IR: 116974, AC: -27843[0m
+[0;32mI (28869) maxrefdes117: IR: 116998, AC: -27451[0m
+[0;32mI (29119) maxrefdes117: IR: 117114, AC: -28708[0m
+[0;32mI (29369) maxrefdes117: IR_raw: 117139, DC: 450747, AC: 19430, BPM: 1050[0m
+[0;32mI (29619) maxrefdes117: IR: 116942, AC: 3576[0m
+[0;32mI (29869) maxrefdes117: IR: 117154, AC: -25298[0m
+[0;32mI (30119) maxrefdes117: IR: 117094, AC: 16497[0m
+[0;32mI (30369) maxrefdes117: IR_raw: 116878, DC: 450029, AC: -21855, BPM: 1290[0m
+[0;32mI (30619) maxrefdes117: IR: 116967, AC: 19645[0m
+[0;32mI (30869) maxrefdes117: IR: 117174, AC: -30430[0m
+[0;32mI (31119) maxrefdes117: IR: 117101, AC: 18825[0m
+[0;32mI (31369) maxrefdes117: IR_raw: 117083, DC: 450556, AC: -13647, BPM: 780[0m
+[0;32mI (31619) maxrefdes117: IR: 117068, AC: -30985[0m
+[0;32mI (31869) maxrefdes117: IR: 117299, AC: 15932[0m
+[0;32mI (32119) maxrefdes117: IR: 117104, AC: -28718[0m
+[0;32mI (32369) maxrefdes117: IR_raw: 117213, DC: 451076, AC: -8821, BPM: 1350[0m
+[0;32mI (32619) maxrefdes117: IR: 117370, AC: 6237[0m
+[0;32mI (32869) maxrefdes117: IR: 117414, AC: -26039[0m
+[0;32mI (33119) maxrefdes117: IR: 117370, AC: -30113[0m
+[0;32mI (33369) maxrefdes117: IR_raw: 117208, DC: 451207, AC: 12249, BPM: 1200[0m
+[0;32mI (33619) maxrefdes117: IR: 117316, AC: -11655[0m
+[0;32mI (33869) maxrefdes117: IR: 117197, AC: -23694[0m
+[0;32mI (34119) maxrefdes117: IR: 117241, AC: -15769[0m
+[0;32mI (34369) maxrefdes117: IR_raw: 117389, DC: 451527, AC: 17273, BPM: 1140[0m
+[0;32mI (34619) maxrefdes117: IR: 117934, AC: -28964[0m
+[0;32mI (34869) maxrefdes117: IR: 6374, AC: -14610[0m
+[0;32mI (35119) maxrefdes117: IR: 10653, AC: -13578[0m
+[0;32mI (35369) maxrefdes117: IR_raw: 570, DC: 3570, AC: 16727, BPM: 1140[0m
+[0;32mI (35619) maxrefdes117: IR: 502, AC: -17122[0m
+[0;32mI (35869) maxrefdes117: IR: 804, AC: 16376[0m
+[0;32mI (36119) maxrefdes117: IR: 553, AC: 23969[0m
+[0;32mI (36369) maxrefdes117: IR_raw: 497, DC: 1781, AC: 15903, BPM: 1320[0m
+[0;32mI (36619) maxrefdes117: IR: 511, AC: -14223[0m
+[0;32mI (36869) maxrefdes117: IR: 470, AC: -11122[0m
+[0;32mI (37119) maxrefdes117: IR: 443, AC: -9818[0m
+[0;32mI (37369) maxrefdes117: IR_raw: 548, DC: 2069, AC: 23927, BPM: 1020[0m
+[0;32mI (37619) maxrefdes117: IR: 441, AC: 20287[0m
+[0;32mI (37869) maxrefdes117: IR: 462, AC: 19668[0m
+[0;32mI (38119) maxrefdes117: IR: 323, AC: -25724[0m
+[0;32mI (38369) maxrefdes117: IR_raw: 520, DC: 2078, AC: 15288, BPM: 1440[0m
+[0;32mI (38619) maxrefdes117: IR: 429, AC: -9109[0m
+[0;32mI (38869) maxrefdes117: IR: 457, AC: 17572[0m
+[0;32mI (39119) maxrefdes117: IR: 400, AC: 23708[0m
+[0;32mI (39369) maxrefdes117: IR_raw: 458, DC: 1793, AC: 19810, BPM: 1080[0m
+[0;32mI (39619) maxrefdes117: IR: 444, AC: 17930[0m
+[0;32mI (39869) maxrefdes117: IR: 451, AC: -12543[0m
+[0;32mI (40119) maxrefdes117: IR: 554, AC: 23419[0m
+[0;32mI (40369) maxrefdes117: IR_raw: 450, DC: 1750, AC: 8556, BPM: 1020[0m
+[0;32mI (40619) maxrefdes117: IR: 446, AC: -7801[0m
+[0;32mI (40869) maxrefdes117: IR: 468, AC: 20223[0m
+[0;32mI (41119) maxrefdes117: IR: 572, AC: 22863[0m
+[0;32mI (41369) maxrefdes117: IR_raw: 450, DC: 1758, AC: 12193, BPM: 1110[0m
+[0;32mI (41619) maxrefdes117: IR: 470, AC: 22000[0m
+[0;32mI (41869) maxrefdes117: IR: 396, AC: -15589[0m
+[0;32mI (42119) maxrefdes117: IR: 492, AC: 17567[0m
+[0;32mI (42369) maxrefdes117: IR_raw: 462, DC: 1778, AC: 12125, BPM: 870[0m
+[0;32mI (42619) maxrefdes117: IR: 470, AC: -20993[0m
+[0;32mI (42869) maxrefdes117: IR: 532, AC: 20297[0m
+[0;32mI (43119) maxrefdes117: IR: 487, AC: 15447[0m
+[0;32mI (43369) maxrefdes117: IR_raw: 464, DC: 1794, AC: 14714, BPM: 990[0m
+[0;32mI (43619) maxrefdes117: IR: 471, AC: 21115[0m
+[0;32mI (43869) maxrefdes117: IR: 640, AC: -25385[0m
+[0;32mI (44119) maxrefdes117: IR: 488, AC: 15482[0m
+[0;32mI (44369) maxrefdes117: IR_raw: 480, DC: 1863, AC: -10415, BPM: 1050[0m
+[0;32mI (44619) maxrefdes117: IR: 489, AC: -16016[0m
+[0;32mI (44869) maxrefdes117: IR: 632, AC: 11543[0m
+[0;32mI (45119) maxrefdes117: IR: 481, AC: -12341[0m
+[0;32mI (45369) maxrefdes117: IR_raw: 492, DC: 1906, AC: -23291, BPM: 1050[0m
+[0;32mI (45619) maxrefdes117: IR: 440, AC: 19224[0m
+[0;32mI (45869) maxrefdes117: IR: 578, AC: -9506[0m
+[0;32mI (46119) maxrefdes117: IR: 517, AC: -18531[0m
+[0;32mI (46369) maxrefdes117: IR_raw: 511, DC: 1955, AC: 19987, BPM: 1170[0m
+[0;32mI (46619) maxrefdes117: IR: 427, AC: -26388[0m
+[0;32mI (46869) maxrefdes117: IR: 523, AC: 23953[0m
+[0;32mI (47119) maxrefdes117: IR: 497, AC: -22952[0m
+[0;32mI (47369) maxrefdes117: IR_raw: 536, DC: 2013, AC: 13758, BPM: 1080[0m
+[0;32mI (47619) maxrefdes117: IR: 596, AC: 5377[0m
+[0;32mI (47869) maxrefdes117: IR: 504, AC: -24687[0m
+[0;32mI (48119) maxrefdes117: IR: 518, AC: -21960[0m
+[0;32mI (48369) maxrefdes117: IR_raw: 549, DC: 2061, AC: 13279, BPM: 1080[0m
+[0;32mI (48619) maxrefdes117: IR: 655, AC: -14968[0m
+[0;32mI (48869) maxrefdes117: IR: 523, AC: -17012[0m
+[0;32mI (49119) maxrefdes117: IR: 515, AC: 14941[0m
+[0;32mI (49369) maxrefdes117: IR_raw: 538, DC: 2080, AC: 22524, BPM: 990[0m
+[0;32mI (49619) maxrefdes117: IR: 654, AC: 18431[0m
+[0;32mI (49869) maxrefdes117: IR: 533, AC: -23373[0m
+[0;32mI (50119) maxrefdes117: IR: 552, AC: 19798[0m
+[0;32mI (50369) maxrefdes117: IR_raw: 491, DC: 1826, AC: -19795, BPM: 1170[0m
+[0;32mI (50619) maxrefdes117: IR: 612, AC: -18344[0m
+[0;32mI (50869) maxrefdes117: IR: 538, AC: 17796[0m
+[0;32mI (51119) maxrefdes117: IR: 564, AC: -22613[0m
+[0;32mI (51369) maxrefdes117: IR_raw: 560, DC: 2005, AC: -22348, BPM: 1020[0m
+[0;32mI (51619) maxrefdes117: IR: 554, AC: -20078[0m
+[0;32mI (51869) maxrefdes117: IR: 555, AC: -15930[0m
+[0;32mI (52119) maxrefdes117: IR: 545, AC: -11848[0m
+[0;32mI (52369) maxrefdes117: IR_raw: 642, DC: 2406, AC: -25670, BPM: 1200[0m
+[0;32mI (52619) maxrefdes117: IR: 549, AC: 22233[0m
+[0;32mI (52869) maxrefdes117: IR: 534, AC: 19910[0m
+[0;32mI (53119) maxrefdes117: IR: 572, AC: 11488[0m
+[0;32mI (53369) maxrefdes117: IR_raw: 685, DC: 2606, AC: -8418, BPM: 1200[0m
+[0;32mI (53619) maxrefdes117: IR: 544, AC: -6247[0m
+[0;32mI (53869) maxrefdes117: IR: 573, AC: 11184[0m
+[0;32mI (54119) maxrefdes117: IR: 452, AC: -23151[0m
+[0;32mI (54369) maxrefdes117: IR_raw: 664, DC: 2601, AC: -28019, BPM: 1230[0m
+[0;32mI (54619) maxrefdes117: IR: 568, AC: -19494[0m
+[0;32mI (54869) maxrefdes117: IR: 570, AC: 14523[0m
+[0;32mI (55119) maxrefdes117: IR: 519, AC: -15412[0m
+[0;32mI (55369) maxrefdes117: IR_raw: 607, DC: 2445, AC: -17009, BPM: 1140[0m
+[0;32mI (55619) maxrefdes117: IR: 591, AC: -16782[0m
+[0;32mI (55869) maxrefdes117: IR: 595, AC: 15853[0m
+[0;32mI (56119) maxrefdes117: IR: 682, AC: -17770[0m
+[0;32mI (56369) maxrefdes117: IR_raw: 585, DC: 2296, AC: 6070, BPM: 1050[0m
+[0;32mI (56619) maxrefdes117: IR: 596, AC: 19375[0m
+[0;32mI (56869) maxrefdes117: IR: 596, AC: 7466[0m
+[0;32mI (57119) maxrefdes117: IR: 723, AC: -9787[0m
+[0;32mI (57369) maxrefdes117: IR_raw: 586, DC: 2273, AC: 21449, BPM: 990[0m
+[0;32mI (57619) maxrefdes117: IR: 612, AC: -23665[0m
+[0;32mI (57869) maxrefdes117: IR: 621, AC: -27643[0m
+[0;32mI (58119) maxrefdes117: IR: 727, AC: 17392[0m
+[0;32mI (58369) maxrefdes117: IR_raw: 580, DC: 2253, AC: -24322, BPM: 1170[0m
+[0;32mI (58619) maxrefdes117: IR: 621, AC: 11884[0m
+[0;32mI (58869) maxrefdes117: IR: 495, AC: 19452[0m
+[0;32mI (59119) maxrefdes117: IR: 708, AC: -15190[0m
+[0;32mI (59369) maxrefdes117: IR_raw: 598, DC: 2302, AC: -12925, BPM: 1080[0m
+[0;32mI (59619) maxrefdes117: IR: 595, AC: -13534[0m
+[0;32mI (59869) maxrefdes117: IR: 558, AC: 19153[0m
+[0;32mI (60119) maxrefdes117: IR: 648, AC: 13350[0m
+[0;32mI (60369) maxrefdes117: IR_raw: 625, DC: 2400, AC: 17695, BPM: 1260[0m
+[0;32mI (60619) maxrefdes117: IR: 631, AC: -19487[0m
+[0;32mI (60869) maxrefdes117: IR: 627, AC: -20116[0m
+[0;32mI (61119) maxrefdes117: IR: 599, AC: -16373[0m
+[0;32mI (61369) maxrefdes117: IR_raw: 626, DC: 2407, AC: 19018, BPM: 1140[0m
+[0;32mI (61619) maxrefdes117: IR: 634, AC: -25301[0m
+[0;32mI (61869) maxrefdes117: IR: 722, AC: -18100[0m
+[0;32mI (62119) maxrefdes117: IR: 601, AC: -16105[0m
+[0;32mI (62369) maxrefdes117: IR_raw: 648, DC: 2481, AC: 12142, BPM: 1320[0m
+[0;32mI (62619) maxrefdes117: IR: 649, AC: -14599[0m
+[0;32mI (62869) maxrefdes117: IR: 753, AC: 5346[0m
+[0;32mI (63119) maxrefdes117: IR: 623, AC: 24010[0m
+[0;32mI (63369) maxrefdes117: IR_raw: 636, DC: 2486, AC: 13107, BPM: 1350[0m
+[0;32mI (63619) maxrefdes117: IR: 642, AC: -27992[0m
+[0;32mI (63869) maxrefdes117: IR: 776, AC: 10337[0m
+[0;32mI (64119) maxrefdes117: IR: 663, AC: -21201[0m
+[0;32mI (64369) maxrefdes117: IR_raw: 657, DC: 2529, AC: 11316, BPM: 1230[0m
+[0;32mI (64619) maxrefdes117: IR: 658, AC: 21951[0m
+[0;32mI (64869) maxrefdes117: IR: 784, AC: -20662[0m
+[0;32mI (65119) maxrefdes117: IR: 654, AC: 18470[0m
+[0;32mI (65369) maxrefdes117: IR_raw: 652, DC: 2530, AC: 16622, BPM: 990[0m
+[0;32mI (65619) maxrefdes117: IR: 559, AC: -25185[0m
+[0;32mI (65869) maxrefdes117: IR: 741, AC: 18774[0m
+[0;32mI (66119) maxrefdes117: IR: 677, AC: 12663[0m
+[0;32mI (66369) maxrefdes117: IR_raw: 671, DC: 2549, AC: -16148, BPM: 1050[0m
+[0;32mI (66619) maxrefdes117: IR: 613, AC: -15204[0m
+[0;32mI (66869) maxrefdes117: IR: 713, AC: -10013[0m
+[0;32mI (67119) maxrefdes117: IR: 674, AC: 12342[0m
+[0;32mI (67369) maxrefdes117: IR_raw: 686, DC: 2640, AC: 23458, BPM: 1230[0m
+[0;32mI (67619) maxrefdes117: IR: 589, AC: -14882[0m
+[0;32mI (67869) maxrefdes117: IR: 711, AC: -19805[0m
+[0;32mI (68119) maxrefdes117: IR: 678, AC: 15647[0m
+[0;32mI (68369) maxrefdes117: IR_raw: 678, DC: 2615, AC: -23128, BPM: 1170[0m
+[0;32mI (68619) maxrefdes117: IR: 631, AC: -23048[0m
+[0;32mI (68869) maxrefdes117: IR: 655, AC: -20700[0m
+[0;32mI (69119) maxrefdes117: IR: 677, AC: -21713[0m
+[0;32mI (69369) maxrefdes117: IR_raw: 675, DC: 2620, AC: 6082, BPM: 990[0m
+[0;32mI (69619) maxrefdes117: IR: 756, AC: 17391[0m
+[0;32mI (69869) maxrefdes117: IR: 697, AC: -23991[0m
+[0;32mI (70119) maxrefdes117: IR: 697, AC: -7001[0m
+[0;32mI (70369) maxrefdes117: IR_raw: 682, DC: 2619, AC: -22415, BPM: 1200[0m
+[0;32mI (70619) maxrefdes117: IR: 793, AC: 18178[0m
+[0;32mI (70869) maxrefdes117: IR: 673, AC: -11733[0m
+[0;32mI (71119) maxrefdes117: IR: 703, AC: 10395[0m
+[0;32mI (71369) maxrefdes117: IR_raw: 690, DC: 2642, AC: -10981, BPM: 1020[0m
+[0;32mI (71619) maxrefdes117: IR: 772, AC: 7223[0m
+[0;32mI (71869) maxrefdes117: IR: 691, AC: -23437[0m
+[0;32mI (72119) maxrefdes117: IR: 697, AC: 13550[0m
+[0;32mI (72369) maxrefdes117: IR_raw: 662, DC: 2611, AC: 8085, BPM: 1200[0m
+[0;32mI (72619) maxrefdes117: IR: 840, AC: -10431[0m
+[0;32mI (72869) maxrefdes117: IR: 682, AC: 8740[0m
+[0;32mI (73119) maxrefdes117: IR: 717, AC: -14387[0m
+[0;32mI (73369) maxrefdes117: IR_raw: 580, DC: 2486, AC: 10390, BPM: 1050[0m
+[0;32mI (73619) maxrefdes117: IR: 812, AC: -26479[0m
+[0;32mI (73869) maxrefdes117: IR: 698, AC: -23939[0m
+[0;32mI (74119) maxrefdes117: IR: 714, AC: -13947[0m
+[0;32mI (74369) maxrefdes117: IR_raw: 616, DC: 2451, AC: -12902, BPM: 1380[0m
+[0;32mI (74619) maxrefdes117: IR: 754, AC: -11987[0m
+[0;32mI (74869) maxrefdes117: IR: 718, AC: 5758[0m
+[0;32mI (75119) maxrefdes117: IR: 729, AC: -13313[0m
+[0;32mI (75369) maxrefdes117: IR_raw: 667, DC: 2489, AC: -18449, BPM: 1050[0m
+[0;32mI (75619) maxrefdes117: IR: 721, AC: 7340[0m
+[0;32mI (75869) maxrefdes117: IR: 682, AC: 16947[0m
+[0;32mI (76119) maxrefdes117: IR: 712, AC: -21275[0m
+[0;32mI (76369) maxrefdes117: IR_raw: 786, DC: 2778, AC: -20631, BPM: 1080[0m
+[0;32mI (76619) maxrefdes117: IR: 716, AC: -16949[0m
+[0;32mI (76869) maxrefdes117: IR: 708, AC: -24272[0m
+[0;32mI (77119) maxrefdes117: IR: 726, AC: -22255[0m
+[0;32mI (77369) maxrefdes117: IR_raw: 832, DC: 3042, AC: -7758, BPM: 1080[0m
+[0;32mI (77619) maxrefdes117: IR: 711, AC: -17906[0m
+[0;32mI (77869) maxrefdes117: IR: 726, AC: -25188[0m
+[0;32mI (78119) maxrefdes117: IR: 766, AC: 19802[0m
+[0;32mI (78369) maxrefdes117: IR_raw: 841, DC: 3134, AC: 12058, BPM: 1140[0m
+[0;32mI (78619) maxrefdes117: IR: 735, AC: -22844[0m
+[0;32mI (78869) maxrefdes117: IR: 725, AC: 8442[0m
+[0;32mI (79119) maxrefdes117: IR: 754, AC: 17011[0m
+[0;32mI (79369) maxrefdes117: IR_raw: 834, DC: 3182, AC: -18373, BPM: 1020[0m
+[0;32mI (79619) maxrefdes117: IR: 729, AC: -27555[0m
+[0;32mI (79869) maxrefdes117: IR: 730, AC: 9331[0m
+[0;32mI (80119) maxrefdes117: IR: 726, AC: -7271[0m
+[0;32mI (80369) maxrefdes117: IR_raw: 841, DC: 3202, AC: -19214, BPM: 1200[0m
+[0;32mI (80619) maxrefdes117: IR: 728, AC: -12832[0m
+[0;32mI (80869) maxrefdes117: IR: 748, AC: 22397[0m
+[0;32mI (81119) maxrefdes117: IR: 747, AC: -6941[0m
+[0;32mI (81369) maxrefdes117: IR_raw: 848, DC: 3263, AC: 6501, BPM: 990[0m
+[0;32mI (81619) maxrefdes117: IR: 724, AC: -25259[0m
+[0;32mI (81869) maxrefdes117: IR: 754, AC: -22469[0m
+[0;32mI (82119) maxrefdes117: IR: 750, AC: -7879[0m
+[0;32mI (82369) maxrefdes117: IR_raw: 833, DC: 3224, AC: 21928, BPM: 1110[0m
+[0;32mI (82619) maxrefdes117: IR: 727, AC: -18290[0m
+[0;32mI (82869) maxrefdes117: IR: 775, AC: -20793[0m
+[0;32mI (83119) maxrefdes117: IR: 758, AC: -25798[0m
+[0;32mI (83369) maxrefdes117: IR_raw: 863, DC: 3291, AC: 14988, BPM: 1080[0m
+[0;32mI (83619) maxrefdes117: IR: 744, AC: 10689[0m
+[0;32mI (83869) maxrefdes117: IR: 781, AC: -27436[0m
+[0;32mI (84119) maxrefdes117: IR: 753, AC: 4984[0m
+[0;32mI (84369) maxrefdes117: IR_raw: 877, DC: 3333, AC: 13259, BPM: 1140[0m
+[0;32mI (84619) maxrefdes117: IR: 744, AC: -26364[0m
+[0;32mI (84869) maxrefdes117: IR: 754, AC: -8350[0m
+[0;32mI (85119) maxrefdes117: IR: 756, AC: 12439[0m
+[0;32mI (85369) maxrefdes117: IR_raw: 871, DC: 3329, AC: -17069, BPM: 1170[0m
+[0;32mI (85619) maxrefdes117: IR: 764, AC: -26422[0m
+[0;32mI (85869) maxrefdes117: IR: 781, AC: 6107[0m
+[0;32mI (86119) maxrefdes117: IR: 759, AC: 21269[0m
+[0;32mI (86369) maxrefdes117: IR_raw: 857, DC: 3280, AC: 6562, BPM: 1350[0m
+[0;32mI (86619) maxrefdes117: IR: 747, AC: -27543[0m
+[0;32mI (86869) maxrefdes117: IR: 783, AC: -17251[0m
+[0;32mI (87119) maxrefdes117: IR: 758, AC: 14591[0m
+[0;32mI (87369) maxrefdes117: IR_raw: 889, DC: 3358, AC: -11625, BPM: 1020[0m
+[0;32mI (87619) maxrefdes117: IR: 746, AC: 14845[0m
+[0;32mI (87869) maxrefdes117: IR: 796, AC: 9953[0m
+[0;32mI (88119) maxrefdes117: IR: 769, AC: -22936[0m
+[0;32mI (88369) maxrefdes117: IR_raw: 921, DC: 3421, AC: 5835, BPM: 1200[0m
+[0;32mI (88619) maxrefdes117: IR: 764, AC: -19833[0m
+[0;32mI (88869) maxrefdes117: IR: 773, AC: -19995[0m
+[0;32mI (89119) maxrefdes117: IR: 668, AC: -16075[0m
+[0;32mI (89369) maxrefdes117: IR_raw: 876, DC: 3426, AC: -23937, BPM: 1140[0m
+[0;32mI (89619) maxrefdes117: IR: 780, AC: 6861[0m
+[0;32mI (89869) maxrefdes117: IR: 786, AC: 18287[0m
+[0;32mI (90119) maxrefdes117: IR: 685, AC: -12223[0m
+[0;32mI (90369) maxrefdes117: IR_raw: 885, DC: 3452, AC: 11789, BPM: 1170[0m
+[0;32mI (90619) maxrefdes117: IR: 798, AC: 16613[0m
+[0;32mI (90869) maxrefdes117: IR: 773, AC: 12257[0m
+[0;32mI (91119) maxrefdes117: IR: 709, AC: -26536[0m
+[0;32mI (91369) maxrefdes117: IR_raw: 839, DC: 3388, AC: 22296, BPM: 1410[0m
+[0;32mI (91619) maxrefdes117: IR: 773, AC: -15683[0m
+[0;32mI (91869) maxrefdes117: IR: 794, AC: -16460[0m
+[0;32mI (92119) maxrefdes117: IR: 713, AC: -24909[0m
+[0;32mI (92369) maxrefdes117: IR_raw: 866, DC: 3460, AC: -17946, BPM: 1050[0m
+[0;32mI (92619) maxrefdes117: IR: 809, AC: 20149[0m
+[0;32mI (92869) maxrefdes117: IR: 799, AC: -27856[0m
+[0;32mI (93119) maxrefdes117: IR: 709, AC: 16389[0m
+[0;32mI (93369) maxrefdes117: IR_raw: 862, DC: 3437, AC: 23598, BPM: 1050[0m
+[0;32mI (93619) maxrefdes117: IR: 776, AC: 13260[0m
+[0;32mI (93869) maxrefdes117: IR: 812, AC: -17490[0m
+[0;32mI (94119) maxrefdes117: IR: 709, AC: 21265[0m
+[0;32mI (94369) maxrefdes117: IR_raw: 882, DC: 3529, AC: -18807, BPM: 1350[0m
+[0;32mI (94619) maxrefdes117: IR: 800, AC: -25718[0m
+[0;32mI (94869) maxrefdes117: IR: 799, AC: 15595[0m
+[0;32mI (95119) maxrefdes117: IR: 732, AC: -14481[0m
+[0;32mI (95369) maxrefdes117: IR_raw: 869, DC: 3447, AC: -17625, BPM: 960[0m
+[0;32mI (95619) maxrefdes117: IR: 796, AC: -17437[0m
+[0;32mI (95869) maxrefdes117: IR: 815, AC: 21943[0m
+[0;32mI (96119) maxrefdes117: IR: 734, AC: 19453[0m
+[0;32mI (96369) maxrefdes117: IR_raw: 843, DC: 3407, AC: -6663, BPM: 1140[0m
+[0;32mI (96619) maxrefdes117: IR: 793, AC: 22491[0m
+[0;32mI (96869) maxrefdes117: IR: 813, AC: 9265[0m
+[0;32mI (97119) maxrefdes117: IR: 723, AC: -10283[0m
+[0;32mI (97369) maxrefdes117: IR_raw: 859, DC: 3351, AC: 14057, BPM: 1140[0m
+[0;32mI (97619) maxrefdes117: IR: 844, AC: 13232[0m
+[0;32mI (97869) maxrefdes117: IR: 816, AC: -24347[0m
+[0;32mI (98119) maxrefdes117: IR: 754, AC: -12317[0m
+[0;32mI (98369) maxrefdes117: IR_raw: 833, DC: 3300, AC: 17632, BPM: 1320[0m
+[0;32mI (98619) maxrefdes117: IR: 823, AC: 12830[0m
+[0;32mI (98869) maxrefdes117: IR: 791, AC: 21651[0m
+[0;32mI (99119) maxrefdes117: IR: 844, AC: -27081[0m
+[0;32mI (99369) maxrefdes117: IR_raw: 822, DC: 3223, AC: -23268, BPM: 1170[0m
+[0;32mI (99619) maxrefdes117: IR: 818, AC: -24902[0m
+[0;32mI (99869) maxrefdes117: IR: 831, AC: -27159[0m
+[0;32mI (100119) maxrefdes117: IR: 893, AC: 14951[0m
+[0;32mI (100369) maxrefdes117: IR_raw: 822, DC: 3197, AC: -12633, BPM: 1200[0m
+[0;32mI (100619) maxrefdes117: IR: 842, AC: 19629[0m
+[0;32mI (100869) maxrefdes117: IR: 810, AC: -20139[0m
+[0;32mI (101119) maxrefdes117: IR: 926, AC: 21848[0m
+[0;32mI (101369) maxrefdes117: IR_raw: 824, DC: 3205, AC: -27476, BPM: 930[0m
+[0;32mI (101619) maxrefdes117: IR: 843, AC: -19759[0m
+[0;32mI (101869) maxrefdes117: IR: 833, AC: 5791[0m
+[0;32mI (102119) maxrefdes117: IR: 941, AC: -15663[0m
+[0;32mI (102369) maxrefdes117: IR_raw: 812, DC: 3179, AC: 21413, BPM: 1350[0m
+[0;32mI (102619) maxrefdes117: IR: 837, AC: 9656[0m
+[0;32mI (102869) maxrefdes117: IR: 816, AC: -12007[0m
+[0;32mI (103119) maxrefdes117: IR: 946, AC: -18975[0m
+[0;32mI (103369) maxrefdes117: IR_raw: 824, DC: 3212, AC: -11801, BPM: 990[0m
+[0;32mI (103619) maxrefdes117: IR: 875, AC: 19835[0m
+[0;32mI (103869) maxrefdes117: IR: 847, AC: -19921[0m
+[0;32mI (104119) maxrefdes117: IR: 945, AC: -25504[0m
+[0;32mI (104369) maxrefdes117: IR_raw: 824, DC: 3228, AC: -12728, BPM: 1050[0m
+[0;32mI (104619) maxrefdes117: IR: 866, AC: -18220[0m
+[0;32mI (104869) maxrefdes117: IR: 822, AC: -21347[0m
+[0;32mI (105119) maxrefdes117: IR: 935, AC: -24871[0m
+[0;32mI (105369) maxrefdes117: IR_raw: 815, DC: 3219, AC: 14243, BPM: 1080[0m
+[0;32mI (105619) maxrefdes117: IR: 845, AC: -27764[0m
+[0;32mI (105869) maxrefdes117: IR: 872, AC: 20032[0m
+[0;32mI (106119) maxrefdes117: IR: 943, AC: -7676[0m
+[0;32mI (106369) maxrefdes117: IR_raw: 844, DC: 3312, AC: -13468, BPM: 1170[0m
+[0;32mI (106619) maxrefdes117: IR: 844, AC: -23325[0m
+[0;32mI (106869) maxrefdes117: IR: 867, AC: 10684[0m
+[0;32mI (107119) maxrefdes117: IR: 965, AC: -17414[0m
+[0;32mI (107369) maxrefdes117: IR_raw: 833, DC: 3224, AC: 9664, BPM: 1260[0m
+[0;32mI (107619) maxrefdes117: IR: 854, AC: 17005[0m
+[0;32mI (107869) maxrefdes117: IR: 868, AC: 5902[0m
+[0;32mI (108119) maxrefdes117: IR: 974, AC: -27538[0m
+[0;32mI (108369) maxrefdes117: IR_raw: 849, DC: 3311, AC: -16372, BPM: 1020[0m
+[0;32mI (108619) maxrefdes117: IR: 834, AC: 23112[0m
+[0;32mI (108869) maxrefdes117: IR: 873, AC: 17516[0m
+[0;32mI (109119) maxrefdes117: IR: 969, AC: 21395[0m
+[0;32mI (109369) maxrefdes117: IR_raw: 887, DC: 3400, AC: 13523, BPM: 1170[0m
+[0;32mI (109619) maxrefdes117: IR: 822, AC: 20175[0m
+[0;32mI (109869) maxrefdes117: IR: 858, AC: 19555[0m
+[0;32mI (110119) maxrefdes117: IR: 987, AC: 15105[0m
+[0;32mI (110369) maxrefdes117: IR_raw: 841, DC: 3325, AC: 11527, BPM: 1080[0m
+[0;32mI (110619) maxrefdes117: IR: 833, AC: -17009[0m
+[0;32mI (110869) maxrefdes117: IR: 876, AC: -27436[0m
+[0;32mI (111119) maxrefdes117: IR: 969, AC: -6635[0m
+[0;32mI (111369) maxrefdes117: IR_raw: 864, DC: 3413, AC: 22840, BPM: 1290[0m
+[0;32mI (111619) maxrefdes117: IR: 860, AC: 12397[0m
+[0;32mI (111869) maxrefdes117: IR: 871, AC: 21602[0m
+[0;32mI (112119) maxrefdes117: IR: 971, AC: -25993[0m
+[0;32mI (112369) maxrefdes117: IR_raw: 864, DC: 3374, AC: -9366, BPM: 1230[0m
+[0;32mI (112619) maxrefdes117: IR: 874, AC: -11892[0m
+[0;32mI (112869) maxrefdes117: IR: 876, AC: -27475[0m
+[0;32mI (113119) maxrefdes117: IR: 1002, AC: -17913[0m
+[0;32mI (113369) maxrefdes117: IR_raw: 869, DC: 3408, AC: 20426, BPM: 1140[0m
+[0;32mI (113619) maxrefdes117: IR: 865, AC: -15093[0m
+[0;32mI (113869) maxrefdes117: IR: 898, AC: -26321[0m
+[0;32mI (114119) maxrefdes117: IR: 1018, AC: -12519[0m
+[0;32mI (114369) maxrefdes117: IR_raw: 893, DC: 3458, AC: -12637, BPM: 1290[0m
+[0;32mI (114619) maxrefdes117: IR: 878, AC: 5198[0m
+[0;32mI (114869) maxrefdes117: IR: 898, AC: -18539[0m
+[0;32mI (115119) maxrefdes117: IR: 952, AC: -8667[0m
+[0;32mI (115369) maxrefdes117: IR_raw: 876, DC: 3428, AC: -16449, BPM: 1170[0m
+[0;32mI (115619) maxrefdes117: IR: 884, AC: -6318[0m
+[0;32mI (115869) maxrefdes117: IR: 893, AC: -27287[0m
+[0;32mI (116119) maxrefdes117: IR: 988, AC: -18760[0m
+[0;32mI (116369) maxrefdes117: IR_raw: 882, DC: 3437, AC: 7193, BPM: 1050[0m
+[0;32mI (116619) maxrefdes117: IR: 904, AC: -13699[0m
+[0;32mI (116869) maxrefdes117: IR: 897, AC: 8868[0m
+[0;32mI (117119) maxrefdes117: IR: 981, AC: -19094[0m
+[0;32mI (117369) maxrefdes117: IR_raw: 891, DC: 3473, AC: -14864, BPM: 1200[0m
+[0;32mI (117619) maxrefdes117: IR: 896, AC: -15182[0m
+[0;32mI (117869) maxrefdes117: IR: 887, AC: -27353[0m
+[0;32mI (118119) maxrefdes117: IR: 1011, AC: 10866[0m
+[0;32mI (118369) maxrefdes117: IR_raw: 900, DC: 3498, AC: -12838, BPM: 1110[0m
+[0;32mI (118619) maxrefdes117: IR: 881, AC: -24685[0m
+[0;32mI (118869) maxrefdes117: IR: 931, AC: -28288[0m
+[0;32mI (119119) maxrefdes117: IR: 1066, AC: -22376[0m
+[0;32mI (119369) maxrefdes117: IR_raw: 895, DC: 3460, AC: 12912, BPM: 960[0m
+[0;32mI (119619) maxrefdes117: IR: 879, AC: -26421[0m
+[0;32mI (119869) maxrefdes117: IR: 938, AC: 19938[0m
+[0;32mI (120119) maxrefdes117: IR: 1014, AC: -16692[0m
+[0;32mI (120369) maxrefdes117: IR_raw: 894, DC: 3418, AC: 19349, BPM: 1110[0m
+[0;32mI (120619) maxrefdes117: IR: 900, AC: -17200[0m
+[0;32mI (120869) maxrefdes117: IR: 918, AC: -24285[0m
+[0;32mI (121119) maxrefdes117: IR: 1022, AC: 20447[0m
+[0;32mI (121369) maxrefdes117: IR_raw: 920, DC: 3525, AC: 12012, BPM: 1200[0m
+[0;32mI (121619) maxrefdes117: IR: 873, AC: 10654[0m
+[0;32mI (121869) maxrefdes117: IR: 816, AC: -23142[0m
+[0;32mI (122119) maxrefdes117: IR: 1022, AC: 5048[0m
+[0;32mI (122369) maxrefdes117: IR_raw: 923, DC: 3561, AC: 11476, BPM: 1170[0m
+[0;32mI (122619) maxrefdes117: IR: 915, AC: -12546[0m
+[0;32mI (122869) maxrefdes117: IR: 869, AC: -21241[0m
+[0;32mI (123119) maxrefdes117: IR: 993, AC: -23846[0m
+[0;32mI (123369) maxrefdes117: IR_raw: 909, DC: 3504, AC: 22801, BPM: 1050[0m
+[0;32mI (123619) maxrefdes117: IR: 939, AC: -21085[0m
+[0;32mI (123869) maxrefdes117: IR: 846, AC: 18156[0m
+[0;32mI (124119) maxrefdes117: IR: 967, AC: 6842[0m
+[0;32mI (124369) maxrefdes117: IR_raw: 940, DC: 3592, AC: -5959, BPM: 1110[0m
+[0;32mI (124619) maxrefdes117: IR: 912, AC: 19392[0m
+[0;32mI (124869) maxrefdes117: IR: 850, AC: -25022[0m
+[0;32mI (125119) maxrefdes117: IR: 964, AC: -26937[0m
+[0;32mI (125369) maxrefdes117: IR_raw: 919, DC: 3530, AC: 5440, BPM: 1200[0m
+[0;32mI (125619) maxrefdes117: IR: 915, AC: 7683[0m
+[0;32mI (125869) maxrefdes117: IR: 886, AC: -19693[0m
+[0;32mI (126119) maxrefdes117: IR: 943, AC: -16067[0m
+[0;32mI (126369) maxrefdes117: IR_raw: 913, DC: 3525, AC: -9344, BPM: 1200[0m
+[0;32mI (126619) maxrefdes117: IR: 915, AC: 19001[0m
+[0;32mI (126869) maxrefdes117: IR: 972, AC: -18070[0m
+[0;32mI (127119) maxrefdes117: IR: 923, AC: -27785[0m
+[0;32mI (127369) maxrefdes117: IR_raw: 960, DC: 3655, AC: -19999, BPM: 1230[0m
+[0;32mI (127619) maxrefdes117: IR: 936, AC: 12162[0m
+[0;32mI (127869) maxrefdes117: IR: 984, AC: 4890[0m
+[0;32mI (128119) maxrefdes117: IR: 946, AC: -23584[0m
+[0;32mI (128369) maxrefdes117: IR_raw: 932, DC: 3595, AC: -11605, BPM: 1380[0m
+[0;32mI (128619) maxrefdes117: IR: 912, AC: -27559[0m
+[0;32mI (128869) maxrefdes117: IR: 1037, AC: -11649[0m
+[0;32mI (129119) maxrefdes117: IR: 941, AC: 6718[0m
+[0;32mI (129369) maxrefdes117: IR_raw: 929, DC: 3618, AC: 21427, BPM: 1200[0m
+[0;32mI (129619) maxrefdes117: IR: 932, AC: -19226[0m
+[0;32mI (129869) maxrefdes117: IR: 1070, AC: -22571[0m
+[0;32mI (130119) maxrefdes117: IR: 942, AC: -11036[0m
+[0;32mI (130369) maxrefdes117: IR_raw: 928, DC: 3580, AC: 9627, BPM: 960[0m
+[0;32mI (130619) maxrefdes117: IR: 937, AC: -23202[0m
+[0;32mI (130869) maxrefdes117: IR: 1064, AC: 21324[0m
+[0;32mI (131119) maxrefdes117: IR: 936, AC: 20757[0m
+[0;32mI (131369) maxrefdes117: IR_raw: 944, DC: 3649, AC: -26397, BPM: 1140[0m
+[0;32mI (131619) maxrefdes117: IR: 945, AC: 11480[0m
+[0;32mI (131869) maxrefdes117: IR: 1053, AC: -17240[0m
+[0;32mI (132119) maxrefdes117: IR: 953, AC: -10064[0m
+[0;32mI (132369) maxrefdes117: IR_raw: 939, DC: 3616, AC: 17258, BPM: 1230[0m
+[0;32mI (132619) maxrefdes117: IR: 950, AC: -16539[0m
+[0;32mI (132869) maxrefdes117: IR: 1057, AC: -19618[0m
+[0;32mI (133119) maxrefdes117: IR: 938, AC: -23223[0m
+[0;32mI (133369) maxrefdes117: IR_raw: 935, DC: 3624, AC: 14540, BPM: 1020[0m
+[0;32mI (133619) maxrefdes117: IR: 963, AC: -6579[0m
+[0;32mI (133869) maxrefdes117: IR: 1061, AC: 21835[0m
+[0;32mI (134119) maxrefdes117: IR: 956, AC: -16258[0m
+[0;32mI (134369) maxrefdes117: IR_raw: 953, DC: 3656, AC: -25839, BPM: 1350[0m
+[0;32mI (134619) maxrefdes117: IR: 973, AC: 23041[0m
+[0;32mI (134869) maxrefdes117: IR: 1025, AC: -10153[0m
+[0;32mI (135119) maxrefdes117: IR: 951, AC: 22025[0m
+[0;32mI (135369) maxrefdes117: IR_raw: 956, DC: 3645, AC: -24340, BPM: 1380[0m
+[0;32mI (135619) maxrefdes117: IR: 938, AC: -7871[0m
+[0;32mI (135869) maxrefdes117: IR: 1050, AC: -11035[0m
+[0;32mI (136119) maxrefdes117: IR: 948, AC: 5704[0m
+[0;32mI (136369) maxrefdes117: IR_raw: 964, DC: 3677, AC: -23649, BPM: 1200[0m
+[0;32mI (136619) maxrefdes117: IR: 964, AC: -24634[0m
+[0;32mI (136869) maxrefdes117: IR: 1055, AC: 8836[0m
+[0;32mI (137119) maxrefdes117: IR: 927, AC: -23528[0m
+[0;32mI (137369) maxrefdes117: IR_raw: 956, DC: 3694, AC: -23848, BPM: 1260[0m
+[0;32mI (137619) maxrefdes117: IR: 958, AC: -23547[0m
+[0;32mI (137869) maxrefdes117: IR: 1026, AC: 10308[0m
+[0;32mI (138119) maxrefdes117: IR: 981, AC: 19719[0m
+[0;32mI (138369) maxrefdes117: IR_raw: 965, DC: 3703, AC: -21951, BPM: 1200[0m
+[0;32mI (138619) maxrefdes117: IR: 978, AC: -23155[0m
+[0;32mI (138869) maxrefdes117: IR: 1024, AC: -16099[0m
+[0;32mI (139119) maxrefdes117: IR: 969, AC: -24572[0m
+[0;32mI (139369) maxrefdes117: IR_raw: 964, DC: 3717, AC: 15453, BPM: 1110[0m
+[0;32mI (139619) maxrefdes117: IR: 955, AC: -17967[0m
+[0;32mI (139869) maxrefdes117: IR: 985, AC: 22345[0m
+[0;32mI (140119) maxrefdes117: IR: 983, AC: 5247[0m
+[0;32mI (140369) maxrefdes117: IR_raw: 973, DC: 3744, AC: -25979, BPM: 1230[0m
+[0;32mI (140619) maxrefdes117: IR: 994, AC: -25500[0m
+[0;32mI (140869) maxrefdes117: IR: 918, AC: -14522[0m
+[0;32mI (141119) maxrefdes117: IR: 982, AC: -27726[0m
+[0;32mI (141369) maxrefdes117: IR_raw: 976, DC: 3752, AC: 19962, BPM: 1170[0m
+[0;32mI (141619) maxrefdes117: IR: 988, AC: 7858[0m
+[0;32mI (141869) maxrefdes117: IR: 947, AC: 6222[0m
+[0;32mI (142119) maxrefdes117: IR: 1029, AC: 10594[0m
+[0;32mI (142369) maxrefdes117: IR_raw: 977, DC: 3765, AC: -7063, BPM: 1230[0m
+[0;32mI (142619) maxrefdes117: IR: 983, AC: 22244[0m
+[0;32mI (142869) maxrefdes117: IR: 910, AC: -17369[0m
+[0;32mI (143119) maxrefdes117: IR: 1023, AC: -27735[0m
+[0;32mI (143369) maxrefdes117: IR_raw: 966, DC: 3755, AC: -12929, BPM: 1290[0m
+[0;32mI (143619) maxrefdes117: IR: 983, AC: 8589[0m
+[0;32mI (143869) maxrefdes117: IR: 926, AC: 5399[0m
+[0;32mI (144119) maxrefdes117: IR: 996, AC: -16172[0m
+[0;32mI (144369) maxrefdes117: IR_raw: 965, DC: 3738, AC: -24342, BPM: 1110[0m
+[0;32mI (144619) maxrefdes117: IR: 977, AC: -27985[0m
+[0;32mI (144869) maxrefdes117: IR: 924, AC: 10815[0m
+[0;32mI (145119) maxrefdes117: IR: 1023, AC: -7448[0m
+[0;32mI (145369) maxrefdes117: IR_raw: 989, DC: 3817, AC: -10489, BPM: 1140[0m
+[0;32mI (145619) maxrefdes117: IR: 975, AC: 13158[0m
+[0;32mI (145869) maxrefdes117: IR: 919, AC: -7238[0m
+[0;32mI (146119) maxrefdes117: IR: 1009, AC: 19273[0m
+[0;32mI (146369) maxrefdes117: IR_raw: 987, DC: 3824, AC: 22835, BPM: 1020[0m
+[0;32mI (146619) maxrefdes117: IR: 981, AC: -14787[0m
+[0;32mI (146869) maxrefdes117: IR: 974, AC: -14876[0m
+[0;32mI (147119) maxrefdes117: IR: 1016, AC: -27290[0m
+[0;32mI (147369) maxrefdes117: IR_raw: 995, DC: 3829, AC: 23084, BPM: 1140[0m
+[0;32mI (147619) maxrefdes117: IR: 999, AC: 11726[0m
+[0;32mI (147869) maxrefdes117: IR: 978, AC: -15871[0m
+[0;32mI (148119) maxrefdes117: IR: 988, AC: -24080[0m
+[0;32mI (148369) maxrefdes117: IR_raw: 993, DC: 3822, AC: 18242, BPM: 1200[0m
+[0;32mI (148619) maxrefdes117: IR: 1008, AC: -21345[0m
+[0;32mI (148869) maxrefdes117: IR: 1100, AC: 16769[0m
+[0;32mI (149119) maxrefdes117: IR: 994, AC: 13750[0m
+[0;32mI (149369) maxrefdes117: IR_raw: 990, DC: 3767, AC: 10418, BPM: 1020[0m
+[0;32mI (149619) maxrefdes117: IR: 1015, AC: -13413[0m
+[0;32mI (149869) maxrefdes117: IR: 1102, AC: -14792[0m
+[0;32mI (150119) maxrefdes117: IR: 983, AC: 22680[0m
+[0;32mI (150369) maxrefdes117: IR_raw: 977, DC: 3768, AC: 13171, BPM: 1290[0m
+[0;32mI (150619) maxrefdes117: IR: 981, AC: 23330[0m
+[0;32mI (150869) maxrefdes117: IR: 1115, AC: 9747[0m
+[0;32mI (151119) maxrefdes117: IR: 967, AC: -7791[0m
+[0;32mI (151369) maxrefdes117: IR_raw: 1016, DC: 3874, AC: 22101, BPM: 1140[0m
+[0;32mI (151619) maxrefdes117: IR: 988, AC: 14561[0m
+[0;32mI (151869) maxrefdes117: IR: 1116, AC: 12204[0m
+[0;32mI (152119) maxrefdes117: IR: 999, AC: 19867[0m
+[0;32mI (152369) maxrefdes117: IR_raw: 979, DC: 3853, AC: -25038, BPM: 1050[0m
+[0;32mI (152619) maxrefdes117: IR: 995, AC: -7986[0m
+[0;32mI (152869) maxrefdes117: IR: 1095, AC: -18076[0m
+[0;32mI (153119) maxrefdes117: IR: 1015, AC: -22082[0m
+[0;32mI (153369) maxrefdes117: IR_raw: 996, DC: 3877, AC: 12380, BPM: 1050[0m
+[0;32mI (153619) maxrefdes117: IR: 1000, AC: -7513[0m
+[0;32mI (153869) maxrefdes117: IR: 1102, AC: -19000[0m
+[0;32mI (154119) maxrefdes117: IR: 1014, AC: 11980[0m
+[0;32mI (154369) maxrefdes117: IR_raw: 1015, DC: 3866, AC: -28077, BPM: 1200[0m
+[0;32mI (154619) maxrefdes117: IR: 1003, AC: 23044[0m
+[0;32mI (154869) maxrefdes117: IR: 1131, AC: 19752[0m
+[0;32mI (155119) maxrefdes117: IR: 1020, AC: -16335[0m
+[0;32mI (155369) maxrefdes117: IR_raw: 1008, DC: 3874, AC: 18584, BPM: 1290[0m
+[0;32mI (155619) maxrefdes117: IR: 1006, AC: 23070[0m
+[0;32mI (155869) maxrefdes117: IR: 1146, AC: -20637[0m
+[0;32mI (156119) maxrefdes117: IR: 1004, AC: 21075[0m
+[0;32mI (156369) maxrefdes117: IR_raw: 1021, DC: 3931, AC: 8089, BPM: 960[0m
+[0;32mI (156619) maxrefdes117: IR: 1018, AC: -15130[0m
+[0;32mI (156869) maxrefdes117: IR: 1172, AC: -13250[0m
+[0;32mI (157119) maxrefdes117: IR: 1019, AC: -20448[0m
+[0;32mI (157369) maxrefdes117: IR_raw: 1020, DC: 3921, AC: 6871, BPM: 1170[0m
+[0;32mI (157619) maxrefdes117: IR: 1021, AC: -25723[0m
+[0;32mI (157869) maxrefdes117: IR: 1102, AC: -10616[0m
+[0;32mI (158119) maxrefdes117: IR: 1024, AC: -16684[0m
+[0;32mI (158369) maxrefdes117: IR_raw: 1014, DC: 3891, AC: 17145, BPM: 1290[0m
+[0;32mI (158619) maxrefdes117: IR: 1017, AC: 5856[0m
+[0;32mI (158869) maxrefdes117: IR: 1119, AC: 15839[0m
+[0;32mI (159119) maxrefdes117: IR: 1025, AC: 10293[0m
+[0;32mI (159369) maxrefdes117: IR_raw: 1002, DC: 3900, AC: -18120, BPM: 1110[0m
+[0;32mI (159619) maxrefdes117: IR: 1022, AC: 15929[0m
+[0;32mI (159869) maxrefdes117: IR: 1146, AC: 20112[0m
+[0;32mI (160119) maxrefdes117: IR: 1037, AC: 7815[0m
+[0;32mI (160369) maxrefdes117: IR_raw: 1020, DC: 3943, AC: 7054, BPM: 1170[0m
+[0;32mI (160619) maxrefdes117: IR: 1033, AC: -27890[0m
+[0;32mI (160869) maxrefdes117: IR: 1103, AC: -29291[0m
+[0;32mI (161119) maxrefdes117: IR: 1028, AC: -14904[0m
+[0;32mI (161369) maxrefdes117: IR_raw: 1015, DC: 3901, AC: -25145, BPM: 1380[0m
+[0;32mI (161619) maxrefdes117: IR: 1022, AC: 9408[0m
+[0;32mI (161869) maxrefdes117: IR: 1138, AC: -11149[0m
+[0;32mI (162119) maxrefdes117: IR: 1038, AC: -19795[0m
+[0;32mI (162369) maxrefdes117: IR_raw: 1029, DC: 3959, AC: 18156, BPM: 1050[0m
+[0;32mI (162619) maxrefdes117: IR: 1034, AC: -24065[0m
+[0;32mI (162869) maxrefdes117: IR: 1129, AC: 4762[0m
+[0;32mI (163119) maxrefdes117: IR: 1023, AC: -23684[0m
+[0;32mI (163369) maxrefdes117: IR_raw: 1020, DC: 3916, AC: -22746, BPM: 1290[0m
+[0;32mI (163619) maxrefdes117: IR: 1023, AC: -20374[0m
+[0;32mI (163869) maxrefdes117: IR: 1142, AC: 20852[0m
+[0;32mI (164119) maxrefdes117: IR: 1033, AC: 14411[0m
+[0;32mI (164369) maxrefdes117: IR_raw: 1027, DC: 3955, AC: 18584, BPM: 1050[0m
+[0;32mI (164619) maxrefdes117: IR: 1028, AC: -15803[0m
+[0;32mI (164869) maxrefdes117: IR: 1150, AC: -15055[0m
+[0;32mI (165119) maxrefdes117: IR: 1025, AC: -18936[0m
+[0;32mI (165369) maxrefdes117: IR_raw: 1049, DC: 3996, AC: 19073, BPM: 1200[0m
+[0;32mI (165619) maxrefdes117: IR: 1018, AC: -16257[0m
+[0;32mI (165869) maxrefdes117: IR: 1139, AC: -21403[0m
+[0;32mI (166119) maxrefdes117: IR: 1032, AC: -26646[0m
+[0;32mI (166369) maxrefdes117: IR_raw: 1021, DC: 3950, AC: 7999, BPM: 1080[0m
+[0;32mI (166619) maxrefdes117: IR: 1018, AC: -12948[0m
+[0;32mI (166869) maxrefdes117: IR: 1143, AC: 6614[0m
+[0;32mI (167119) maxrefdes117: IR: 1023, AC: -27999[0m
+[0;32mI (167369) maxrefdes117: IR_raw: 1056, DC: 4063, AC: 20777, BPM: 1170[0m
+[0;32mI (167619) maxrefdes117: IR: 1047, AC: 21338[0m
+[0;32mI (167869) maxrefdes117: IR: 1162, AC: 10972[0m
+[0;32mI (168119) maxrefdes117: IR: 1042, AC: -13007[0m
+[0;32mI (168369) maxrefdes117: IR_raw: 1044, DC: 4021, AC: -14487, BPM: 1110[0m
+[0;32mI (168619) maxrefdes117: IR: 1020, AC: 15811[0m
+[0;32mI (168869) maxrefdes117: IR: 1145, AC: 9921[0m
+[0;32mI (169119) maxrefdes117: IR: 1024, AC: -18328[0m
+[0;32mI (169369) maxrefdes117: IR_raw: 1033, DC: 3990, AC: -24397, BPM: 1050[0m
+[0;32mI (169619) maxrefdes117: IR: 1031, AC: -15293[0m
+[0;32mI (169869) maxrefdes117: IR: 1196, AC: -24878[0m
+[0;32mI (170119) maxrefdes117: IR: 1032, AC: 21121[0m
+[0;32mI (170369) maxrefdes117: IR_raw: 1043, DC: 4011, AC: 17323, BPM: 1170[0m
+[0;32mI (170619) maxrefdes117: IR: 918, AC: -15609[0m
+[0;32mI (170869) maxrefdes117: IR: 1104, AC: -15306[0m
+[0;32mI (171119) maxrefdes117: IR: 1027, AC: 16772[0m
+[0;32mI (171369) maxrefdes117: IR_raw: 1046, DC: 4019, AC: -12365, BPM: 870[0m
