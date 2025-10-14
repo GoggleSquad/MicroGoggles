@@ -1,0 +1,293 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\MicroGoggles\Accelerometer\build\Accelerometer.elf C:\Users\pprat\Senior_Design\MicroGoggles\Accelerometer\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 14 2025 17:27:36[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b784h ( 46980) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001b7ac vaddr=3fc93900 size=02b08h ( 11016) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e2bc vaddr=40374000 size=01d5ch (  7516) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1a4a4h (107684) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=0003a4cc vaddr=40375d5c size=0db90h ( 56208) load[0m
+[0;32mI (140) esp_image: segment 5: paddr=00048064 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (158) cpu_start: Multicore app[0m
+[0;32mI (167) cpu_start: Pro cpu start user code[0m
+[0;32mI (167) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     Accelerometer[0m
+[0;32mI (172) app_init: App version:      85934ec[0m
+[0;32mI (176) app_init: Compile time:     Oct 14 2025 17:11:05[0m
+[0;32mI (181) app_init: ELF file SHA256:  4a1e13cc7...[0m
+[0;32mI (185) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (201) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC96CF0 len 00052A20 (330 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (256) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+[0;32mI (280) MAIN_APP: Initializing I2C...[0m
+[0;32mI (280) MAIN_APP: Scanning I2C bus...[0m
+[0;32mI (290) MAIN_APP: Found device at 0x19[0m
+[0;32mI (310) MAIN_APP: LIS3DH WHO_AM_I = 0x33[0m
+[0;32mI (310) MAIN_APP: LIS3DH detected, initializing...[0m
+[0;32mI (310) lis3dh: LIS3DH initialized (100Hz, ±2g)[0m
+[0;32mI (310) MAIN_APP: LIS3DH initialized successfully[0m
+[0;32mI (310) lis3dh: Accel raw X=24 Y=-20 Z=1032[0m
+[0;32mI (320) MAIN_APP: Accel: X=0.235 g, Y=-0.196 g, Z=10.124 g[0m
+[0;32mI (820) lis3dh: Accel raw X=12 Y=-32 Z=1044[0m
+[0;32mI (820) MAIN_APP: Accel: X=0.118 g, Y=-0.314 g, Z=10.242 g[0m
+[0;32mI (1320) lis3dh: Accel raw X=20 Y=-24 Z=1036[0m
+[0;32mI (1320) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (1820) lis3dh: Accel raw X=16 Y=-32 Z=1044[0m
+[0;32mI (1820) MAIN_APP: Accel: X=0.157 g, Y=-0.314 g, Z=10.242 g[0m
+[0;32mI (2320) lis3dh: Accel raw X=12 Y=-24 Z=1032[0m
+[0;32mI (2320) MAIN_APP: Accel: X=0.118 g, Y=-0.235 g, Z=10.124 g[0m
+[0;32mI (2820) lis3dh: Accel raw X=12 Y=-32 Z=1032[0m
+[0;32mI (2820) MAIN_APP: Accel: X=0.118 g, Y=-0.314 g, Z=10.124 g[0m
+[0;32mI (3320) lis3dh: Accel raw X=12 Y=-28 Z=1036[0m
+[0;32mI (3320) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (3820) lis3dh: Accel raw X=24 Y=-28 Z=1036[0m
+[0;32mI (3820) MAIN_APP: Accel: X=0.235 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (4320) lis3dh: Accel raw X=24 Y=-32 Z=1032[0m
+[0;32mI (4320) MAIN_APP: Accel: X=0.235 g, Y=-0.314 g, Z=10.124 g[0m
+[0;32mI (4820) lis3dh: Accel raw X=16 Y=-36 Z=1032[0m
+[0;32mI (4820) MAIN_APP: Accel: X=0.157 g, Y=-0.353 g, Z=10.124 g[0m
+[0;32mI (5320) lis3dh: Accel raw X=16 Y=-28 Z=1036[0m
+[0;32mI (5320) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (5820) lis3dh: Accel raw X=16 Y=-28 Z=1040[0m
+[0;32mI (5820) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.202 g[0m
+[0;32mI (6320) lis3dh: Accel raw X=16 Y=-24 Z=1036[0m
+[0;32mI (6320) MAIN_APP: Accel: X=0.157 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (6820) lis3dh: Accel raw X=28 Y=-32 Z=1028[0m
+[0;32mI (6820) MAIN_APP: Accel: X=0.275 g, Y=-0.314 g, Z=10.085 g[0m
+[0;32mI (7320) lis3dh: Accel raw X=20 Y=-28 Z=1036[0m
+[0;32mI (7320) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (7820) lis3dh: Accel raw X=20 Y=-20 Z=1036[0m
+[0;32mI (7820) MAIN_APP: Accel: X=0.196 g, Y=-0.196 g, Z=10.163 g[0m
+[0;32mI (8320) lis3dh: Accel raw X=12 Y=-28 Z=1040[0m
+[0;32mI (8320) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.202 g[0m
+[0;32mI (8820) lis3dh: Accel raw X=16 Y=-24 Z=1036[0m
+[0;32mI (8820) MAIN_APP: Accel: X=0.157 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (9320) lis3dh: Accel raw X=12 Y=-28 Z=1036[0m
+[0;32mI (9320) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (9820) lis3dh: Accel raw X=24 Y=-24 Z=1036[0m
+[0;32mI (9820) MAIN_APP: Accel: X=0.235 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (10320) lis3dh: Accel raw X=12 Y=-28 Z=1040[0m
+[0;32mI (10320) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.202 g[0m
+[0;32mI (10820) lis3dh: Accel raw X=20 Y=-24 Z=1044[0m
+[0;32mI (10820) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.242 g[0m
+[0;32mI (11320) lis3dh: Accel raw X=24 Y=40 Z=984[0m
+[0;32mI (11320) MAIN_APP: Accel: X=0.235 g, Y=0.392 g, Z=9.653 g[0m
+[0;32mI (11820) lis3dh: Accel raw X=16 Y=-24 Z=1044[0m
+[0;32mI (11820) MAIN_APP: Accel: X=0.157 g, Y=-0.235 g, Z=10.242 g[0m
+[0;32mI (12320) lis3dh: Accel raw X=16 Y=-28 Z=1032[0m
+[0;32mI (12320) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (12820) lis3dh: Accel raw X=20 Y=-28 Z=1036[0m
+[0;32mI (12820) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (13320) lis3dh: Accel raw X=12 Y=-32 Z=1040[0m
+[0;32mI (13320) MAIN_APP: Accel: X=0.118 g, Y=-0.314 g, Z=10.202 g[0m
+[0;32mI (13820) lis3dh: Accel raw X=16 Y=-28 Z=1032[0m
+[0;32mI (13820) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (14320) lis3dh: Accel raw X=12 Y=-28 Z=1036[0m
+[0;32mI (14320) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (14820) lis3dh: Accel raw X=20 Y=-28 Z=1028[0m
+[0;32mI (14820) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.085 g[0m
+[0;32mI (15320) lis3dh: Accel raw X=16 Y=-28 Z=1036[0m
+[0;32mI (15320) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (15820) lis3dh: Accel raw X=12 Y=-100 Z=1208[0m
+[0;32mI (15820) MAIN_APP: Accel: X=0.118 g, Y=-0.981 g, Z=11.850 g[0m
+[0;32mI (16320) lis3dh: Accel raw X=8 Y=-364 Z=1020[0m
+[0;32mI (16320) MAIN_APP: Accel: X=0.078 g, Y=-3.571 g, Z=10.006 g[0m
+[0;32mI (16820) lis3dh: Accel raw X=20 Y=-32 Z=1036[0m
+[0;32mI (16820) MAIN_APP: Accel: X=0.196 g, Y=-0.314 g, Z=10.163 g[0m
+[0;32mI (17320) lis3dh: Accel raw X=16 Y=-24 Z=1032[0m
+[0;32mI (17320) MAIN_APP: Accel: X=0.157 g, Y=-0.235 g, Z=10.124 g[0m
+[0;32mI (17820) lis3dh: Accel raw X=24 Y=-32 Z=1044[0m
+[0;32mI (17820) MAIN_APP: Accel: X=0.235 g, Y=-0.314 g, Z=10.242 g[0m
+[0;32mI (18320) lis3dh: Accel raw X=-28 Y=68 Z=1032[0m
+[0;32mI (18320) MAIN_APP: Accel: X=-0.275 g, Y=0.667 g, Z=10.124 g[0m
+[0;32mI (18820) lis3dh: Accel raw X=16 Y=-28 Z=1032[0m
+[0;32mI (18820) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (19320) lis3dh: Accel raw X=12 Y=-28 Z=1032[0m
+[0;32mI (19320) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (19820) lis3dh: Accel raw X=20 Y=-24 Z=1040[0m
+[0;32mI (19820) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.202 g[0m
+[0;32mI (20320) lis3dh: Accel raw X=16 Y=-24 Z=1036[0m
+[0;32mI (20320) MAIN_APP: Accel: X=0.157 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (20820) lis3dh: Accel raw X=20 Y=-32 Z=1040[0m
+[0;32mI (20820) MAIN_APP: Accel: X=0.196 g, Y=-0.314 g, Z=10.202 g[0m
+[0;32mI (21320) lis3dh: Accel raw X=72 Y=-192 Z=864[0m
+[0;32mI (21320) MAIN_APP: Accel: X=0.706 g, Y=-1.884 g, Z=8.476 g[0m
+[0;32mI (21820) lis3dh: Accel raw X=16 Y=164 Z=1072[0m
+[0;32mI (21820) MAIN_APP: Accel: X=0.157 g, Y=1.609 g, Z=10.516 g[0m
+[0;32mI (22320) lis3dh: Accel raw X=52 Y=-224 Z=1076[0m
+[0;32mI (22320) MAIN_APP: Accel: X=0.510 g, Y=-2.197 g, Z=10.556 g[0m
+[0;32mI (22820) lis3dh: Accel raw X=28 Y=-196 Z=1116[0m
+[0;32mI (22820) MAIN_APP: Accel: X=0.275 g, Y=-1.923 g, Z=10.948 g[0m
+[0;32mI (23320) lis3dh: Accel raw X=12 Y=28 Z=1072[0m
+[0;32mI (23320) MAIN_APP: Accel: X=0.118 g, Y=0.275 g, Z=10.516 g[0m
+[0;32mI (23820) lis3dh: Accel raw X=16 Y=96 Z=1028[0m
+[0;32mI (23820) MAIN_APP: Accel: X=0.157 g, Y=0.942 g, Z=10.085 g[0m
+[0;32mI (24320) lis3dh: Accel raw X=12 Y=-88 Z=1040[0m
+[0;32mI (24320) MAIN_APP: Accel: X=0.118 g, Y=-0.863 g, Z=10.202 g[0m
+[0;32mI (24820) lis3dh: Accel raw X=-12 Y=72 Z=904[0m
+[0;32mI (24820) MAIN_APP: Accel: X=-0.118 g, Y=0.706 g, Z=8.868 g[0m
+[0;32mI (25320) lis3dh: Accel raw X=20 Y=-24 Z=1036[0m
+[0;32mI (25320) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (25820) lis3dh: Accel raw X=20 Y=-24 Z=1036[0m
+[0;32mI (25820) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.163 g[0m
+[0;32mI (26320) lis3dh: Accel raw X=16 Y=-36 Z=1036[0m
+[0;32mI (26320) MAIN_APP: Accel: X=0.157 g, Y=-0.353 g, Z=10.163 g[0m
+[0;32mI (26820) lis3dh: Accel raw X=24 Y=-36 Z=1044[0m
+[0;32mI (26820) MAIN_APP: Accel: X=0.235 g, Y=-0.353 g, Z=10.242 g[0m
+[0;32mI (27320) lis3dh: Accel raw X=12 Y=-24 Z=1040[0m
+[0;32mI (27320) MAIN_APP: Accel: X=0.118 g, Y=-0.235 g, Z=10.202 g[0m
+[0;32mI (27820) lis3dh: Accel raw X=-20 Y=108 Z=1088[0m
+[0;32mI (27820) MAIN_APP: Accel: X=-0.196 g, Y=1.059 g, Z=10.673 g[0m
+[0;32mI (28320) lis3dh: Accel raw X=20 Y=-20 Z=1028[0m
+[0;32mI (28320) MAIN_APP: Accel: X=0.196 g, Y=-0.196 g, Z=10.085 g[0m
+[0;32mI (28820) lis3dh: Accel raw X=12 Y=-28 Z=1040[0m
+[0;32mI (28820) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.202 g[0m
+[0;32mI (29320) lis3dh: Accel raw X=20 Y=-28 Z=1032[0m
+[0;32mI (29320) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (29820) lis3dh: Accel raw X=12 Y=-28 Z=1040[0m
+[0;32mI (29820) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.202 g[0m
+[0;32mI (30320) lis3dh: Accel raw X=24 Y=-36 Z=1028[0m
+[0;32mI (30320) MAIN_APP: Accel: X=0.235 g, Y=-0.353 g, Z=10.085 g[0m
+[0;32mI (30820) lis3dh: Accel raw X=36 Y=212 Z=1060[0m
+[0;32mI (30820) MAIN_APP: Accel: X=0.353 g, Y=2.080 g, Z=10.399 g[0m
+[0;32mI (31320) lis3dh: Accel raw X=20 Y=-36 Z=1044[0m
+[0;32mI (31320) MAIN_APP: Accel: X=0.196 g, Y=-0.353 g, Z=10.242 g[0m
+[0;32mI (31820) lis3dh: Accel raw X=16 Y=-20 Z=1036[0m
+[0;32mI (31820) MAIN_APP: Accel: X=0.157 g, Y=-0.196 g, Z=10.163 g[0m
+[0;32mI (32320) lis3dh: Accel raw X=12 Y=-24 Z=1040[0m
+[0;32mI (32320) MAIN_APP: Accel: X=0.118 g, Y=-0.235 g, Z=10.202 g[0m
+[0;32mI (32820) lis3dh: Accel raw X=20 Y=-36 Z=1036[0m
+[0;32mI (32820) MAIN_APP: Accel: X=0.196 g, Y=-0.353 g, Z=10.163 g[0m
+[0;32mI (33320) lis3dh: Accel raw X=20 Y=-32 Z=1032[0m
+[0;32mI (33320) MAIN_APP: Accel: X=0.196 g, Y=-0.314 g, Z=10.124 g[0m
+[0;32mI (33820) lis3dh: Accel raw X=168 Y=-172 Z=1020[0m
+[0;32mI (33820) MAIN_APP: Accel: X=1.648 g, Y=-1.687 g, Z=10.006 g[0m
+[0;32mI (34320) lis3dh: Accel raw X=4 Y=-20 Z=1056[0m
+[0;32mI (34320) MAIN_APP: Accel: X=0.039 g, Y=-0.196 g, Z=10.359 g[0m
+[0;32mI (34820) lis3dh: Accel raw X=12 Y=-20 Z=1036[0m
+[0;32mI (34820) MAIN_APP: Accel: X=0.118 g, Y=-0.196 g, Z=10.163 g[0m
+[0;32mI (35320) lis3dh: Accel raw X=-216 Y=-92 Z=1056[0m
+[0;32mI (35320) MAIN_APP: Accel: X=-2.119 g, Y=-0.903 g, Z=10.359 g[0m
+[0;32mI (35820) lis3dh: Accel raw X=16 Y=-28 Z=1036[0m
+[0;32mI (35820) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (36320) lis3dh: Accel raw X=20 Y=-24 Z=1044[0m
+[0;32mI (36320) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.242 g[0m
+[0;32mI (36820) lis3dh: Accel raw X=24 Y=-28 Z=1036[0m
+[0;32mI (36820) MAIN_APP: Accel: X=0.235 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (37320) lis3dh: Accel raw X=20 Y=-28 Z=1048[0m
+[0;32mI (37320) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.281 g[0m
+[0;32mI (37820) lis3dh: Accel raw X=208 Y=-12 Z=1044[0m
+[0;32mI (37820) MAIN_APP: Accel: X=2.040 g, Y=-0.118 g, Z=10.242 g[0m
+[0;32mI (38320) lis3dh: Accel raw X=0 Y=-24 Z=1024[0m
+[0;32mI (38320) MAIN_APP: Accel: X=0.000 g, Y=-0.235 g, Z=10.045 g[0m
+[0;32mI (38820) lis3dh: Accel raw X=16 Y=-28 Z=1040[0m
+[0;32mI (38820) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.202 g[0m
+[0;32mI (39320) lis3dh: Accel raw X=8 Y=-28 Z=1032[0m
+[0;32mI (39320) MAIN_APP: Accel: X=0.078 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (39820) lis3dh: Accel raw X=12 Y=-28 Z=1028[0m
+[0;32mI (39820) MAIN_APP: Accel: X=0.118 g, Y=-0.275 g, Z=10.085 g[0m
+[0;32mI (40320) lis3dh: Accel raw X=20 Y=-24 Z=1032[0m
+[0;32mI (40320) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.124 g[0m
+[0;32mI (40820) lis3dh: Accel raw X=-180 Y=0 Z=1024[0m
+[0;32mI (40820) MAIN_APP: Accel: X=-1.766 g, Y=0.000 g, Z=10.045 g[0m
+[0;32mI (41320) lis3dh: Accel raw X=328 Y=220 Z=984[0m
+[0;32mI (41320) MAIN_APP: Accel: X=3.218 g, Y=2.158 g, Z=9.653 g[0m
+[0;32mI (41820) lis3dh: Accel raw X=20 Y=-32 Z=1040[0m
+[0;32mI (41820) MAIN_APP: Accel: X=0.196 g, Y=-0.314 g, Z=10.202 g[0m
+[0;32mI (42320) lis3dh: Accel raw X=24 Y=-28 Z=1036[0m
+[0;32mI (42320) MAIN_APP: Accel: X=0.235 g, Y=-0.275 g, Z=10.163 g[0m
+[0;32mI (42820) lis3dh: Accel raw X=16 Y=-36 Z=1036[0m
+[0;32mI (42820) MAIN_APP: Accel: X=0.157 g, Y=-0.353 g, Z=10.163 g[0m
+[0;32mI (43320) lis3dh: Accel raw X=20 Y=-28 Z=1032[0m
+[0;32mI (43320) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (43820) lis3dh: Accel raw X=20 Y=-28 Z=1044[0m
+[0;32mI (43820) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.242 g[0m
+[0;32mI (44320) lis3dh: Accel raw X=20 Y=-24 Z=1040[0m
+[0;32mI (44320) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.202 g[0m
+[0;32mI (44820) lis3dh: Accel raw X=48 Y=-52 Z=1144[0m
+[0;32mI (44820) MAIN_APP: Accel: X=0.471 g, Y=-0.510 g, Z=11.223 g[0m
+[0;32mI (45320) lis3dh: Accel raw X=8 Y=-76 Z=1032[0m
+[0;32mI (45320) MAIN_APP: Accel: X=0.078 g, Y=-0.746 g, Z=10.124 g[0m
+[0;32mI (45820) lis3dh: Accel raw X=8 Y=-36 Z=1012[0m
+[0;32mI (45820) MAIN_APP: Accel: X=0.078 g, Y=-0.353 g, Z=9.928 g[0m
+[0;32mI (46320) lis3dh: Accel raw X=4 Y=-44 Z=996[0m
+[0;32mI (46320) MAIN_APP: Accel: X=0.039 g, Y=-0.432 g, Z=9.771 g[0m
+[0;32mI (46820) lis3dh: Accel raw X=-108 Y=-180 Z=976[0m
+[0;32mI (46820) MAIN_APP: Accel: X=-1.059 g, Y=-1.766 g, Z=9.575 g[0m
+[0;32mI (47320) lis3dh: Accel raw X=-640 Y=-80 Z=836[0m
+[0;32mI (47320) MAIN_APP: Accel: X=-6.278 g, Y=-0.785 g, Z=8.201 g[0m
+[0;32mI (47820) lis3dh: Accel raw X=-956 Y=-16 Z=228[0m
+[0;32mI (47820) MAIN_APP: Accel: X=-9.378 g, Y=-0.157 g, Z=2.237 g[0m
+[0;32mI (48320) lis3dh: Accel raw X=-968 Y=32 Z=-32[0m
+[0;32mI (48320) MAIN_APP: Accel: X=-9.496 g, Y=0.314 g, Z=-0.314 g[0m
+[0;32mI (48820) lis3dh: Accel raw X=-972 Y=28 Z=-48[0m
+[0;32mI (48820) MAIN_APP: Accel: X=-9.535 g, Y=0.275 g, Z=-0.471 g[0m
+[0;32mI (49320) lis3dh: Accel raw X=-780 Y=48 Z=356[0m
+[0;32mI (49320) MAIN_APP: Accel: X=-7.652 g, Y=0.471 g, Z=3.492 g[0m
+[0;32mI (49820) lis3dh: Accel raw X=-284 Y=-192 Z=1040[0m
+[0;32mI (49820) MAIN_APP: Accel: X=-2.786 g, Y=-1.884 g, Z=10.202 g[0m
+[0;32mI (50320) lis3dh: Accel raw X=-72 Y=-244 Z=596[0m
+[0;32mI (50320) MAIN_APP: Accel: X=-0.706 g, Y=-2.394 g, Z=5.847 g[0m
+[0;32mI (50820) lis3dh: Accel raw X=-20 Y=-168 Z=1052[0m
+[0;32mI (50820) MAIN_APP: Accel: X=-0.196 g, Y=-1.648 g, Z=10.320 g[0m
+[0;32mI (51320) lis3dh: Accel raw X=280 Y=-184 Z=1696[0m
+[0;32mI (51320) MAIN_APP: Accel: X=2.747 g, Y=-1.805 g, Z=16.638 g[0m
+[0;32mI (51820) lis3dh: Accel raw X=16 Y=-12 Z=1020[0m
+[0;32mI (51820) MAIN_APP: Accel: X=0.157 g, Y=-0.118 g, Z=10.006 g[0m
+[0;32mI (52320) lis3dh: Accel raw X=8 Y=-12 Z=1048[0m
+[0;32mI (52320) MAIN_APP: Accel: X=0.078 g, Y=-0.118 g, Z=10.281 g[0m
+[0;32mI (52820) lis3dh: Accel raw X=148 Y=-152 Z=912[0m
+[0;32mI (52820) MAIN_APP: Accel: X=1.452 g, Y=-1.491 g, Z=8.947 g[0m
+[0;32mI (53320) lis3dh: Accel raw X=-116 Y=12 Z=864[0m
+[0;32mI (53320) MAIN_APP: Accel: X=-1.138 g, Y=0.118 g, Z=8.476 g[0m
+[0;32mI (53820) lis3dh: Accel raw X=12 Y=-20 Z=1056[0m
+[0;32mI (53820) MAIN_APP: Accel: X=0.118 g, Y=-0.196 g, Z=10.359 g[0m
+[0;32mI (54320) lis3dh: Accel raw X=-20 Y=16 Z=904[0m
+[0;32mI (54320) MAIN_APP: Accel: X=-0.196 g, Y=0.157 g, Z=8.868 g[0m
+[0;32mI (54820) lis3dh: Accel raw X=16 Y=-28 Z=1020[0m
+[0;32mI (54820) MAIN_APP: Accel: X=0.157 g, Y=-0.275 g, Z=10.006 g[0m
+[0;32mI (55320) lis3dh: Accel raw X=20 Y=-24 Z=1040[0m
+[0;32mI (55320) MAIN_APP: Accel: X=0.196 g, Y=-0.235 g, Z=10.202 g[0m
+[0;32mI (55820) lis3dh: Accel raw X=16 Y=-36 Z=1040[0m
+[0;32mI (55820) MAIN_APP: Accel: X=0.157 g, Y=-0.353 g, Z=10.202 g[0m
+[0;32mI (56320) lis3dh: Accel raw X=20 Y=-28 Z=1032[0m
+[0;32mI (56320) MAIN_APP: Accel: X=0.196 g, Y=-0.275 g, Z=10.124 g[0m
+[0;32mI (56820) lis3dh: Accel raw X=16 Y=-32 Z=1036[0m
+[0;32mI (56820) MAIN_APP: Accel: X=0.157 g, Y=-0.314 g, Z=10.163 g[0m
