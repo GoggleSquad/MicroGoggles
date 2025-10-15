@@ -1,0 +1,556 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\oximetro-hr.elf C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 15 2025 18:46:02[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c174h ( 49524) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001c19c vaddr=3fc94100 size=02c00h ( 11264) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001eda4 vaddr=40374000 size=01274h (  4724) load[0m
+[0;32mI (102) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1df9ch (122780) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003dfc4 vaddr=40375274 size=0ee00h ( 60928) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004cdcc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (151) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     oximetro-hr[0m
+[0;32mI (175) app_init: App version:      513b76f-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:45:52[0m
+[0;32mI (185) app_init: ELF file SHA256:  1ac5882f8...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC98218 len 000514F8 (325 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (251) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (267) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) MAIN: ===========================================[0m
+[0;32mI (284) MAIN:   MAX30102 Heart Rate & SpO2 Monitor[0m
+[0;32mI (294) MAIN: ===========================================[0m
+[0;32mI (304) MAIN: ✓ I2C initialized successfully[0m
+[0;32mI (404) MAX30102: Part ID: 0x15 (expected 0x15)[0m
+[0;32mI (404) MAX30102: Rev ID: 0x06[0m
+[0;32mI (404) MAIN: ✓ MAX30102 sensor detected![0m
+[0;32mI (504) MAX30102: FIFO Config: OK[0m
+[0;32mI (504) MAX30102: Mode Config: OK[0m
+[0;32mI (504) MAX30102: SPO2 Config: OK[0m
+[0;32mI (504) MAX30102: LED1 PA: OK[0m
+[0;32mI (504) MAX30102: LED2 PA: OK[0m
+[0;32mI (504) MAX30102: MAX30102 initialization complete[0m
+[0;32mI (504) MAIN: [0m
+[0;32mI (504) MAIN: System ready! Place your finger on the sensor...[0m
+[0;32mI (514) MAIN: [0m
+[0;32mI (514) main_task: Returned from app_main()[0m
+R0 329511.328125
+red_rms 293.059721
+ir_rms 574.030487
+Z 0.584062
+
+╔════════════════════════════════════════╗
+║        Measurement #2                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  27.1°C             ║
+║  📊 Correlation:  0.976               ║
+╚════════════════════════════════════════╝
+
+R0 11381856.437500
+red_rms 1879.826322
+ir_rms 3373.700639
+Z 0.629097
+
+╔════════════════════════════════════════╗
+║        Measurement #3                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  27.1°C             ║
+║  📊 Correlation:  0.986               ║
+╚════════════════════════════════════════╝
+
+R0 47705245.421875
+[0;33mW (22924) MAIN: Poor signal quality - HR: 333, Correlation: 0.993[0m
+[0;33mW (22924) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 -130681902.914062
+red_rms nan
+ir_rms 1880.378951
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #5                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   45 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  27.2°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 2738874.875000
+red_rms 996.425110
+ir_rms 1654.954380
+Z 0.697681
+
+╔════════════════════════════════════════╗
+║        Measurement #6                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  27.4°C             ║
+║  📊 Correlation:  0.886               ║
+╚════════════════════════════════════════╝
+
+R0 1439161.195312
+[0;33mW (40214) MAIN: Poor signal quality - HR: 17, Correlation: 0.991[0m
+[0;33mW (40214) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 53463971.601562
+red_rms 3592.356191
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #8                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  27.4°C             ║
+║  📊 Correlation:  0.996               ║
+╚════════════════════════════════════════╝
+
+R0 9191954.859375
+[0;33mW (51724) MAIN: Poor signal quality - HR: 13, Correlation: 0.996[0m
+[0;33mW (51724) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 23850428.632812
+[0;33mW (57454) MAIN: Poor signal quality - HR: 16, Correlation: 0.996[0m
+[0;33mW (57454) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 581064.031250
+red_rms 324.416399
+ir_rms 762.275541
+Z 0.484495
+
+╔════════════════════════════════════════╗
+║        Measurement #11                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   88 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  28.5°C             ║
+║  📊 Correlation:  0.951               ║
+╚════════════════════════════════════════╝
+
+R0 2013793.546875
+red_rms 1290.613420
+ir_rms 1419.081745
+Z 1.040321
+
+╔════════════════════════════════════════╗
+║        Measurement #12                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  28.6°C             ║
+║  📊 Correlation:  0.938               ║
+╚════════════════════════════════════════╝
+
+R0 -107228774.570312
+[0;33mW (74744) MAIN: Poor signal quality - HR: 14, Correlation: 0.992[0m
+[0;33mW (74744) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 -12057495.312500
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #14                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   45 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  28.2°C             ║
+║  📊 Correlation:  0.906               ║
+╚════════════════════════════════════════╝
+
+R0 4745707.484375
+[0;33mW (86254) MAIN: Poor signal quality - HR: 18, Correlation: 0.997[0m
+[0;33mW (86254) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 224844746.789062
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #16                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  115 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  28.1°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 173897778.046875
+red_rms nan
+ir_rms 2474.998586
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #17                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  27.8°C             ║
+║  📊 Correlation:  0.972               ║
+╚════════════════════════════════════════╝
+
+R0 36642178.140625
+[0;33mW (103544) MAIN: Poor signal quality - HR: 333, Correlation: 0.900[0m
+[0;33mW (103544) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 24933058.031250
+[0;33mW (109274) MAIN: Poor signal quality - HR: 333, Correlation: 0.971[0m
+[0;33mW (109274) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 -168742437.000000
+[0;33mW (115004) MAIN: Poor signal quality - HR: 13, Correlation: 0.998[0m
+[0;33mW (115004) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 -23459264.132812
+red_rms nan
+ir_rms 3177.289253
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #21                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   65 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  28.6°C             ║
+║  📊 Correlation:  0.993               ║
+╚════════════════════════════════════════╝
+
+R0 3309367.890625
+red_rms 988.859444
+ir_rms 1819.166567
+Z 0.621495
+
+╔════════════════════════════════════════╗
+║        Measurement #22                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  28.9°C             ║
+║  📊 Correlation:  0.989               ║
+╚════════════════════════════════════════╝
+
+R0 27203089.328125
+[0;33mW (132294) MAIN: Poor signal quality - HR: 333, Correlation: 0.994[0m
+[0;33mW (132294) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 584863855.375000
+red_rms 941.451539
+ir_rms 3799.804074
+Z 0.282462
+
+╔════════════════════════════════════════╗
+║        Measurement #24                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  28.7°C             ║
+║  📊 Correlation:  0.997               ║
+╚════════════════════════════════════════╝
+
+R0 965225.476562
+red_rms 316.414285
+ir_rms 982.458651
+Z 0.382226
+
+╔════════════════════════════════════════╗
+║        Measurement #25                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  28.8°C             ║
+║  📊 Correlation:  0.991               ║
+╚════════════════════════════════════════╝
+
+R0 39410774.015625
+[0;33mW (149584) MAIN: Poor signal quality - HR: 333, Correlation: 0.986[0m
+[0;33mW (149584) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 19251863.273438
+[0;33mW (155314) MAIN: Poor signal quality - HR: 333, Correlation: 0.942[0m
+[0;33mW (155314) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 13288939.226562
+red_rms 1478.943880
+ir_rms 3645.399704
+Z 0.470902
+
+╔════════════════════════════════════════╗
+║        Measurement #28                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  29.5°C             ║
+║  📊 Correlation:  0.999               ║
+╚════════════════════════════════════════╝
+
+R0 398163923.734375
+[0;33mW (166824) MAIN: Poor signal quality - HR: 38, Correlation: 0.999[0m
+[0;33mW (166824) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 76080768.679688
+[0;33mW (172554) MAIN: Poor signal quality - HR: 333, Correlation: 0.997[0m
+[0;33mW (172554) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 33168646.570312
+[0;33mW (178284) MAIN: Poor signal quality - HR: 333, Correlation: 0.997[0m
+[0;33mW (178284) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 767719.484375
+[0;33mW (184014) MAIN: Poor signal quality - HR: 333, Correlation: 0.907[0m
+[0;33mW (184014) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 94708971.515625
+[0;33mW (189744) MAIN: Poor signal quality - HR: 16, Correlation: 0.992[0m
+[0;33mW (189744) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 420797.664062
+red_rms 238.327506
+ir_rms 648.688677
+Z 0.424367
+
+╔════════════════════════════════════════╗
+║        Measurement #34                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.9°C             ║
+║  📊 Correlation:  0.989               ║
+╚════════════════════════════════════════╝
+
+R0 314077.585938
+red_rms 211.823039
+ir_rms 560.425731
+Z 0.431676
+
+╔════════════════════════════════════════╗
+║        Measurement #35                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   78 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  31.1°C             ║
+║  📊 Correlation:  0.994               ║
+╚════════════════════════════════════════╝
+
+R0 387462.968750
+red_rms 226.148182
+ir_rms 622.464457
+Z 0.418962
+
+╔════════════════════════════════════════╗
+║        Measurement #36                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  31.3°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 434809.617188
+red_rms 244.421767
+ir_rms 659.400485
+Z 0.429825
+
+╔════════════════════════════════════════╗
+║        Measurement #37                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   78 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  31.5°C             ║
+║  📊 Correlation:  0.999               ║
+╚════════════════════════════════════════╝
+
+R0 1290634.359375
+[0;33mW (218594) MAIN: Poor signal quality - HR: 333, Correlation: 0.983[0m
+[0;33mW (218594) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 1409247.679688
+red_rms 428.871776
+ir_rms 1187.117096
+Z 0.416698
+
+╔════════════════════════════════════════╗
+║        Measurement #39                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  31.5°C             ║
+║  📊 Correlation:  0.974               ║
+╚════════════════════════════════════════╝
+
+R0 1722006.945312
+red_rms 698.117469
+ir_rms 1312.252262
+Z 0.591291
+
+╔════════════════════════════════════════╗
+║        Measurement #40                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  31.4°C             ║
+║  📊 Correlation:  0.996               ║
+╚════════════════════════════════════════╝
+
+R0 63995720.429688
+[0;33mW (235884) MAIN: Poor signal quality - HR: 333, Correlation: 0.995[0m
+[0;33mW (235884) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 335279034.023438
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #42                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  125 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  31.2°C             ║
+║  📊 Correlation:  0.995               ║
+╚════════════════════════════════════════╝
+
+R0 6383525.531250
+red_rms 1125.607836
+ir_rms 2526.563872
+Z 0.502452
+
+╔════════════════════════════════════════╗
+║        Measurement #43                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  31.2°C             ║
+║  📊 Correlation:  0.999               ║
+╚════════════════════════════════════════╝
+
+R0 246131771.875000
+[0;33mW (253174) MAIN: Poor signal quality - HR: 18, Correlation: 0.984[0m
+[0;33mW (253174) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 187163240.164062
+[0;33mW (258904) MAIN: Poor signal quality - HR: 16, Correlation: 0.984[0m
+[0;33mW (258904) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 97556697.601562
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #46                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  30.9°C             ║
+║  📊 Correlation:  0.999               ║
+╚════════════════════════════════════════╝
+
+R0 532041039.179688
+red_rms 2359.498676
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #52                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  28.7°C             ║
+║  📊 Correlation:  0.997               ║
+╚════════════════════════════════════════╝
+
+R0 563593969.570312
+[0;33mW (304294) MAIN: Poor signal quality - HR: 333, Correlation: 0.997[0m
+[0;33mW (304294) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 90573337.398438
+[0;33mW (310024) MAIN: Poor signal quality - HR: 14, Correlation: 0.991[0m
+[0;33mW (310024) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 443964.789062
+red_rms 442.799051
+ir_rms 666.306236
+Z 0.640187
+
+╔════════════════════════════════════════╗
+║        Measurement #55                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  29.3°C             ║
+║  📊 Correlation:  0.987               ║
+╚════════════════════════════════════════╝
+
+R0 -151687980.656250
+[0;33mW (321534) MAIN: Poor signal quality - HR: 38, Correlation: 0.996[0m
+[0;33mW (321534) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 8422419.968750
+red_rms nan
+ir_rms 2902.140417
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #57                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   41 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  29.6°C             ║
+║  📊 Correlation:  0.999               ║
+╚════════════════════════════════════════╝
+
+R0 655319.867188
+red_rms 340.458514
+ir_rms 809.517758
+Z 0.479947
+
+╔════════════════════════════════════════╗
+║        Measurement #58                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.1°C             ║
+║  📊 Correlation:  0.964               ║
+╚════════════════════════════════════════╝
+
+R0 139752304.703125
+[0;33mW (338824) MAIN: Poor signal quality - HR: 333, Correlation: 0.985[0m
+[0;33mW (338824) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 318276552.898438
+red_rms 3906.451843
+ir_rms 4035.673921
+Z 1.113416
+
+╔════════════════════════════════════════╗
+║        Measurement #60                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   45 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.0°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+

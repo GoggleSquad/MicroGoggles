@@ -1,0 +1,348 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\oximetro-hr.elf C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 15 2025 18:46:02[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c174h ( 49524) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001c19c vaddr=3fc94100 size=02c00h ( 11264) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001eda4 vaddr=40374000 size=01274h (  4724) load[0m
+[0;32mI (102) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1df9ch (122780) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003dfc4 vaddr=40375274 size=0ee00h ( 60928) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004cdcc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (151) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     oximetro-hr[0m
+[0;32mI (175) app_init: App version:      513b76f-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:45:52[0m
+[0;32mI (185) app_init: ELF file SHA256:  1ac5882f8...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC98218 len 000514F8 (325 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (236) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (251) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (267) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) MAIN: ===========================================[0m
+[0;32mI (284) MAIN:   MAX30102 Heart Rate & SpO2 Monitor[0m
+[0;32mI (294) MAIN: ===========================================[0m
+[0;32mI (304) MAIN: ✓ I2C initialized successfully[0m
+[0;32mI (404) MAX30102: Part ID: 0x15 (expected 0x15)[0m
+[0;32mI (404) MAX30102: Rev ID: 0x06[0m
+[0;32mI (404) MAIN: ✓ MAX30102 sensor detected![0m
+[0;32mI (504) MAX30102: FIFO Config: OK[0m
+[0;32mI (504) MAX30102: Mode Config: OK[0m
+[0;32mI (504) MAX30102: SPO2 Config: OK[0m
+[0;32mI (504) MAX30102: LED1 PA: OK[0m
+[0;32mI (504) MAX30102: LED2 PA: OK[0m
+[0;32mI (504) MAX30102: MAX30102 initialization complete[0m
+[0;32mI (504) MAIN: [0m
+[0;32mI (504) MAIN: System ready! Place your finger on the sensor...[0m
+[0;32mI (514) MAIN: [0m
+[0;32mI (514) main_task: Returned from app_main()[0m
+R0 -1996988.070312
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #2                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   88 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  24.5°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 55498602.804688
+[0;33mW (17144) MAIN: Poor signal quality - HR: 12, Correlation: 1.000[0m
+[0;33mW (17144) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 378174572.921875
+red_rms nan
+ir_rms 3012.610164
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #7                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  24.6°C             ║
+║  📊 Correlation:  0.992               ║
+╚════════════════════════════════════════╝
+
+R0 284815.890625
+red_rms 247.060721
+ir_rms 533.680616
+Z 0.555177
+
+╔════════════════════════════════════════╗
+║        Measurement #8                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  25.4°C             ║
+║  📊 Correlation:  0.848               ║
+╚════════════════════════════════════════╝
+
+R0 1520104.398438
+red_rms 611.471177
+ir_rms 1232.924977
+Z 0.595950
+
+╔════════════════════════════════════════╗
+║        Measurement #9                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  26.1°C             ║
+║  📊 Correlation:  0.971               ║
+╚════════════════════════════════════════╝
+
+R0 276433006.781250
+red_rms nan
+ir_rms 2827.993989
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #13                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  115 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  26.0°C             ║
+║  📊 Correlation:  0.995               ║
+╚════════════════════════════════════════╝
+
+R0 248212.187500
+red_rms 295.754966
+ir_rms 498.208792
+Z 0.659216
+
+╔════════════════════════════════════════╗
+║        Measurement #14                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  26.7°C             ║
+║  📊 Correlation:  0.793               ║
+╚════════════════════════════════════════╝
+
+R0 471745823.250000
+red_rms nan
+ir_rms 1408.465477
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #17                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   68 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  26.6°C             ║
+║  📊 Correlation:  0.996               ║
+╚════════════════════════════════════════╝
+
+R0 1499408.859375
+[0;33mW (102514) MAIN: Poor signal quality - HR: 333, Correlation: 0.962[0m
+[0;33mW (102514) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 -24394567.859375
+red_rms nan
+ir_rms 3026.526722
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #19                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   42 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  27.1°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 114662853.164062
+[0;33mW (114024) MAIN: Poor signal quality - HR: 333, Correlation: 0.999[0m
+[0;33mW (114024) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 37878471.117188
+[0;33mW (119754) MAIN: Poor signal quality - HR: 333, Correlation: 0.933[0m
+[0;33mW (119754) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 19494603.210938
+red_rms 2529.294368
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #22                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  27.8°C             ║
+║  📊 Correlation:  0.932               ║
+╚════════════════════════════════════════╝
+
+R0 522641.710938
+red_rms 245.102020
+ir_rms 722.939140
+Z 0.403873
+
+╔════════════════════════════════════════╗
+║        Measurement #23                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  136 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  27.9°C             ║
+║  📊 Correlation:  0.983               ║
+╚════════════════════════════════════════╝
+
+[1;31mE (131934) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (131974) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132014) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132054) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132094) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132134) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132174) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132214) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132254) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132294) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132334) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132374) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132414) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132454) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132494) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132534) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132574) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132614) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132654) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132694) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132734) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132774) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132814) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132854) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132894) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132934) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (132974) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133014) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133054) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133094) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133134) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133174) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133214) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133254) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133294) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133334) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133374) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133414) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133454) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133494) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133534) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133574) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133614) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133654) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133694) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133734) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133774) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133814) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133854) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133894) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133934) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (133974) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134014) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134054) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134094) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134134) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134174) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134214) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134254) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134294) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134334) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134374) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134414) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134454) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134494) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134534) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134574) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134614) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134654) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134694) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134734) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134774) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134814) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134854) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134894) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134934) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (134974) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135014) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135054) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135094) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135134) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135174) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135214) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135254) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135294) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135334) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135374) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135414) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135454) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135494) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135534) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135574) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135614) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135654) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135694) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135734) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135774) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135814) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135854) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135894) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135934) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (135974) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136014) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136054) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136094) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136134) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136174) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136214) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136254) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136294) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136334) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136374) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136414) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136454) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136494) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136534) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (136574) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (138314) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (138354) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (139034) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (139074) MAX30102: Failed to write FIFO register address[0m

@@ -1,0 +1,1250 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\oximetro-hr.elf C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 15 2025 18:46:02[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c174h ( 49524) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001c19c vaddr=3fc94100 size=02c00h ( 11264) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001eda4 vaddr=40374000 size=01274h (  4724) load[0m
+[0;32mI (102) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1df9ch (122780) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003dfc4 vaddr=40375274 size=0ee00h ( 60928) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004cdcc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (151) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     oximetro-hr[0m
+[0;32mI (175) app_init: App version:      513b76f-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:45:52[0m
+[0;32mI (185) app_init: ELF file SHA256:  1ac5882f8...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC98218 len 000514F8 (325 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (236) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (251) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (267) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) MAIN: ===========================================[0m
+[0;32mI (284) MAIN:   MAX30102 Heart Rate & SpO2 Monitor[0m
+[0;32mI (294) MAIN: ===========================================[0m
+[0;32mI (304) MAIN: ✓ I2C initialized successfully[0m
+[0;32mI (404) MAX30102: Part ID: 0x15 (expected 0x15)[0m
+[0;32mI (404) MAX30102: Rev ID: 0x06[0m
+[0;32mI (404) MAIN: ✓ MAX30102 sensor detected![0m
+[0;32mI (504) MAX30102: FIFO Config: OK[0m
+[0;32mI (504) MAX30102: Mode Config: OK[0m
+[0;32mI (504) MAX30102: SPO2 Config: OK[0m
+[0;32mI (504) MAX30102: LED1 PA: OK[0m
+[0;32mI (504) MAX30102: LED2 PA: OK[0m
+[0;32mI (504) MAX30102: MAX30102 initialization complete[0m
+[0;32mI (504) MAIN: [0m
+[0;32mI (504) MAIN: System ready! Place your finger on the sensor...[0m
+[0;32mI (514) MAIN: [0m
+[0;32mI (514) main_task: Returned from app_main()[0m
+R0 265437522.359375
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #1                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:  107 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  27.3°C             ║
+║  📊 Correlation:  1.000               ║
+╚════════════════════════════════════════╝
+
+R0 9402979.554688
+[0;33mW (11524) MAIN: Poor signal quality - HR: 333, Correlation: 0.952[0m
+[0;33mW (11524) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 66968987.921875
+[0;33mW (17254) MAIN: Poor signal quality - HR: 333, Correlation: 0.997[0m
+[0;33mW (17254) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 20337681.351562
+red_rms nan
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #4                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   62 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  28.9°C             ║
+║  📊 Correlation:  0.990               ║
+╚════════════════════════════════════════╝
+
+R0 159452.585938
+red_rms 168.603084
+ir_rms 399.314412
+Z 0.464360
+
+╔════════════════════════════════════════╗
+║        Measurement #5                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   71 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  29.2°C             ║
+║  📊 Correlation:  0.997               ║
+╚════════════════════════════════════════╝
+
+R0 178173.085938
+red_rms 184.594149
+ir_rms 422.105437
+Z 0.483242
+
+╔════════════════════════════════════════╗
+║        Measurement #6                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   65 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  29.6°C             ║
+║  📊 Correlation:  0.986               ║
+╚════════════════════════════════════════╝
+
+R0 190701.765625
+red_rms 182.233367
+ir_rms 436.693256
+Z 0.463368
+
+╔════════════════════════════════════════╗
+║        Measurement #7                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   75 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  29.9°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 230258.460938
+red_rms 202.440115
+ir_rms 479.852061
+Z 0.468906
+
+╔════════════════════════════════════════╗
+║        Measurement #8                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   71 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  29.9°C             ║
+║  📊 Correlation:  0.999               ║
+╚════════════════════════════════════════╝
+
+R0 284836.718750
+red_rms 239.209114
+ir_rms 533.700290
+Z 0.499879
+
+╔════════════════════════════════════════╗
+║        Measurement #9                 ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   78 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.1°C             ║
+║  📊 Correlation:  0.991               ║
+╚════════════════════════════════════════╝
+
+R0 131284.789062
+red_rms 185.342925
+ir_rms 362.331340
+Z 0.571307
+
+╔════════════════════════════════════════╗
+║        Measurement #10                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.2°C             ║
+║  📊 Correlation:  0.954               ║
+╚════════════════════════════════════════╝
+
+R0 175780.312500
+red_rms 181.722316
+ir_rms 419.261255
+Z 0.480522
+
+╔════════════════════════════════════════╗
+║        Measurement #11                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.4°C             ║
+║  📊 Correlation:  0.993               ║
+╚════════════════════════════════════════╝
+
+R0 315729.710938
+red_rms 277.223736
+ir_rms 561.897678
+Z 0.545067
+
+╔════════════════════════════════════════╗
+║        Measurement #12                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   78 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.5°C             ║
+║  📊 Correlation:  0.988               ║
+╚════════════════════════════════════════╝
+
+R0 174422.945312
+red_rms 205.513990
+ir_rms 417.638600
+Z 0.540626
+
+╔════════════════════════════════════════╗
+║        Measurement #13                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.7°C             ║
+║  📊 Correlation:  0.973               ║
+╚════════════════════════════════════════╝
+
+R0 193728.109375
+red_rms 193.463175
+ir_rms 440.145431
+Z 0.479987
+
+╔════════════════════════════════════════╗
+║        Measurement #14                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.9°C             ║
+║  📊 Correlation:  0.992               ║
+╚════════════════════════════════════════╝
+
+R0 316605.734375
+red_rms 263.655078
+ir_rms 562.676639
+Z 0.508955
+
+╔════════════════════════════════════════╗
+║        Measurement #15                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.9°C             ║
+║  📊 Correlation:  0.997               ║
+╚════════════════════════════════════════╝
+
+R0 644842.468750
+red_rms 355.242171
+ir_rms 803.020548
+Z 0.474782
+
+╔════════════════════════════════════════╗
+║        Measurement #16                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.6°C             ║
+║  📊 Correlation:  0.995               ║
+╚════════════════════════════════════════╝
+
+R0 384724.054688
+red_rms 252.926867
+ir_rms 620.261235
+Z 0.437188
+
+╔════════════════════════════════════════╗
+║        Measurement #17                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   68 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.7°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 342924.507812
+red_rms 237.804542
+ir_rms 585.597131
+Z 0.435721
+
+╔════════════════════════════════════════╗
+║        Measurement #18                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   68 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.9°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 479422.359375
+[0;33mW (109684) MAIN: Poor signal quality - HR: 333, Correlation: 0.969[0m
+[0;33mW (109684) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 259729644.656250
+[0;33mW (115414) MAIN: Poor signal quality - HR: 333, Correlation: 0.985[0m
+[0;33mW (115414) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 90321229.070312
+[0;33mW (121144) MAIN: Poor signal quality - HR: 333, Correlation: 0.996[0m
+[0;33mW (121144) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 235379662.312500
+red_rms 1021.802329
+ir_rms 706.143045
+Z 1.649833
+
+╔════════════════════════════════════════╗
+║        Measurement #22                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   48 bpm             ║
+║  🩸 SpO2:         82.0%              ║
+║  🌡️  Temperature:  30.2°C             ║
+║  📊 Correlation:  0.998               ║
+╚════════════════════════════════════════╝
+
+R0 122280706.390625
+[0;33mW (132654) MAIN: Poor signal quality - HR: 333, Correlation: 0.973[0m
+[0;33mW (132654) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 12301317.851562
+[0;33mW (138384) MAIN: Poor signal quality - HR: 333, Correlation: 0.892[0m
+[0;33mW (138384) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 302671.156250
+red_rms 270.075915
+ir_rms 550.155433
+Z 0.573251
+
+╔════════════════════════════════════════╗
+║        Measurement #25                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   83 bpm             ║
+║  🩸 SpO2:         70.0%              ║
+║  🌡️  Temperature:  30.9°C             ║
+║  📊 Correlation:  0.949               ║
+╚════════════════════════════════════════╝
+
+R0 230455192.085938
+red_rms 2174.658824
+ir_rms nan
+Z nan
+
+╔════════════════════════════════════════╗
+║        Measurement #26                ║
+╠════════════════════════════════════════╣
+║  ❤️  Heart Rate:   75 bpm             ║
+║  🩸 SpO2:          nan%              ║
+║  🌡️  Temperature:  30.8°C             ║
+║  📊 Correlation:  0.997               ║
+╚════════════════════════════════════════╝
+
+[1;31mE (167464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (167984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (168984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (169984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (170984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (171984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (172964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (173964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (174964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (175964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (176964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (177964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (178984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (179984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (180984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (181984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (182984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (183624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (184964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (185964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (186964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (187964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (188964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (189984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (190984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (191984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (192984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (193984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (194864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (195964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (196964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (197964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (198964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199524) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199564) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199604) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199644) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199684) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199724) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199764) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199804) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199844) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199884) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199924) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (199964) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200004) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200044) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200084) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200124) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200164) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200204) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200244) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200284) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200324) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200364) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200404) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200444) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (200484) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (201984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (202984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (203984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204944) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (204984) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205024) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205064) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205104) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205144) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205184) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205224) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205264) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205304) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205344) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205384) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205424) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205464) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205504) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205544) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205584) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205624) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205664) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205704) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205744) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205784) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205824) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205864) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205904) MAX30102: Failed to write FIFO register address[0m
+[1;31mE (205944) MAX30102: Failed to write FIFO register address[0m

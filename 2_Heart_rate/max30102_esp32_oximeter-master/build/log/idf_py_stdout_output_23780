@@ -1,0 +1,459 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\oximetro-hr.elf C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 15 2025 18:46:02[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0bf9ch ( 49052) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001bfc4 vaddr=3fc94100 size=02c00h ( 11264) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001ebcc vaddr=40374000 size=0144ch (  5196) load[0m
+[0;32mI (102) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1def4h (122612) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003df1c vaddr=4037544c size=0ec28h ( 60456) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004cb4c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (150) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     oximetro-hr[0m
+[0;32mI (175) app_init: App version:      513b76f-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:45:52[0m
+[0;32mI (185) app_init: ELF file SHA256:  9bb12d613...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC98218 len 000514F8 (325 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (251) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (267) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) MAIN: ===========================================[0m
+[0;32mI (284) MAIN:   MAX30102 Heart Rate & SpO2 Monitor[0m
+[0;32mI (294) MAIN: ===========================================[0m
+[0;32mI (304) MAIN: ✓ I2C initialized successfully[0m
+[0;32mI (404) MAX30102: Part ID: 0x15 (expected 0x15)[0m
+[0;32mI (404) MAX30102: Rev ID: 0x06[0m
+[0;32mI (404) MAIN: ✓ MAX30102 sensor detected![0m
+[0;32mI (504) MAX30102: FIFO Config: OK[0m
+[0;32mI (504) MAX30102: Mode Config: OK[0m
+[0;32mI (504) MAX30102: SPO2 Config: OK[0m
+[0;32mI (504) MAX30102: LED1 PA: OK[0m
+[0;32mI (504) MAX30102: LED2 PA: OK[0m
+[0;32mI (504) MAX30102: MAX30102 initialization complete[0m
+[0;32mI (504) MAIN: [0m
+[0;32mI (504) MAIN: System ready! Place your finger on the sensor...[0m
+[0;32mI (514) MAIN: [0m
+[0;32mI (514) main_task: Returned from app_main()[0m
+R0 302785.679688
+[0;33mW (11364) MAIN: Poor signal quality - HR: 333, Correlation: 0.960[0m
+[0;33mW (11364) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 1137651.132812
+[0;33mW (17094) MAIN: Poor signal quality - HR: 333, Correlation: 0.951[0m
+[0;33mW (17094) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 75413.789062
+[0;33mW (22824) MAIN: Poor signal quality - HR: 333, Correlation: 0.684[0m
+[0;33mW (22824) MAIN:   → Signals not well correlated. Hold finger steady.[0m
+[0;33mW (22824) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 194333.203125
+red_rms 167.367858
+ir_rms 440.832168
+Z 0.465108
+
+Measurement #5              
+Heart Rate:   57 bpm             
+SpO2:         70.0%              
+Temperature:  30.4°C             
+Correlation:  0.988               
+
+R0 83981.476562
+red_rms 105.707143
+ir_rms 289.794755
+Z 0.449978
+
+Measurement #6              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  30.4°C             
+Correlation:  0.990               
+
+R0 232730.515625
+red_rms 167.373833
+ir_rms 482.420978
+Z 0.429840
+
+Measurement #7              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  30.6°C             
+Correlation:  0.997               
+
+R0 285190.414062
+red_rms 187.058814
+ir_rms 534.031834
+Z 0.435996
+
+Measurement #8              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  30.8°C             
+Correlation:  0.997               
+
+R0 136016.132812
+red_rms 134.751623
+ir_rms 368.803471
+Z 0.457644
+
+Measurement #9              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  30.9°C             
+Correlation:  0.994               
+
+R0 783521.031250
+red_rms 294.025509
+ir_rms 885.167216
+Z 0.414523
+
+Measurement #10              
+Heart Rate:   83 bpm             
+SpO2:         70.0%              
+Temperature:  31.0°C             
+Correlation:  0.999               
+
+R0 571137.500000
+red_rms 241.022820
+ir_rms 755.736065
+Z 0.399404
+
+Measurement #11              
+Heart Rate:   83 bpm             
+SpO2:         70.0%              
+Temperature:  31.2°C             
+Correlation:  0.998               
+
+R0 530692.078125
+red_rms 235.180782
+ir_rms 728.486101
+Z 0.402566
+
+Measurement #12              
+Heart Rate:   83 bpm             
+SpO2:         70.0%              
+Temperature:  31.0°C             
+Correlation:  0.999               
+
+R0 412252.664062
+red_rms 205.613715
+ir_rms 642.068532
+Z 0.402720
+
+Measurement #13              
+Heart Rate:   83 bpm             
+SpO2:         70.0%              
+Temperature:  30.9°C             
+Correlation:  0.993               
+
+R0 491772.257812
+red_rms 224.307824
+ir_rms 701.264572
+Z 0.403198
+
+Measurement #14              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.2°C             
+Correlation:  0.997               
+
+R0 313749.382812
+red_rms 186.453748
+ir_rms 560.133020
+Z 0.420725
+
+Measurement #15              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.1°C             
+Correlation:  0.998               
+
+R0 363346.648438
+red_rms 183.537462
+ir_rms 602.781884
+Z 0.385265
+
+Measurement #16              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.0°C             
+Correlation:  0.991               
+
+R0 299921.093750
+red_rms 168.659420
+ir_rms 547.650436
+Z 0.390116
+
+Measurement #17              
+Heart Rate:   68 bpm             
+SpO2:         70.0%              
+Temperature:  31.0°C             
+Correlation:  0.996               
+
+R0 284840.554688
+[0;33mW (103184) MAIN: Poor signal quality - HR: 65, Correlation: 0.162[0m
+[0;33mW (103184) MAIN:   → Signals not well correlated. Hold finger steady.[0m
+R0 548472.015625
+red_rms 250.465566
+ir_rms 740.588955
+Z 0.428793
+
+Measurement #19              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.1°C             
+Correlation:  0.948               
+
+R0 136273.171875
+red_rms 132.744115
+ir_rms 369.151730
+Z 0.457562
+
+Measurement #20              
+Heart Rate:   71 bpm             
+SpO2:         70.0%              
+Temperature:  31.1°C             
+Correlation:  0.988               
+
+R0 534189.382812
+red_rms 226.786243
+ir_rms 730.882343
+Z 0.394072
+
+Measurement #21              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.1°C             
+Correlation:  0.997               
+
+R0 417789.328125
+red_rms 198.572405
+ir_rms 646.365995
+Z 0.390725
+
+Measurement #22              
+Heart Rate:   68 bpm             
+SpO2:         70.0%              
+Temperature:  31.1°C             
+Correlation:  0.998               
+
+R0 493635.203125
+red_rms 209.830884
+ir_rms 702.591631
+Z 0.379829
+
+Measurement #23              
+Heart Rate:   68 bpm             
+SpO2:         70.0%              
+Temperature:  31.2°C             
+Correlation:  0.997               
+
+R0 793651.812500
+red_rms 267.131054
+ir_rms 890.870922
+Z 0.380718
+
+Measurement #24              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.2°C             
+Correlation:  0.999               
+
+R0 544837.945312
+red_rms 217.455743
+ir_rms 738.130747
+Z 0.374872
+
+Measurement #25              
+Heart Rate:   68 bpm             
+SpO2:         70.0%              
+Temperature:  31.4°C             
+Correlation:  0.998               
+
+R0 508608.750000
+red_rms 209.086107
+ir_rms 713.167582
+Z 0.373504
+
+Measurement #26              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.3°C             
+Correlation:  0.998               
+
+R0 533903040.117188
+red_rms nan
+ir_rms nan
+Z nan
+
+Measurement #27              
+Heart Rate:  136 bpm             
+SpO2:          nan%              
+Temperature:  30.7°C             
+Correlation:  0.996               
+
+[0;33mW (211044) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (211044) MAIN: IR sample: 276 (need > 50000)[0m
+R0 673729005.375000
+red_rms 3888.690139
+ir_rms 1624.919998
+Z 2.675451
+
+Measurement #40              
+Heart Rate:  115 bpm             
+SpO2:        100.0%              
+Temperature:  29.0°C             
+Correlation:  0.989               
+
+R0 5360556.500000
+red_rms 1007.374806
+ir_rms 2315.287455
+Z 0.508033
+
+Measurement #41              
+Heart Rate:  136 bpm             
+SpO2:         70.0%              
+Temperature:  30.6°C             
+Correlation:  0.919               
+
+R0 178904.406250
+red_rms 163.813919
+ir_rms 422.970448
+Z 0.455519
+
+Measurement #42              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.1°C             
+Correlation:  0.984               
+
+R0 244074.773438
+red_rms 151.901284
+ir_rms 494.038460
+Z 0.366265
+
+Measurement #43              
+Heart Rate:   83 bpm             
+SpO2:         70.0%              
+Temperature:  31.2°C             
+Correlation:  0.986               
+
+R0 603415.023438
+red_rms 243.581609
+ir_rms 776.797915
+Z 0.376300
+
+Measurement #44              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.3°C             
+Correlation:  0.997               
+
+R0 656177.437500
+red_rms 253.950783
+ir_rms 810.047529
+Z 0.379041
+
+Measurement #45              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.4°C             
+Correlation:  0.998               
+
+R0 924264.898438
+red_rms 290.606263
+ir_rms 961.386499
+Z 0.366243
+
+Measurement #46              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  31.6°C             
+Correlation:  0.997               
+
+R0 1062218.414062
+red_rms 301.429926
+ir_rms 1030.639607
+Z 0.357277
+
+Measurement #47              
+Heart Rate:   88 bpm             
+SpO2:         70.0%              
+Temperature:  31.7°C             
+Correlation:  0.990               
+
+R0 1302765.273438
+red_rms 366.122930
+ir_rms 1141.387314
+Z 0.390446
+
+Measurement #48              
+Heart Rate:   78 bpm             
+SpO2:         70.0%              
+Temperature:  31.6°C             
+Correlation:  0.999               
+
+R0 1036860.164062
+red_rms 332.361249
+ir_rms 1018.263227
+Z 0.399549
+
+Measurement #49              
+Heart Rate:   83 bpm             
+SpO2:         70.0%              
+Temperature:  31.7°C             
+Correlation:  0.999               
+
+R0 1293111.195312
+[0;33mW (285414) MAIN: Poor signal quality - HR: 333, Correlation: 0.995[0m
+[0;33mW (285414) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+[0;33mW (341614) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (341614) MAIN: IR sample: 342 (need > 50000)[0m
+[0;33mW (397814) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (397814) MAIN: IR sample: 333 (need > 50000)[0m
+[0;33mW (454014) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (454014) MAIN: IR sample: 333 (need > 50000)[0m
+[0;33mW (510214) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (510214) MAIN: IR sample: 332 (need > 50000)[0m
+[0;33mW (566414) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (566414) MAIN: IR sample: 335 (need > 50000)[0m
+[0;33mW (622614) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (622614) MAIN: IR sample: 327 (need > 50000)[0m
+[0;33mW (678814) MAIN: No finger detected. Please place finger firmly on sensor.[0m
+[0;33mW (678814) MAIN: IR sample: 330 (need > 50000)[0m

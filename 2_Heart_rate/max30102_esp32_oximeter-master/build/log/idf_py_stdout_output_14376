@@ -1,0 +1,265 @@
+Command: C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\pprat\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\oximetro-hr.elf C:\Users\pprat\Senior_Design\MicroGoggles\2_Heart_rate\max30102_esp32_oximeter-master\build\bootloader\bootloader.elf --force-color -m 'C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\pprat\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 15 2025 18:46:02[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0bf9ch ( 49052) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001bfc4 vaddr=3fc94100 size=02c00h ( 11264) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001ebcc vaddr=40374000 size=0144ch (  5196) load[0m
+[0;32mI (102) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1def4h (122612) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003df1c vaddr=4037544c size=0ec28h ( 60456) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004cb4c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (150) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     oximetro-hr[0m
+[0;32mI (175) app_init: App version:      513b76f-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:45:52[0m
+[0;32mI (185) app_init: ELF file SHA256:  9bb12d613...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC98218 len 000514F8 (325 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (251) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (260) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (267) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) MAIN: ===========================================[0m
+[0;32mI (284) MAIN:   MAX30102 Heart Rate & SpO2 Monitor[0m
+[0;32mI (294) MAIN: ===========================================[0m
+[0;32mI (304) MAIN: ✓ I2C initialized successfully[0m
+[0;32mI (404) MAX30102: Part ID: 0x15 (expected 0x15)[0m
+[0;32mI (404) MAX30102: Rev ID: 0x06[0m
+[0;32mI (404) MAIN: ✓ MAX30102 sensor detected![0m
+[0;32mI (504) MAX30102: FIFO Config: OK[0m
+[0;32mI (504) MAX30102: Mode Config: OK[0m
+[0;32mI (504) MAX30102: SPO2 Config: OK[0m
+[0;32mI (504) MAX30102: LED1 PA: OK[0m
+[0;32mI (504) MAX30102: LED2 PA: OK[0m
+[0;32mI (504) MAX30102: MAX30102 initialization complete[0m
+[0;32mI (504) MAIN: [0m
+[0;32mI (504) MAIN: System ready! Place your finger on the sensor...[0m
+[0;32mI (514) MAIN: [0m
+[0;32mI (514) main_task: Returned from app_main()[0m
+R0 16903.054688
+[0;33mW (11364) MAIN: Poor signal quality - HR: 333, Correlation: 0.908[0m
+[0;33mW (11364) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 5806355.476562
+red_rms nan
+ir_rms 2409.637940
+Z nan
+
+Measurement #3              
+Heart Rate:   50 bpm             
+SpO2:          nan%              
+Temperature:  31.4°C             
+Correlation:  0.999               
+
+R0 220793.531250
+[0;33mW (22834) MAIN: Poor signal quality - HR: 333, Correlation: 0.971[0m
+[0;33mW (22834) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 1022232.375000
+[0;33mW (28564) MAIN: Poor signal quality - HR: 333, Correlation: 0.911[0m
+[0;33mW (28564) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 8754409.289062
+[0;33mW (34294) MAIN: Poor signal quality - HR: 333, Correlation: 0.994[0m
+[0;33mW (34294) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 641360.671875
+red_rms 519.324561
+ir_rms 800.849549
+Z 0.771221
+
+Measurement #8              
+Heart Rate:  136 bpm             
+SpO2:         70.0%              
+Temperature:  31.6°C             
+Correlation:  0.989               
+
+R0 95593.132812
+red_rms 117.093979
+ir_rms 309.181177
+Z 0.454399
+
+Measurement #9              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  32.0°C             
+Correlation:  0.990               
+
+R0 93597.875000
+red_rms 116.073253
+ir_rms 305.936268
+Z 0.458126
+
+Measurement #10              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  32.0°C             
+Correlation:  0.973               
+
+R0 155344.898438
+red_rms 145.093074
+ir_rms 394.137032
+Z 0.446163
+
+Measurement #11              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  32.1°C             
+Correlation:  0.991               
+
+R0 169585.320312
+[0;33mW (68604) MAIN: Poor signal quality - HR: 23, Correlation: 0.985[0m
+[0;33mW (68604) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 233260.101562
+red_rms 182.488356
+ir_rms 482.969978
+Z 0.460199
+
+Measurement #13              
+Heart Rate:   65 bpm             
+SpO2:         70.0%              
+Temperature:  32.1°C             
+Correlation:  0.984               
+
+R0 612454.273438
+[0;33mW (80074) MAIN: Poor signal quality - HR: 333, Correlation: 0.950[0m
+[0;33mW (80074) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 181958.312500
+[0;33mW (85804) MAIN: Poor signal quality - HR: 333, Correlation: 0.984[0m
+[0;33mW (85804) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 814606.664062
+[0;33mW (91534) MAIN: Poor signal quality - HR: 333, Correlation: 0.975[0m
+[0;33mW (91534) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 1540802.953125
+[0;33mW (97264) MAIN: Poor signal quality - HR: 333, Correlation: 0.990[0m
+[0;33mW (97264) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 3559924.609375
+[0;33mW (102994) MAIN: Poor signal quality - HR: 333, Correlation: 0.949[0m
+[0;33mW (102994) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 3072271.375000
+[0;33mW (108724) MAIN: Poor signal quality - HR: 333, Correlation: 0.986[0m
+[0;33mW (108724) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 101932407.570312
+[0;33mW (114454) MAIN: Poor signal quality - HR: 12, Correlation: 0.982[0m
+[0;33mW (114454) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 1551410.382812
+[0;33mW (120184) MAIN: Poor signal quality - HR: 333, Correlation: 0.887[0m
+[0;33mW (120184) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 7059696.515625
+[0;33mW (125914) MAIN: Poor signal quality - HR: 333, Correlation: 0.990[0m
+[0;33mW (125914) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 78037800.953125
+[0;33mW (131644) MAIN: Poor signal quality - HR: 333, Correlation: 0.964[0m
+[0;33mW (131644) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 117636684.023438
+[0;33mW (137374) MAIN: Poor signal quality - HR: 333, Correlation: 0.994[0m
+[0;33mW (137374) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 161931655.953125
+red_rms nan
+ir_rms nan
+Z nan
+
+Measurement #25              
+Heart Rate:  107 bpm             
+SpO2:          nan%              
+Temperature:  32.3°C             
+Correlation:  0.991               
+
+R0 139950.585938
+[0;33mW (148844) MAIN: Poor signal quality - HR: 333, Correlation: 0.934[0m
+[0;33mW (148844) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 68445744.726562
+[0;33mW (154574) MAIN: Poor signal quality - HR: 333, Correlation: 0.960[0m
+[0;33mW (154574) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 101271977.796875
+red_rms nan
+ir_rms 780.180107
+Z nan
+
+Measurement #28              
+Heart Rate:  136 bpm             
+SpO2:          nan%              
+Temperature:  32.4°C             
+Correlation:  0.991               
+
+R0 469082.375000
+[0;33mW (166044) MAIN: Poor signal quality - HR: 333, Correlation: 0.979[0m
+[0;33mW (166044) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 34750830.078125
+[0;33mW (171774) MAIN: Poor signal quality - HR: 333, Correlation: 0.973[0m
+[0;33mW (171774) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 95389095.882812
+red_rms 3573.766221
+ir_rms nan
+Z nan
+
+Measurement #31              
+Heart Rate:  136 bpm             
+SpO2:          nan%              
+Temperature:  31.8°C             
+Correlation:  0.989               
+
+R0 12311058.835938
+[0;33mW (183244) MAIN: Poor signal quality - HR: 333, Correlation: 0.970[0m
+[0;33mW (183244) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 95251844.148438
+[0;33mW (188974) MAIN: Poor signal quality - HR: 333, Correlation: 0.953[0m
+[0;33mW (188974) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
+R0 9282880.976562
+red_rms 3838.007165
+ir_rms 3046.781909
+Z 1.434812
+
+Measurement #34              
+Heart Rate:  136 bpm             
+SpO2:         71.3%              
+Temperature:  32.4°C             
+Correlation:  0.975               
+
+R0 1307834.609375
+red_rms 823.043134
+ir_rms 1143.605701
+Z 0.864391
+
+Measurement #35              
+Heart Rate:  136 bpm             
+SpO2:         70.0%              
+Temperature:  32.4°C             
+Correlation:  0.990               
+
+R0 30389.960938
+[0;33mW (206184) MAIN: Poor signal quality - HR: 333, Correlation: 0.769[0m
+[0;33mW (206184) MAIN:   → Heart rate out of range. Adjust finger pressure.[0m
