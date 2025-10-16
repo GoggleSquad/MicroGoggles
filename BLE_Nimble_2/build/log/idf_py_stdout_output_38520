@@ -1,0 +1,8 @@
+Command: ninja all
+[1/4] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\pprat\Senior_Design\MicroGoggles\BLE_Nimble_2\build\esp-idf\esptool_py && C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/pprat/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/pprat/Senior_Design/MicroGoggles/BLE_Nimble_2/build/partition_table/partition-table.bin C:/Users/pprat/Senior_Design/MicroGoggles/BLE_Nimble_2/build/BLE_Nimble_2.bin"
+BLE_Nimble_2.bin binary size 0x86910 bytes. Smallest app partition is 0x100000 bytes. 0x796f0 bytes (47%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\pprat\Senior_Design\MicroGoggles\BLE_Nimble_2\build\bootloader\esp-idf\esptool_py && C:\Users\pprat\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/pprat/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/pprat/Senior_Design/MicroGoggles/BLE_Nimble_2/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'
