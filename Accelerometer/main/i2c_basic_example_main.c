@@ -5,6 +5,10 @@
 #include "esp_log.h"
 #include "lis3dh.h"
 
+//new
+#include "driver/gpio.h"
+#include <math.h>
+
 #define I2C_MASTER_SCL_IO           9
 #define I2C_MASTER_SDA_IO           8
 #define I2C_MASTER_NUM              I2C_NUM_0
@@ -12,7 +16,51 @@
 #define I2C_MASTER_TX_BUF_DISABLE   0
 #define I2C_MASTER_RX_BUF_DISABLE   0
 
+#define LED_X  2  
+#define LED_Y  4
+#define LED_Z  5
+
+#define MOTION_THRESHOLD_X 0.3f
+#define MOTION_THRESHOLD_Y 0.3f
+
+#define MOTION_THRESHOLD_Z 9.81f //gravity
+
+
 static const char *TAG = "MAIN_APP";
+
+void init_motion_leds(void) {
+    gpio_config_t io_conf = {
+        .mode = GPIO_MODE_OUTPUT,
+        .pin_bit_mask = (1ULL << LED_X) | (1ULL << LED_Y) | (1ULL << LED_Z),
+    };
+    gpio_config(&io_conf);
+
+    // Start with all LEDs off
+    gpio_set_level(LED_X, 0);
+    gpio_set_level(LED_Y, 0);
+    gpio_set_level(LED_Z, 0);
+}
+
+void update_motion_leds(float gx, float gy, float gz) {
+    // X-axis LED
+    if (fabs(gx) > MOTION_THRESHOLD_X)
+        gpio_set_level(LED_X, 1);
+    else
+        gpio_set_level(LED_X, 0);
+
+    // Y-axis LED
+    if (fabs(gy) > MOTION_THRESHOLD_Y)
+        gpio_set_level(LED_Y, 1);
+    else
+        gpio_set_level(LED_Y, 0);
+
+    // Z-axis LED (compare deviation from 1 g)
+    if (fabs(gz) < MOTION_THRESHOLD_Z)
+        gpio_set_level(LED_Z, 1);
+    else
+        gpio_set_level(LED_Z, 0);
+}
+
 
 // Initialize I2C master
 static esp_err_t i2c_master_init(void)
@@ -63,6 +111,8 @@ void app_main(void)
 
     i2c_scan_bus(); // Scan bus before initializing sensor
 
+    init_motion_leds();
+
     // Read WHO_AM_I
     uint8_t whoami = lis3dh_who_am_i(I2C_MASTER_NUM);
     ESP_LOGI(TAG, "LIS3DH WHO_AM_I = 0x%02X", whoami);
@@ -80,8 +130,12 @@ void app_main(void)
                 if (lis3dh_read_accel(I2C_MASTER_NUM, &x, &y, &z) == ESP_OK) {
                     lis3dh_convert_to_g(x, y, z, &gx, &gy, &gz);
                     ESP_LOGI(TAG, "Accel: X=%.3f g, Y=%.3f g, Z=%.3f g", gx, gy, gz);
+                    
+                    update_motion_leds(gx, gy, gz);
+
                 } else {
                     ESP_LOGE(TAG, "Failed to read acceleration");
+                    
                 }
                 vTaskDelay(pdMS_TO_TICKS(500));
             }

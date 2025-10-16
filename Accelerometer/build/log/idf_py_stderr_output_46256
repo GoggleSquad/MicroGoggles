@@ -1,0 +1,2 @@
+Command: ninja buid
+ninja: error: unknown target 'buid', did you mean 'uf2'?

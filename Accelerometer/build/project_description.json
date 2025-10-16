@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Accelerometer",
-    "project_version":    "85934ec",
+    "project_version":    "5ef25a9-dirty",
     "project_path":       "C:/Users/pprat/Senior_Design/MicroGoggles/Accelerometer",
     "idf_path":           "C:/Users/pprat/esp/v5.5.1/esp-idf",
     "build_dir":          "C:/Users/pprat/Senior_Design/MicroGoggles/Accelerometer/build",
