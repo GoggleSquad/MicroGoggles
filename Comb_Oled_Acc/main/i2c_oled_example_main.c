@@ -34,7 +34,7 @@ static const char *TAG = "example";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////// Please update the following configuration according to your LCD spec //////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#define EXAMPLE_LCD_PIXEL_CLOCK_HZ    (400 * 1000)
+#define EXAMPLE_LCD_PIXEL_CLOCK_HZ    (100 * 1000)
 #define EXAMPLE_PIN_NUM_SDA           8
 #define EXAMPLE_PIN_NUM_SCL           9
 #define EXAMPLE_PIN_NUM_RST           -1
@@ -76,7 +76,7 @@ void accel_display_task(void *pvParameters)
         i2c_master_start(cmd);
         i2c_master_write_byte(cmd, (addr << 1) | I2C_MASTER_WRITE, true);
         i2c_master_stop(cmd);
-        if (i2c_master_cmd_begin(I2C_NUM_0, cmd, 100 / portTICK_PERIOD_MS) == ESP_OK) {
+        if (i2c_master_cmd_begin(I2C_NUM_0, cmd, pdMS_TO_TICKS(50)) == ESP_OK) {
             ESP_LOGI(TAG, "Device found at 0x%02X", addr);
         }
         i2c_cmd_link_delete(cmd);

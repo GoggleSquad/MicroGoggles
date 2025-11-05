@@ -1,6 +1,1 @@
-0000000000000000000000000000000000000000 1fab982a0c3d853c5380946d251fce4e8d162197 pputhuss <pputhuss@purdue.edu> 1760415562 -0400	commit (initial): code review commit
-1fab982a0c3d853c5380946d251fce4e8d162197 85934ec657c9cf12f18298bebb6037357a5d08bf pputhuss <pputhuss@purdue.edu> 1760473287 -0400	commit: oled flipped msg
-85934ec657c9cf12f18298bebb6037357a5d08bf 513b76f7f4fc2b903a1d3534bab73462352219ce pputhuss <pputhuss@purdue.edu> 1760483881 -0400	commit: accelerometer code
-513b76f7f4fc2b903a1d3534bab73462352219ce 5ef25a9bdc8d28c049f60bc55a58db3c45d9d08f pputhuss <pputhuss@purdue.edu> 1760571848 -0400	commit: working heart rate
-5ef25a9bdc8d28c049f60bc55a58db3c45d9d08f f787ef9cfd4f9b604688c1999216dfbd8f249a57 pputhuss <pputhuss@purdue.edu> 1760597849 -0400	commit: added GPIO for LEDs
-f787ef9cfd4f9b604688c1999216dfbd8f249a57 e20d07a3ae84cd575c5a8417a2d2b907b295d73f pputhuss <pputhuss@purdue.edu> 1760609749 -0400	commit: new BLE server
+72c74041003553b797d3003d792d78db03a214b3

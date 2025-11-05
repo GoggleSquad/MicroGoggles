@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "OLED_display",
-    "project_version":    "e20d07a-dirty",
+    "project_version":    "72c7404-dirty",
     "project_path":       "C:/Users/pprat/Senior_Design/MicroGoggles/Comb_Oled_Acc",
     "idf_path":           "C:/Users/pprat/esp/v5.5.1/esp-idf",
     "build_dir":          "C:/Users/pprat/Senior_Design/MicroGoggles/Comb_Oled_Acc/build",
